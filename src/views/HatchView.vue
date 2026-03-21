@@ -196,51 +196,6 @@
       </section>
     </main>
 
-    <!-- BottomNavBar -->
-    <nav class="fixed bottom-0 w-full z-50 pb-safe bg-[#fafaf5]/70 dark:bg-zinc-900/70 backdrop-blur-xl no-border bg-surface-container-low shadow-none md:hidden">
-      <div class="flex justify-around items-center w-full px-4 py-3">
-        <router-link to="/hatch" class="flex flex-col items-center justify-center bg-[#4f6d58] text-white rounded-full px-4 py-1 scale-110 duration-300 ease-in-out">
-          <span class="material-symbols-outlined" data-icon="egg">egg</span>
-          <span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope">
-            <span v-if="currentLang === 'en'">Hatch</span>
-            <span v-if="currentLang === 'de'">Brut</span>
-            <span v-if="currentLang === 'hu'">Kikel</span>
-          </span>
-        </router-link>
-        <router-link to="/nest" class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400 hover:text-[#375541] dark:hover:text-white transition-colors">
-          <span class="material-symbols-outlined" data-icon="home_max">home_max</span>
-          <span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope">
-            <span v-if="currentLang === 'en'">Nest</span>
-            <span v-if="currentLang === 'de'">Nest</span>
-            <span v-if="currentLang === 'hu'">Fészek</span>
-          </span>
-        </router-link>
-        <router-link to="/hunt" class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400 hover:text-[#375541] dark:hover:text-white transition-colors">
-          <span class="material-symbols-outlined" data-icon="target">target</span>
-          <span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope">
-            <span v-if="currentLang === 'en'">Hunt</span>
-            <span v-if="currentLang === 'de'">Jagd</span>
-            <span v-if="currentLang === 'hu'">Vadász</span>
-          </span>
-        </router-link>
-        <router-link to="/flight" class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400 hover:text-[#375541] dark:hover:text-white transition-colors">
-          <span class="material-symbols-outlined" data-icon="Wings">flight</span>
-          <span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope">
-            <span v-if="currentLang === 'en'">Flight</span>
-            <span v-if="currentLang === 'de'">Flug</span>
-            <span v-if="currentLang === 'hu'">Repül</span>
-          </span>
-        </router-link>
-        <router-link to="/mate" class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400 hover:text-[#375541] dark:hover:text-white transition-colors">
-          <span class="material-symbols-outlined" data-icon="favorite">favorite</span>
-          <span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope">
-            <span v-if="currentLang === 'en'">Mate</span>
-            <span v-if="currentLang === 'de'">Paarung</span>
-            <span v-if="currentLang === 'hu'">Párzás</span>
-          </span>
-        </router-link>
-      </div>
-    </nav>
   </div>
 </template>
 

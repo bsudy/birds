@@ -96,32 +96,6 @@
       </section>
     </main>
 
-    <!-- BottomNavBar -->
-    <nav class="fixed bottom-0 w-full z-50 pb-safe bg-[#fafaf5]/70 dark:bg-zinc-900/70 backdrop-blur-xl md:hidden">
-      <div class="flex justify-around items-center w-full px-4 py-3">
-        <router-link to="/hatch" class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400 group cursor-pointer">
-          <span class="material-symbols-outlined transition-transform duration-300 group-hover:scale-110">egg</span>
-          <span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope mt-1">Hatch</span>
-        </router-link>
-        <router-link to="/nest" class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400 group cursor-pointer">
-          <span class="material-symbols-outlined transition-transform duration-300 group-hover:scale-110">home_max</span>
-          <span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope mt-1">Nest</span>
-        </router-link>
-        <router-link to="/hunt" class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400 group cursor-pointer">
-          <span class="material-symbols-outlined transition-transform duration-300 group-hover:scale-110">target</span>
-          <span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope mt-1">Hunt</span>
-        </router-link>
-        <router-link to="/flight" class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400 group cursor-pointer">
-          <span class="material-symbols-outlined transition-transform duration-300 group-hover:scale-110">flight</span>
-          <span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope mt-1">Flight</span>
-        </router-link>
-        <!-- Active State -->
-        <router-link to="/mate" class="flex flex-col items-center justify-center bg-[#4f6d58] text-white rounded-full px-4 py-1 scale-110 duration-300 ease-in-out cursor-pointer">
-          <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
-          <span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope mt-0.5">Mate</span>
-        </router-link>
-      </div>
-    </nav>
   </div>
 </template>
 

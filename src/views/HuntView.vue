@@ -131,31 +131,6 @@
       </section>
     </main>
 
-    <!-- BottomNavBar -->
-    <nav class="md:hidden fixed bottom-0 w-full z-50 pb-safe bg-[#fafaf5]/70 dark:bg-zinc-900/70 backdrop-blur-xl">
-      <div class="flex justify-around items-center w-full px-4 py-3">
-        <router-link to="/hatch" class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400">
-          <span class="material-symbols-outlined mb-1">egg</span>
-          <span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope">Hatch</span>
-        </router-link>
-        <router-link to="/nest" class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400">
-          <span class="material-symbols-outlined mb-1">home_max</span>
-          <span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope">Nest</span>
-        </router-link>
-        <router-link to="/hunt" class="flex flex-col items-center justify-center bg-[#4f6d58] text-white rounded-full px-4 py-1 scale-110 duration-300 ease-in-out">
-          <span class="material-symbols-outlined mb-1">target</span>
-          <span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope">Hunt</span>
-        </router-link>
-        <router-link to="/flight" class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400">
-          <span class="material-symbols-outlined mb-1">flight</span>
-          <span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope">Flight</span>
-        </router-link>
-        <router-link to="/mate" class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400">
-          <span class="material-symbols-outlined mb-1">favorite</span>
-          <span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope">Mate</span>
-        </router-link>
-      </div>
-    </nav>
 
     <!-- Floating Action Button -->
     <div class="fixed bottom-24 right-6 md:bottom-12 md:right-12 z-40 hidden md:block">

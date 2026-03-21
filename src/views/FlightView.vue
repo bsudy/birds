@@ -105,32 +105,6 @@
       </section>
     </main>
 
-    <!-- BottomNavBar -->
-    <nav class="md:hidden fixed bottom-0 w-full z-50 pb-safe bg-[#fafaf5]/70 dark:bg-zinc-900/70 backdrop-blur-xl">
-      <div class="flex justify-around items-center w-full px-4 py-3">
-        <router-link to="/hatch" class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400 cursor-pointer">
-          <span class="material-symbols-outlined mb-1" data-icon="egg">egg</span>
-          <span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope">{{ t.navHatch }}</span>
-        </router-link>
-        <router-link to="/nest" class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400 cursor-pointer">
-          <span class="material-symbols-outlined mb-1" data-icon="home_max">home_max</span>
-          <span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope">{{ t.navNest }}</span>
-        </router-link>
-        <router-link to="/hunt" class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400 cursor-pointer">
-          <span class="material-symbols-outlined mb-1" data-icon="target">target</span>
-          <span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope">{{ t.navHunt }}</span>
-        </router-link>
-        <!-- Active State: Flight -->
-        <router-link to="/flight" class="flex flex-col items-center justify-center bg-[#4f6d58] text-white rounded-full px-4 py-1 scale-110 duration-300 ease-in-out cursor-pointer shadow-lg">
-          <span class="material-symbols-outlined mb-1" data-icon="flight">flight</span>
-          <span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope">{{ t.navFlight }}</span>
-        </router-link>
-        <router-link to="/mate" class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400 cursor-pointer">
-          <span class="material-symbols-outlined mb-1" data-icon="favorite">favorite</span>
-          <span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope">{{ t.navMate }}</span>
-        </router-link>
-      </div>
-    </nav>
   </div>
 </template>
 
@@ -162,12 +136,7 @@ export default {
           stat2Desc: 'Typical soaring height during migration.',
           s3Title: 'The First Journey',
           s3Body: "By late summer, the natal territory becomes too small. Guided by celestial cues and the changing thermal currents, the young kestrel begins its first true migration\u2014a journey of thousands of miles across diverse biomes.",
-          s3Link: 'READ ARCHIVE LOGS',
-          navHatch: 'Hatch',
-          navNest: 'Nest',
-          navHunt: 'Hunt',
-          navFlight: 'Flight',
-          navMate: 'Mate'
+          s3Link: 'READ ARCHIVE LOGS'
         },
         de: {
           title: 'Abflug',
@@ -187,12 +156,7 @@ export default {
           stat2Desc: 'Typische Segelh\u00F6he w\u00E4hrend des Zugs.',
           s3Title: 'Die erste Reise',
           s3Body: 'Bis zum Sp\u00E4tsommer wird das Geburtsrevier zu klein. Geleitet von Himmelszeichen und wechselnden Thermiken beginnt der junge Turmfalke seinen ersten echten Zug \u2013 eine Reise \u00FCber tausende Kilometer durch vielf\u00E4ltige Biome.',
-          s3Link: 'ARCHIVPROTOKOLLE LESEN',
-          navHatch: 'Brut',
-          navNest: 'Nest',
-          navHunt: 'Jagd',
-          navFlight: 'Flug',
-          navMate: 'Paarung'
+          s3Link: 'ARCHIVPROTOKOLLE LESEN'
         },
         hu: {
           title: 'Rep\u00FCl\u00E9s',
@@ -212,12 +176,7 @@ export default {
           stat2Desc: 'Jellemz\u0151 magass\u00E1g a vonul\u00E1s sor\u00E1n.',
           s3Title: 'Az els\u0151 utaz\u00E1s',
           s3Body: 'Ny\u00E1r v\u00E9g\u00E9re a sz\u00FCl\u0151i ter\u00FClet t\u00FAl kicsiv\u00E9 v\u00E1lik. \u00C9gi jelek \u00E9s a v\u00E1ltoz\u00F3 termikek \u00E1ltal vez\u00E9relve a fiatal v\u00E9rcse megkezdi els\u0151 val\u00F3di vonul\u00E1s\u00E1t \u2013 egy t\u00F6bb ezer m\u00E9rf\u00F6ldes utat k\u00FCl\u00F6nb\u00F6z\u0151 biomokon kereszt\u00FCl.',
-          s3Link: 'ARCH\u00CDV NAPL\u00D3K OLVAS\u00C1SA',
-          navHatch: 'Kikel',
-          navNest: 'F\u00E9szek',
-          navHunt: 'Vad\u00E1sz',
-          navFlight: 'Rep\u00FCl',
-          navMate: 'P\u00E1rz\u00E1s'
+          s3Link: 'ARCH\u00CDV NAPL\u00D3K OLVAS\u00C1SA'
         }
       }
     }

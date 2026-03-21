@@ -13,16 +13,6 @@
           <p>{{ $t('growth.introParagraph') }}</p>
           <p class="font-headline italic text-2xl text-tertiary-container py-4 border-l-2 border-primary-container/20 pl-6">"{{ $t('growth.quote') }}"</p>
         </div>
-        <div class="flex gap-4">
-          <button class="bg-primary text-on-primary px-8 py-4 rounded shadow-sm flex items-center gap-2 hover:opacity-90 transition-all active:scale-95">
-            <span class="material-symbols-outlined">menu_book</span>
-            <span>{{ $t('growth.viewFieldData') }}</span>
-          </button>
-          <button class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded flex items-center gap-2 hover:opacity-90 transition-all">
-            <span class="material-symbols-outlined">volume_up</span>
-            <span>{{ $t('growth.calls') }}</span>
-          </button>
-        </div>
         <template #stat-top>
           <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('growth.growthRate') }}</p>
           <p class="font-headline text-2xl text-primary">14.2g/day</p>

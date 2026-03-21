@@ -12,9 +12,6 @@
               <span>{{ $t('home.beginJourney') }}</span>
               <span class="material-symbols-outlined">arrow_forward</span>
             </button>
-            <button class="text-primary font-bold underline underline-offset-8 decoration-primary-fixed-dim hover:text-primary-container transition-colors">
-              <span>{{ $t('home.exploreMethodology') }}</span>
-            </button>
           </div>
           <template #stat-top>
             <p class="font-label text-[10px] text-outline uppercase mb-1">Genus</p>
@@ -29,23 +26,18 @@
 
       <!-- Feature Grid -->
       <FeatureGrid />
-
-      <!-- Specimen Highlight Section -->
-      <SpecimenHighlight />
     </main>
   </div>
 </template>
 
 <script>
 import FeatureGrid from '@/components/FeatureGrid.vue'
-import SpecimenHighlight from '@/components/SpecimenHighlight.vue'
 import SpecimenHero from '@/components/SpecimenHero.vue'
 
 export default {
   name: 'HomeView',
   components: {
     FeatureGrid,
-    SpecimenHighlight,
     SpecimenHero
   }
 }

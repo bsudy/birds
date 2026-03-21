@@ -11,7 +11,7 @@
   },
   "home": {
     "heroTitle": "The Falcon of <br/><span class=\"italic font-light\">The Old Wind</span>",
-    "heroDesc": "A digital field study of the Falco tinnunculus. This archive documents the life-cycles, aerodynamic mastery, and the silent vigil of the Kestrel.",
+    "heroDesc": "An in-depth guide to the Falco tinnunculus — exploring its life-cycles, aerodynamic mastery, and the remarkable world of the Common Kestrel.",
     "beginJourney": "Begin Journey",
     "exploreMethodology": "Explore Methodology"
   },
@@ -99,7 +99,7 @@
     "talonsTitle": "Powerful Talons",
     "talonsDesc": "Once the target is acquired, the kestrel drops in a controlled 'stoop'. The impact is followed by a swift grasp of its needle-sharp yellow talons, designed for immediate incapacitation.",
     "dietTitle": "The Hunter's Diet",
-    "dietSubtitle": "Analysis of field samples and pellets",
+    "dietSubtitle": "Dietary composition by prey type",
     "viewDataLogs": "View Data Logs",
     "volesLabel": "Field Voles",
     "volesDesc": "The primary energy source for breeding pairs.",
@@ -118,13 +118,13 @@
     "heroDesc": "The lifecycle reaches its zenith not in the hunt, but in the quiet, deliberate rituals of pair bonding. The male kestrel's courtship is an aerial ballet \u2014 a display of fitness, territory, and devotion.",
     "plateCaption": "Plate IV: The Clutch",
     "selectionTitle": "The Selection",
-    "selectionDesc": "Monogamous for the breeding season, the male woos his partner through a series of ritualised food offerings, presenting freshly caught voles on prominent perches. This nuptial gift is a tangible proof of his hunting prowess and his ability to provide for a brood of 4-6 demanding nestlings.",
+    "selectionDesc": "Monogamous for the breeding season, the male woos his partner through a series of ritualised food offerings, presenting freshly caught voles on prominent perches. This nuptial gift is a tangible proof of his hunting prowess and his ability to provide for a brood of 3-6 demanding nestlings.",
     "recordSighting": "Record Sighting",
     "fieldManual": "Field Manual",
     "eggsTitle": "3-6 Eggs",
     "eggsDesc": "Laid at 2-day intervals, incubated for approximately 28 days primarily by the female.",
-    "archiveTitle": "A Living Archive",
-    "archiveDesc": "This ongoing documentation serves as a permanent ecological record, tracking generational changes in nesting behaviour and pair-bond dynamics across decades of data.",
+    "archiveTitle": "Courtship Behaviour",
+    "archiveDesc": "The rituals of kestrel courtship are elaborate and consistent across generations. The male's aerial displays and food offerings give a revealing window into the species' biology and the strength of the pair bond.",
     "quote": "\"The kestrel does not merely reproduce; it ensures its legacy through rigorous partner selection and a shared investment in survival.\"",
     "plumageTitle": "The Plumage",
     "plumageDesc": "The male's blue-grey head and rufous back serve as key visual signals during courtship displays, indicating genetic fitness and territory ownership.",
@@ -133,13 +133,13 @@
   },
   "nest": {
     "phaseLabel": "The Legacy",
-    "heroTitle": "The Nest <span class=\"italic\">Archive</span>",
+    "heroTitle": "The <span class=\"italic\">Nest</span>",
     "heroDesc": "The common kestrel never builds its own nest. Instead, it occupies abandoned crow nests, cliff ledges, church towers, and building recesses--repurposing the architecture of others into a cradle for the next generation.",
     "exploreSites": "Explore Sites",
     "fieldNotes": "Field Notes",
     "nestingHeightLabel": "Nesting Height",
     "clutchSizeLabel": "Clutch Size",
-    "clutchSizeValue": "4-6 Eggs",
+    "clutchSizeValue": "3-6 Eggs",
     "borrowedArchitecture": "Borrowed Architecture",
     "borrowedP1": "Unlike most raptors, the common kestrel constructs no nest of its own. It is an opportunistic tenant, seeking out the abandoned nests of crows, magpies, and other corvids in tall trees. Where trees are scarce, cliff faces, quarry walls, and rocky outcrops serve as natural alternatives.",
     "borrowedP2": "In the modern landscape, church towers, cathedral spires, factory ledges, and high-rise window recesses have become vital urban substitutes. The female scrapes a shallow depression in the existing substrate--whether sticks, gravel, or bare stone--and lays her clutch directly upon it.",
@@ -148,7 +148,7 @@
     "nestingHeightsLabel": "Nesting Heights",
     "nestingHeightsDesc": "Typical elevation above ground",
     "clutchSizeGridLabel": "Clutch Size",
-    "clutchSizeGridValue": "4-6 Eggs",
+    "clutchSizeGridValue": "3-6 Eggs",
     "clutchSizeGridDesc": "Laid at 2-day intervals",
     "territoryDefense": "Territory Defense",
     "territoryDefenseDesc": "Males fiercely defend a radius of approximately 500 meters around the nest site, engaging in aerial displays and vocal warnings to deter intruders. Persistent threats are met with steep, aggressive dive attacks.",
@@ -157,7 +157,7 @@
   },
   "featureGrid": {
     "chaptersTitle": "The Chapters of Flight",
-    "chaptersDesc": "Six stages of a singular existence, captured in high-fidelity data and living narrative.",
+    "chaptersDesc": "Six stages of a singular existence, from hatching to the next generation.",
     "hatchTitle": "Hatch & Early Days",
     "hatchDesc": "From the first crack of the shell to the initial struggle for nourishment in the nest container.",
     "growthTitle": "Growth & Feeding",
@@ -168,8 +168,8 @@
     "huntDesc": "Visualizing the kinetic energy of the perfect hover.",
     "mateTitle": "Courtship & Continuity",
     "mateDesc": "The rituals of pair bonding and the cycle of life renewed.",
-    "nestTitle": "The Nest Archive",
-    "nestDesc": "A deep dive into high-altitude architecture and territory."
+    "nestTitle": "The Nest",
+    "nestDesc": "A deep dive into nesting habits, preferred sites, and territory."
   },
   "specimenHighlight": {
     "title": "Enter the <br/><span class=\"italic text-primary-fixed-dim\">Living Ledger</span>",
@@ -194,7 +194,7 @@
     "huntDesc": "Visualizing the kinetic energy of the perfect hover",
     "mateTitle": "Mating & Courtship",
     "mateDesc": "The intricate dance of kestrel courtship",
-    "nestTitle": "The Nest Archive",
-    "nestDesc": "High-altitude architecture and territory"
+    "nestTitle": "The Nest",
+    "nestDesc": "Nesting habits, preferred sites, and territory"
   }
 }

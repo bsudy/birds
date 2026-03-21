@@ -92,12 +92,6 @@
           </div>
           <h3 class="font-headline text-3xl text-primary mb-6 italic">{{ $t('flight.s3Title') }}</h3>
           <p class="text-on-surface-variant leading-relaxed">{{ $t('flight.s3Body') }}</p>
-          <div class="mt-8">
-            <a class="font-label text-xs font-bold text-primary underline underline-offset-4 decoration-primary/30 flex items-center gap-2" href="#">
-              {{ $t('flight.s3Link') }}
-              <span class="material-symbols-outlined text-xs">arrow_forward</span>
-            </a>
-          </div>
         </div>
         <div class="md:col-span-4 bg-[#375541] text-white p-10 flex flex-col items-start justify-center">
           <span class="material-symbols-outlined text-4xl mb-6">lightbulb</span>

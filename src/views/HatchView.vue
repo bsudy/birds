@@ -9,15 +9,6 @@
         <div class="text-lg text-on-surface-variant leading-relaxed mb-10 max-w-md">
           <p>{{ $t('hatch.heroDesc') }}</p>
         </div>
-        <div class="flex items-center gap-4">
-          <button class="bg-primary text-on-primary px-8 py-3 rounded shadow-lg flex items-center gap-2 hover:opacity-90 transition-all">
-            {{ $t('hatch.observeCycle') }}
-            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
-          </button>
-          <button class="text-primary font-bold underline underline-offset-4 decoration-primary_fixed_dim hover:opacity-80">
-            {{ $t('hatch.fieldNotes') }}
-          </button>
-        </div>
         <template #stat-top>
           <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('hatch.incubationLabel') }}</p>
           <p class="font-headline text-2xl text-primary">{{ $t('hatch.incubationValue') }}</p>

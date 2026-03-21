@@ -11,7 +11,7 @@
   },
   "home": {
     "heroTitle": "Az Öreg <br/><span class=\"italic font-light\">Szél Sólyma</span>",
-    "heroDesc": "Egy digitális tereptanulmány a Falco tinnunculus-ról. Ez az archívum dokumentálja az életciklusokat, az aerodinamikai mesteri szintet és a vércse csendes virrasztását.",
+    "heroDesc": "Részletes útmutató a Falco tinnunculus-hoz — életciklusainak, aerodinamikai képességeinek és a vörös vércse figyelemre méltó világának bemutatása.",
     "beginJourney": "Utazás kezdése",
     "exploreMethodology": "Módszertan felfedezése"
   },
@@ -99,7 +99,7 @@
     "talonsTitle": "Erős karmok",
     "talonsDesc": "Amint a célpont megvan, a vércse kontrollált zuhanásba kezd. A becsapódást a tűhegyes sárga karmok villámgyors megragadása követi, amelyek az azonnali hatástalanításra lettek tervezve.",
     "dietTitle": "A vadász étrendje",
-    "dietSubtitle": "Terepminták és köpetek elemzése",
+    "dietSubtitle": "Táplálék-összetétel zsákmánytípusonként",
     "viewDataLogs": "Adatnaplók megtekintése",
     "volesLabel": "Mezei pockok",
     "volesDesc": "A költőpárok elsődleges energiaforrása.",
@@ -118,13 +118,13 @@
     "heroDesc": "Az életciklus nem a vadászatban éri el csúcspontját, hanem a párkapcsolat csendes, tudatos szertartásaiban. A hím vércse udvarlása légi balett — a kondíció, a terület és az odaadás bemutatója.",
     "plateCaption": "IV. tábla: A fészekalj",
     "selectionTitle": "A kiválasztás",
-    "selectionDesc": "A költési időszakra monogám hím partnere kegyeit ritualizált táplálékajánlatokkal keresi, frissen fogott pockokat mutatva be kiemelkedő ülőhelyeken. Ez a nászajándék kézzelfogható bizonyítéka vadászképességeinek és képességének, hogy 4-6 igényes fiókát eltartson.",
+    "selectionDesc": "A költési időszakra monogám hím partnere kegyeit ritualizált táplálékajánlatokkal keresi, frissen fogott pockokat mutatva be kiemelkedő ülőhelyeken. Ez a nászajándék kézzelfogható bizonyítéka vadászképességeinek és képességének, hogy 3-6 igényes fiókát eltartson.",
     "recordSighting": "Észlelés rögzítése",
     "fieldManual": "Terepi kézikönyv",
     "eggsTitle": "3-6 tojás",
     "eggsDesc": "2 napos időközönként lerakva, körülbelül 28 napig főként a tojó költi.",
-    "archiveTitle": "Egy élő archívum",
-    "archiveDesc": "Ez a folyamatos dokumentáció állandó ökológiai nyilvántartásként szolgál, amely évtizedek adatain keresztül követi a fészkelési viselkedés és párkapcsolati dinamika generációs változásait.",
+    "archiveTitle": "Udvarlási viselkedés",
+    "archiveDesc": "A vércse udvarlásának rituáléi kidolgozottak és generációkon átívelően következetesek. A hím légi bemutatói és táplálékajándékai betekintést nyújtanak a faj biológiájába és a párkapcsolat erejébe.",
     "quote": "\"A vércse nem csupán szaporodik; örökségét szigorú partnerválasztással és a túlélésbe való közös befektetéssel biztosítja.\"",
     "plumageTitle": "A tollazat",
     "plumageDesc": "A hím kékesszürke feje és rozsdavörös háta kulcsfontosságú vizuális jelzésekként szolgálnak az udvarlási bemutatók során, jelezve a genetikai fitneszt és a területi tulajdonjogot.",
@@ -133,13 +133,13 @@
   },
   "nest": {
     "phaseLabel": "Az örökség",
-    "heroTitle": "A fészek<span class=\"italic\">archívum</span>",
+    "heroTitle": "A <span class=\"italic\">fészek</span>",
     "heroDesc": "A vörös vércse soha nem épít saját fészket. Ehelyett elhagyott varjúfészkeket, sziklapárkányokat, templomtornyokat és épületmélyedéseket foglal el -- mások építményeit alakítja bölcsővé a következő generáció számára.",
     "exploreSites": "Helyszínek felfedezése",
     "fieldNotes": "Terepi jegyzetek",
     "nestingHeightLabel": "Fészkelési magasság",
     "clutchSizeLabel": "Fészekalj méret",
-    "clutchSizeValue": "4-6 tojás",
+    "clutchSizeValue": "3-6 tojás",
     "borrowedArchitecture": "Kölcsönzött építészet",
     "borrowedP1": "A legtöbb ragadozó madárral ellentétben a vörös vércse nem épít saját fészket. Alkalmi bérlő, aki magas fákon keresi a varjak, szarkák és más varjúfélék elhagyott fészkeit. Ahol kevés a fa, sziklák, kőbányafalak és sziklás kiszögellések szolgálnak természetes alternatívaként.",
     "borrowedP2": "A modern tájban a templomtornyok, székesegyházi tornyok, gyári párkányok és magasépületek ablakmélyedései létfontosságú városi helyettesítőkké váltak. A tojó sekély mélyedést kapar a meglévő aljzatba -- legyen az ág, kavics vagy csupasz kő --, és közvetlenül arra rakja le tojásait.",
@@ -148,7 +148,7 @@
     "nestingHeightsLabel": "Fészkelési magasságok",
     "nestingHeightsDesc": "Jellemző magasság a talaj felett",
     "clutchSizeGridLabel": "Fészekalj méret",
-    "clutchSizeGridValue": "4-6 tojás",
+    "clutchSizeGridValue": "3-6 tojás",
     "clutchSizeGridDesc": "2 napos időközönként lerakva",
     "territoryDefense": "Területvédelem",
     "territoryDefenseDesc": "A hímek hevesen védelmeznek egy körülbelül 500 méteres sugarat a fészek körül, légi bemutatókkal és hangjelzésekkel riasztva el a betolakodókat. Az állandó fenyegetésekre meredek, agresszív zuhanótámadásokkal válaszolnak.",
@@ -157,7 +157,7 @@
   },
   "featureGrid": {
     "chaptersTitle": "A repülés fejezetei",
-    "chaptersDesc": "Egy egyedülálló létezés hat szakasza, nagy hűségű adatokban és élő narratívában rögzítve.",
+    "chaptersDesc": "Egy egyedülálló létezés hat szakasza, a kikeléstől a következő nemzedékig.",
     "hatchTitle": "Kikelés és az első napok",
     "hatchDesc": "A tojáshéj első repedésétől a táplálékért folytatott kezdeti küzdelemig a fészekben.",
     "growthTitle": "Növekedés és táplálkozás",
@@ -168,8 +168,8 @@
     "huntDesc": "A tökéletes lebegés kinetikus energiájának vizualizálása.",
     "mateTitle": "Udvarlás és folytonosság",
     "mateDesc": "A párkötés rituáléi és az életciklus megújulása.",
-    "nestTitle": "A fészekarchívum",
-    "nestDesc": "Mélymerülés a magaslati építészetbe és a területbe."
+    "nestTitle": "A fészek",
+    "nestDesc": "Mélymerülés a fészkelési szokásokba, a kedvelt helyszínekbe és a területvédelembe."
   },
   "specimenHighlight": {
     "title": "Lépjen be az <br/><span class=\"italic text-primary-fixed-dim\">Élő Nyilvántartásba</span>",
@@ -194,7 +194,7 @@
     "huntDesc": "A tökéletes lebegés kinetikus energiájának vizualizálása",
     "mateTitle": "Párzás és udvarlás",
     "mateDesc": "A vércse udvarlás bonyolult tánca",
-    "nestTitle": "A fészekarchívum",
-    "nestDesc": "Magaslati építészet és terület"
+    "nestTitle": "A fészek",
+    "nestDesc": "Fészkelési szokások, kedvelt helyszínek és területvédelem"
   }
 }

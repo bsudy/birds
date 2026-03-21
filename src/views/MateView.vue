@@ -28,10 +28,6 @@
           </div>
           <h3 class="font-serif text-3xl mb-4">{{ $t('mate.selectionTitle') }}</h3>
           <p class="text-on-surface-variant font-body leading-relaxed max-w-xl">{{ $t('mate.selectionDesc') }}</p>
-          <div class="mt-8 flex gap-4">
-            <button class="bg-gradient-to-r from-primary to-primary-container text-white px-8 py-3 rounded-[0.25rem] font-sans font-bold text-xs uppercase tracking-widest hover:opacity-90 transition-all">{{ $t('mate.recordSighting') }}</button>
-            <button class="text-primary border-b border-primary/30 py-3 font-sans font-bold text-xs uppercase tracking-widest">{{ $t('mate.fieldManual') }}</button>
-          </div>
         </div>
         <!-- Eggs Card -->
         <div class="bg-secondary-container p-10 rounded-xl flex flex-col items-center justify-center text-center">

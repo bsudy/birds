@@ -66,12 +66,6 @@
             <h3 class="font-headline text-4xl">{{ $t('hunt.dietTitle') }}</h3>
             <p class="text-on-surface-variant mt-2 font-label uppercase tracking-widest text-xs">{{ $t('hunt.dietSubtitle') }}</p>
           </div>
-          <div class="mt-4 md:mt-0">
-            <button class="bg-primary text-on-primary px-8 py-3 font-label text-sm uppercase tracking-widest flex items-center gap-2 rounded-lg hover:shadow-lg transition-all">
-              <span>{{ $t('hunt.viewDataLogs') }}</span>
-              <span class="material-symbols-outlined text-sm">arrow_forward</span>
-            </button>
-          </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div class="space-y-2">

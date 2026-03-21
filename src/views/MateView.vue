@@ -15,7 +15,7 @@
           </div>
         </div>
         <div class="lg:col-span-5 mb-12">
-          <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-primary mb-4 block font-bold">{{ $t('mate.chapterLabel') }}</span>
+          <PhaseLabel>{{ $t('mate.chapterLabel') }}</PhaseLabel>
           <h2 class="font-serif text-5xl md:text-7xl leading-[1.1] text-on-surface mb-8">
             {{ $t('mate.heroTitleLine1') }} <br/><span class="italic text-primary">{{ $t('mate.heroTitleLine2') }}</span>
           </h2>
@@ -82,8 +82,10 @@
 </template>
 
 <script>
+import PhaseLabel from '@/components/PhaseLabel.vue'
 export default {
-  name: 'MateView'
+  name: 'MateView',
+  components: { PhaseLabel }
 }
 </script>
 

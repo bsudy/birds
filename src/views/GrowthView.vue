@@ -2,20 +2,13 @@
   <div class="font-body text-on-surface selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
 
     <main class="pb-12 px-6 max-w-7xl mx-auto">
-      <!-- Breadcrumb / Stage Indicator -->
-      <div class="mb-12 flex items-baseline gap-4">
-        <span class="text-primary font-headline italic text-4xl">02</span>
-        <div class="h-px bg-outline-variant/20 flex-grow"></div>
-        <span class="font-label uppercase tracking-[0.2em] text-[10px] text-outline">Phase: Development</span>
-      </div>
-
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
         <!-- Left Column: Narrative Content -->
         <div class="lg:col-span-5 flex flex-col justify-center">
+          <PhaseLabel>{{ $t('growth.phaseLabel') }}</PhaseLabel>
           <h2 class="font-headline text-5xl md:text-7xl text-primary leading-tight mb-8">
             {{ $t('growth.titleLine1') }} <br/>
             <span class="italic">{{ $t('growth.titleLine2') }}</span>
-            <span class="block text-2xl font-light mt-2 opacity-60">{{ $t('growth.subtitle') }}</span>
           </h2>
 
           <div class="space-y-6 text-on-surface-variant leading-relaxed text-lg">
@@ -126,8 +119,10 @@
 </template>
 
 <script>
+import PhaseLabel from '@/components/PhaseLabel.vue'
 export default {
-  name: 'GrowthView'
+  name: 'GrowthView',
+  components: { PhaseLabel }
 }
 </script>
 

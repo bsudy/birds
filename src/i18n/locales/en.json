@@ -16,7 +16,7 @@
     "exploreMethodology": "Explore Methodology"
   },
   "hatch": {
-    "phaseLabel": "Phase 01: Genesis",
+    "phaseLabel": "The Beginning",
     "heroTitle": "The First <span class=\"italic\">Breach</span>",
     "heroDesc": "After 28 days of incubation, the silence within the nest is broken by a rhythmic tapping. The egg tooth\u2014a temporary anatomical tool\u2014strikes against the calcified walls of the shell.",
     "observeCycle": "Observe Cycle",
@@ -38,6 +38,7 @@
     "closingQuote": "\"The breaking of the shell is not the end of a process, but the violent beginning of a flight that will eventually span continents.\""
   },
   "growth": {
+    "phaseLabel": "The Metamorphosis",
     "titleLine1": "Growth &",
     "titleLine2": "Feeding",
     "subtitle": "Growth and feeding",
@@ -59,7 +60,7 @@
   },
   "flight": {
     "title": "Taking Flight",
-    "phaseLabel": "Stage III",
+    "phaseLabel": "The Ascent",
     "obsLabel": "Observation #042",
     "statusLabel": "Status",
     "statusText": "First Flight Sequence Initiated",
@@ -86,7 +87,7 @@
     "closingQuote": "The breaking of stillness is not the end of rest, but the violent beginning of a flight that will span continents."
   },
   "hunt": {
-    "stageLabel": "Stage IV",
+    "stageLabel": "The Pursuit",
     "heroTitle": "Hunting & Survival",
     "specimenDesc": "A master of the wind, the kestrel remains perfectly still in the air, its head locked on a single point in the grass below.",
     "heroParagraph1": "To survive in the open landscape, the kestrel has evolved a specialized technique known as <span class=\"text-primary font-semibold italic\">windhovering</span>.",
@@ -111,7 +112,7 @@
     "closingQuote": "A kestrel needs the equivalent of 4-8 voles a day to survive, requiring hours of focused hovering."
   },
   "mate": {
-    "chapterLabel": "The Final Chapter",
+    "chapterLabel": "The Bond",
     "heroTitleLine1": "Courtship &",
     "heroTitleLine2": "Continuity",
     "heroDesc": "The lifecycle reaches its zenith not in the hunt, but in the quiet, deliberate rituals of pair bonding. The male kestrel's courtship is an aerial ballet \u2014 a display of fitness, territory, and devotion.",
@@ -131,7 +132,7 @@
     "sanctuaryDesc": "Courtship culminates in the selection of a nesting site high above the landscape, a shared decision that marks the final commitment of the bond."
   },
   "nest": {
-    "phaseLabel": "Phase 05: Territory",
+    "phaseLabel": "The Legacy",
     "heroTitle": "The Nest <span class=\"italic\">Archive</span>",
     "heroDesc": "The common kestrel never builds its own nest. Instead, it occupies abandoned crow nests, cliff ledges, church towers, and building recesses--repurposing the architecture of others into a cradle for the next generation.",
     "exploreSites": "Explore Sites",

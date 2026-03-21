@@ -19,7 +19,7 @@
           </div>
         </div>
         <div class="md:col-span-5 md:pl-12 pb-12">
-          <span class="text-primary font-label uppercase tracking-[0.3em] text-sm block mb-4">{{ $t('hunt.stageLabel') }}</span>
+          <PhaseLabel>{{ $t('hunt.stageLabel') }}</PhaseLabel>
           <h2 class="font-headline text-5xl md:text-7xl leading-tight text-on-surface mb-8">{{ $t('hunt.heroTitle') }}</h2>
           <div class="space-y-6 text-lg text-on-surface-variant font-light leading-relaxed">
             <p v-html="$t('hunt.heroParagraph1')"></p>
@@ -123,8 +123,10 @@
 </template>
 
 <script>
+import PhaseLabel from '@/components/PhaseLabel.vue'
 export default {
-  name: 'HuntView'
+  name: 'HuntView',
+  components: { PhaseLabel }
 }
 </script>
 

@@ -16,7 +16,7 @@
     "exploreMethodology": "Methodik erkunden"
   },
   "hatch": {
-    "phaseLabel": "Phase 01: Genesis",
+    "phaseLabel": "Der Anfang",
     "heroTitle": "Der erste <span class=\"italic\">Durchbruch</span>",
     "heroDesc": "Nach 28 Tagen Bebrütung wird die Stille im Nest durch ein rhythmisches Klopfen unterbrochen. Der Eizahn – ein temporäres anatomisches Werkzeug – schlägt gegen die kalkhaltigen Wände der Schale.",
     "observeCycle": "Zyklus beobachten",
@@ -38,6 +38,7 @@
     "closingQuote": "\"Das Aufbrechen der Schale ist nicht das Ende eines Prozesses, sondern der gewaltige Beginn eines Fluges, der schließlich Kontinente umspannen wird.\""
   },
   "growth": {
+    "phaseLabel": "Die Verwandlung",
     "titleLine1": "Wachstum &",
     "titleLine2": "Fütterung",
     "subtitle": "Wachstum und Fütterung",
@@ -59,7 +60,7 @@
   },
   "flight": {
     "title": "Abflug",
-    "phaseLabel": "Phase III",
+    "phaseLabel": "Der Aufstieg",
     "obsLabel": "Beobachtung #042",
     "statusLabel": "Status",
     "statusText": "Erstflugsequenz eingeleitet",
@@ -86,7 +87,7 @@
     "closingQuote": "Das Brechen der Stille ist nicht das Ende der Ruhe, sondern der gewaltige Beginn eines Fluges, der Kontinente umspannen wird."
   },
   "hunt": {
-    "stageLabel": "Phase IV",
+    "stageLabel": "Die Jagd",
     "heroTitle": "Jagd & Überleben",
     "specimenDesc": "Ein Meister des Windes – der Turmfalke verharrt reglos in der Luft, den Blick auf einen einzigen Punkt im Gras unter ihm gerichtet.",
     "heroParagraph1": "Um in der offenen Landschaft zu überleben, hat der Turmfalke eine spezialisierte Technik entwickelt, die als <span class=\"text-primary font-semibold italic\">Rüttelflug</span> bekannt ist.",
@@ -111,7 +112,7 @@
     "closingQuote": "Ein Turmfalke benötigt täglich das Äquivalent von 4-8 Wühlmäusen zum Überleben, was stundenlangen konzentrierten Rüttelflug erfordert."
   },
   "mate": {
-    "chapterLabel": "Das letzte Kapitel",
+    "chapterLabel": "Das Band",
     "heroTitleLine1": "Balz &",
     "heroTitleLine2": "Kontinuität",
     "heroDesc": "Der Lebenszyklus erreicht seinen Höhepunkt nicht bei der Jagd, sondern in den ruhigen, bewussten Ritualen der Paarbindung. Die Balz des männlichen Turmfalken ist ein Luftballett — eine Demonstration von Fitness, Territorium und Hingabe.",
@@ -131,7 +132,7 @@
     "sanctuaryDesc": "Die Balz gipfelt in der Wahl eines Nistplatzes hoch über der Landschaft, eine gemeinsame Entscheidung, die das endgültige Bekenntnis der Bindung markiert."
   },
   "nest": {
-    "phaseLabel": "Phase 05: Territorium",
+    "phaseLabel": "Das Vermächtnis",
     "heroTitle": "Das Nest-<span class=\"italic\">Archiv</span>",
     "heroDesc": "Der Turmfalke baut nie sein eigenes Nest. Stattdessen besetzt er verlassene Krähennester, Felsvorsprünge, Kirchtürme und Gebäudenischen -- er verwandelt die Architektur anderer in eine Wiege für die nächste Generation.",
     "exploreSites": "Standorte erkunden",

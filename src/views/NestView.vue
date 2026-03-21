@@ -5,9 +5,7 @@
       <!-- Hero Section -->
       <section class="relative min-h-[618px] flex flex-col md:flex-row items-center justify-between gap-12 mb-24">
         <div class="w-full md:w-1/2 order-2 md:order-1">
-          <span class="inline-block py-1 px-3 mb-6 bg-secondary-container text-on-secondary-container font-label text-[10px] uppercase tracking-widest rounded-full">
-            {{ $t('nest.phaseLabel') }}
-          </span>
+          <PhaseLabel>{{ $t('nest.phaseLabel') }}</PhaseLabel>
           <h2 class="font-headline text-5xl md:text-7xl text-primary leading-tight mb-8" v-html="$t('nest.heroTitle')"></h2>
           <div class="text-lg text-on-surface-variant leading-relaxed mb-10 max-w-md">
             <p>{{ $t('nest.heroDesc') }}</p>
@@ -126,8 +124,10 @@
 </template>
 
 <script>
+import PhaseLabel from '@/components/PhaseLabel.vue'
 export default {
-  name: 'NestView'
+  name: 'NestView',
+  components: { PhaseLabel }
 }
 </script>
 

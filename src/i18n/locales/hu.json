@@ -16,7 +16,7 @@
     "exploreMethodology": "Módszertan felfedezése"
   },
   "hatch": {
-    "phaseLabel": "01. fázis: Genesis",
+    "phaseLabel": "A kezdet",
     "heroTitle": "Az első <span class=\"italic\">áttörés</span>",
     "heroDesc": "28 napos kotlás után a fészek csendjét ritmikus kopogás töri meg. A tojásfog – egy ideiglenes anatómiai eszköz – a tojáshéj meszes falának ütközik.",
     "observeCycle": "Ciklus megfigyelése",
@@ -38,6 +38,7 @@
     "closingQuote": "\"A héj áttörése nem egy folyamat vége, hanem egy olyan repülés viharos kezdete, amely végül kontinenseket ível át.\""
   },
   "growth": {
+    "phaseLabel": "Az átváltozás",
     "titleLine1": "Növekedés és",
     "titleLine2": "Táplálkozás",
     "subtitle": "Növekedés és táplálkozás",
@@ -59,7 +60,7 @@
   },
   "flight": {
     "title": "Repülés",
-    "phaseLabel": "III. szakasz",
+    "phaseLabel": "A felemelkedés",
     "obsLabel": "Megfigyelés #042",
     "statusLabel": "Állapot",
     "statusText": "Első repülési sorozat elindítva",
@@ -86,7 +87,7 @@
     "closingQuote": "A mozdulatlanság megtörése nem a pihenés vége, hanem egy kontinenseket átívelő repülés viharos kezdete."
   },
   "hunt": {
-    "stageLabel": "IV. szakasz",
+    "stageLabel": "Az üldözés",
     "heroTitle": "Vadászat és túlélés",
     "specimenDesc": "A szél mestere – a vércse mozdulatlanul lebeg a levegőben, tekintete egyetlen pontra szegezve az alatta lévő fűben.",
     "heroParagraph1": "A nyílt tájon való túléléshez a vércse egy speciális technikát fejlesztett ki, amelyet <span class=\"text-primary font-semibold italic\">szitálásnak</span> neveznek.",
@@ -111,7 +112,7 @@
     "closingQuote": "Egy vércsének napi 4-8 pocoknak megfelelő táplálékra van szüksége a túléléshez, ami órákig tartó koncentrált szitálást igényel."
   },
   "mate": {
-    "chapterLabel": "Az utolsó fejezet",
+    "chapterLabel": "A kötelék",
     "heroTitleLine1": "Udvarlás és",
     "heroTitleLine2": "Folytonosság",
     "heroDesc": "Az életciklus nem a vadászatban éri el csúcspontját, hanem a párkapcsolat csendes, tudatos szertartásaiban. A hím vércse udvarlása légi balett — a kondíció, a terület és az odaadás bemutatója.",
@@ -131,7 +132,7 @@
     "sanctuaryDesc": "Az udvarlás a táj felett magasan elhelyezkedő fészkelőhely kiválasztásában csúcsosodik ki, egy közös döntés, amely a kötelék végső elköteleződését jelzi."
   },
   "nest": {
-    "phaseLabel": "05. fázis: Terület",
+    "phaseLabel": "Az örökség",
     "heroTitle": "A fészek<span class=\"italic\">archívum</span>",
     "heroDesc": "A vörös vércse soha nem épít saját fészket. Ehelyett elhagyott varjúfészkeket, sziklapárkányokat, templomtornyokat és épületmélyedéseket foglal el -- mások építményeit alakítja bölcsővé a következő generáció számára.",
     "exploreSites": "Helyszínek felfedezése",

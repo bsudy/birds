@@ -1,5 +1,5 @@
 <template>
-  <nav class="fixed bottom-0 left-0 right-0 z-50 bg-[#fafaf5] dark:bg-zinc-900 border-t border-outline-variant/20 shadow-[0_-4px_16px_rgba(0,0,0,0.05)]">
+  <nav class="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-[#fafaf5] dark:bg-zinc-900 border-t border-outline-variant/20 shadow-[0_-4px_16px_rgba(0,0,0,0.05)]">
     <div class="flex justify-around items-center w-full px-4 py-3">
       <router-link
         v-for="item in navItems"

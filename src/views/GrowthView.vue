@@ -34,9 +34,9 @@
           <div class="bg-surface-container-low p-8 md:p-12 relative overflow-visible">
             <div class="absolute -top-12 -right-8 w-64 h-64 md:w-80 md:h-80 bg-surface-container-highest rounded-full flex items-center justify-center shadow-xl rotate-3">
               <img
-                alt="Feeding parental kestrel and chick"
+                alt="Young kestrels in a nest"
                 class="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-700"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGWoDM3kU8o1uZTdtlKlodWCS3BrXxvP8vtPr0SV9tWxod70BjyeE49Co5cd2gN6Sx2wKt1uY5Dh9b5aLAJHWqGDQMdFpgGs-y6DjZz_zv7WYmssOl-Bhg9bcJETP_OvKQPDCBtnyN-4G9jyYjuC8mqyBzvA8bzJHhOhFA3s8dnQMZBxm0J_SHCNHeufHdk4CT8FDDHQ96E4z3wnYAY70RPz5clUkNpiDbMIUGCo_VCTvsrk9xJBVWqJQQPkrHfi8E8QQK9hdDpGfe"
+                src="/bf-young-kestrels.jpg"
               />
             </div>
             <div class="pt-32 md:pt-16 max-w-md">

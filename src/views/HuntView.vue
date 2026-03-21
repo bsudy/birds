@@ -7,9 +7,9 @@
         <div class="md:col-span-7 relative group">
           <div class="aspect-[4/5] overflow-hidden rounded-xl bg-surface-container-low">
             <img
-              alt="Kestrel hovering"
+              alt="Kestrel portrait"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAntprma9npKZpkbOKspRvR9M4JBLWGlDKPWDkeC9FW3J4JhzpyEDini0RW0o7xNd4O2ys2s7zCGE30FmeSLJW_MP87LxPkJ2vlzGF7HA1MxXL8amnk0-U-Vg5Tfd5VTaOy5vBJMnYvzpNQLpEme9KbMWO4oDQTDeMvLC3m1JfVVVdUyVqo9f6Lyoc59i9wkpKfnhy3SLgSzpRZMFqd2qBU85U_2bsFIFkU-W3iyMgEjoHY9qNnRYlR1d1Dgx5HTuKWmioii1T49zA"
+              src="/bf-kestrel-portrait.jpg"
             />
           </div>
           <!-- Asymmetric Specimen Overlay -->

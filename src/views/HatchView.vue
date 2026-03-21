@@ -23,7 +23,7 @@
         <div class="w-full md:w-1/2 order-1 md:order-2 relative flex justify-center items-center">
           <div class="relative w-full aspect-square bg-surface-container-low rounded-full flex items-center justify-center p-12 overflow-visible">
             <div class="absolute inset-0 border-2 border-dashed border-outline-variant/30 rounded-full animate-spin-slow"></div>
-            <img alt="Cracked kestrel egg with chick emerging" class="specimen-image w-full h-full object-contain relative z-10 transform -rotate-12 scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFoqVEwtPAwahbWJBnG9rR35dg0iJiJa7CTT34zCRqU_v4s7DuYgl-gr2NXDEgPEs1KEnR81weLuF5aTnivCKHyrYyVDgAxkTl3bWBNI2VMtccMkzNFUuKvPCwNxKK53Aoqknms_KO_mg16gu8Qfj182REDrfn7yVv4Vf-gQl-1L-nyVmBd1yjSZbgiPYn36YkGpqhaENj0-FPZtIgaUP9rcUzdtNtin3IiKbjCfR95D3r_o9wvH45UQPnIIWRDwPuxzVNLL62Ww9e"/>
+            <img alt="Kestrel eggs in a nest" class="specimen-image w-full h-full object-cover relative z-10 transform -rotate-12 scale-110 rounded-full" src="/bf-kestrel-eggs.jpg"/>
             <div class="absolute top-0 right-0 bg-surface-container-lowest p-4 shadow-xl rounded-lg z-20 max-w-[150px]">
               <p class="font-label text-[10px] text-outline uppercase mb-1">
                 {{ $t('hatch.incubationLabel') }}

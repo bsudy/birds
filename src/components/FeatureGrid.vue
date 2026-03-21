@@ -10,29 +10,60 @@
     </div>
     
     <div class="grid grid-cols-1 md:grid-cols-6 gap-6">
-      <!-- Large Feature -->
-      <div @click="$router.push('/hatch')" class="md:col-span-4 bg-surface-container rounded-xl p-8 flex flex-col justify-between group cursor-pointer hover:bg-surface-container-high transition-colors">
+      <!-- Hatch -->
+      <div @click="$router.push('/hatch')" class="md:col-span-3 bg-surface-container rounded-xl p-8 flex flex-col justify-between group cursor-pointer hover:bg-surface-container-high transition-colors">
         <div class="flex justify-between items-start">
           <div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center text-white">
             <span class="material-symbols-outlined text-3xl">egg</span>
           </div>
           <span class="font-serif italic text-4xl text-primary/20 group-hover:text-primary/40 transition-colors">01</span>
         </div>
-        <div class="mt-12">
-          <h4 class="font-serif text-3xl font-bold text-primary mb-2">
+        <div class="mt-8">
+          <h4 class="font-serif text-2xl font-bold text-primary mb-2">
             {{ $t('featureGrid.hatchTitle') }}
           </h4>
-          <p class="text-on-surface-variant max-w-md">
+          <p class="text-on-surface-variant text-sm">
             {{ $t('featureGrid.hatchDesc') }}
           </p>
         </div>
       </div>
       
-      <!-- Small Feature -->
+      <!-- Growth -->
+      <div @click="$router.push('/growth')" class="md:col-span-3 bg-surface-container-low rounded-xl p-8 flex flex-col justify-between group cursor-pointer hover:bg-surface-container transition-colors">
+        <div class="flex justify-between items-start">
+          <div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center">
+            <span class="material-symbols-outlined text-3xl text-on-secondary-container">trending_up</span>
+          </div>
+          <span class="font-serif italic text-4xl text-primary/20 group-hover:text-primary/40 transition-colors">02</span>
+        </div>
+        <div class="mt-8">
+          <h4 class="font-serif text-2xl font-bold text-primary mb-2">
+            {{ $t('featureGrid.growthTitle') }}
+          </h4>
+          <p class="text-on-surface-variant text-sm">
+            {{ $t('featureGrid.growthDesc') }}
+          </p>
+        </div>
+      </div>
+      
+      <!-- Flight -->
+      <div @click="$router.push('/flight')" class="md:col-span-2 bg-tertiary-container rounded-xl p-8 flex flex-col justify-between group hover:opacity-90 transition-opacity cursor-pointer">
+        <span class="material-symbols-outlined text-4xl text-on-tertiary-container">flight</span>
+        <div class="mt-8">
+          <h4 class="font-serif text-xl font-bold text-on-tertiary-container mb-2">
+            {{ $t('featureGrid.flightTitle') }}
+          </h4>
+          <p class="text-on-tertiary-fixed-variant text-sm">
+            {{ $t('featureGrid.flightDesc') }}
+          </p>
+        </div>
+      </div>
+      
+      <!-- Hunt -->
       <div @click="$router.push('/hunt')" class="md:col-span-2 bg-secondary-container rounded-xl p-8 flex flex-col justify-between group hover:opacity-90 transition-opacity cursor-pointer">
         <span class="material-symbols-outlined text-4xl text-on-secondary-container">target</span>
         <div class="mt-8">
-          <h4 class="font-serif text-2xl font-bold text-on-secondary-container mb-2">
+          <h4 class="font-serif text-xl font-bold text-on-secondary-container mb-2">
             {{ $t('featureGrid.huntTitle') }}
           </h4>
           <p class="text-on-secondary-fixed-variant text-sm">
@@ -41,27 +72,27 @@
         </div>
       </div>
       
-      <!-- Horizontal Feature -->
-      <div @click="$router.push('/flight')" class="md:col-span-3 bg-surface-container-low rounded-xl p-8 flex items-center gap-6 group cursor-pointer hover:bg-surface-container transition-colors">
-        <div class="flex-1">
-          <h4 class="font-serif text-2xl font-bold text-primary mb-2">
-            {{ $t('featureGrid.flightTitle') }}
+      <!-- Mate -->
+      <div @click="$router.push('/mate')" class="md:col-span-2 bg-surface-container-high rounded-xl p-8 flex flex-col justify-between group cursor-pointer hover:bg-surface-container-highest transition-colors">
+        <span class="material-symbols-outlined text-4xl text-primary">favorite</span>
+        <div class="mt-8">
+          <h4 class="font-serif text-xl font-bold text-primary mb-2">
+            {{ $t('featureGrid.mateTitle') }}
           </h4>
           <p class="text-on-surface-variant text-sm">
-            {{ $t('featureGrid.flightDesc') }}
+            {{ $t('featureGrid.mateDesc') }}
           </p>
         </div>
-        <span class="material-symbols-outlined text-5xl text-primary/30 group-hover:scale-110 transition-transform">flight</span>
       </div>
       
-      <!-- Another Feature -->
-      <div @click="$router.push('/nest')" class="md:col-span-3 bg-surface-container-highest rounded-xl p-8 flex items-center gap-6 group cursor-pointer hover:opacity-95 transition-opacity">
+      <!-- Nest -->
+      <div @click="$router.push('/nest')" class="md:col-span-6 bg-surface-container-highest rounded-xl p-8 flex items-center gap-6 group cursor-pointer hover:opacity-95 transition-opacity">
         <span class="material-symbols-outlined text-5xl text-primary">home_max</span>
         <div class="flex-1">
           <h4 class="font-serif text-2xl font-bold text-primary mb-2">
             {{ $t('featureGrid.nestTitle') }}
           </h4>
-          <p class="text-on-surface-variant text-sm">
+          <p class="text-on-surface-variant">
             {{ $t('featureGrid.nestDesc') }}
           </p>
         </div>

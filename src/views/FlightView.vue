@@ -7,9 +7,9 @@
         <div class="md:col-span-7 relative group">
           <div class="aspect-[4/5] overflow-hidden rounded-xl bg-surface-container-low shadow-sm relative">
             <img
-              alt="Kestrel taking flight"
+              alt="Kestrel soaring in flight"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuArJqhHB6WMzUzTpvSLeRtUHh9rOagN65nxNhgEyf2kLGmY2UQa6gNaF3T5FcZU0_5uSk8az2Ji4X5xZu5OkWO4JqJZ_TV8pVq5_h_FFj3OxIdQBYWxyI2DdZv6xE5RFZSAh3RUDwm1yHGV0xDOoSAl59w4tO9lYxbQRrW-8fR81u1x76QWmsO_ORF9V35-S029t26Y4Q90YEbTNTxWlAAvZbB01mDSdxAFPhASbM9dp79XwKsvDCAMSHVwT815MlzNQY5SGg_VuH-4"
+              src="/bf-kestrel-in-flight.jpg"
             />
             <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-[#1a1c19]/60 to-transparent">
               <p class="text-white/80 font-label text-[10px] tracking-[0.2em] uppercase mb-1">{{ $t('flight.obsLabel') }}</p>

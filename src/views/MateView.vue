@@ -6,7 +6,7 @@
       <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end mb-24">
         <div class="lg:col-span-7 relative">
           <div class="aspect-[4/5] bg-surface-container-low rounded-xl overflow-hidden shadow-sm relative">
-            <img alt="Two kestrels on a high branch" class="w-full h-full object-cover grayscale-[20%] sepia-[10%] opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyR3mTM15DcOg0P-faAuWrTrqhufqUbX_9lqh9smv0Y5X3SQNFirS2qcdRbzySXkLhDgxMLGcylhEqe7HvfU4nwQhe3-KJ9UbrF3OllTfbEsGGd86OGiGcbVVJ1p9zeWxGMEAczbI1-9GCEGZYV7E-1edD7FM-LLfzA693pV8W3oOGwt9DPNSD2f6268qWy8sgHLUUwjzKxiy3mjPfQJgW81xedv_lwj8HqiLLnw3eOOjtwzJ9KqA5yWuC-kW9J0Q0H4xm98LsgQIW"/>
+            <img alt="Male and female kestrels perched together" class="w-full h-full object-cover grayscale-[20%] sepia-[10%] opacity-90" src="/bf-male-and-female-common-kestrels.jpg"/>
             <!-- Overlapping Specimen Component -->
             <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-surface-container-lowest p-4 shadow-xl rotate-3 border border-outline-variant/20 hidden md:block">
               <img alt="Kestrel eggs in nest" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJwjUnX6oUEzB9gCAaugasQ8y3i3RVKqke1nIlft3sFpG4UYO8J-7H9om0UKdkX7ZJFtd8-Hzr_8pTahoH31Mwh_m5UvAZQ8fiA6u1J527f1rp2XbN3P-V7Y1Kt5gLymlTHR2hJX3nRz1BM3rmLU7A3Z4N1CWlcbVpflmLk4m1yheHB0JVzX5vq3fG5HSy837ZUQky-J9jQchESc_BqB8VQundgjtolH4dmGHSNZJt01pGBzELwbMCej7Fw--M9fdtMxA-xKwy8BVG"/>

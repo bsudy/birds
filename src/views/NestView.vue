@@ -23,7 +23,7 @@
         <div class="w-full md:w-1/2 order-1 md:order-2 relative flex justify-center items-center">
           <div class="relative w-full aspect-square bg-surface-container-low rounded-full flex items-center justify-center p-12 overflow-visible">
             <div class="absolute inset-0 border-2 border-dashed border-outline-variant/30 rounded-full animate-spin-slow"></div>
-            <img alt="Kestrel perched at a nesting site on a high ledge" class="nest-hero-image w-full h-full object-contain relative z-10 transform -rotate-6 scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0VdzSnDgajSW5H4T7GiFgpXBdBNwmhQSIAJoUFtr2WfAGw7vJAqpVNCDMZdJrE_vtQkRnSo8tuLVpkgkaEaXxP3RznYDiOQL9M0BKhinniHqUE1Sy1FqQt7kzIenYmEcB6HtooZrbMRfBneWrsK6gIm54-F7ISEjvKyLHqkj2vqGORr0ZDmcBmUzLi1fyZ8FDPglcCQeR8hRPZAAPbnlkrlP0oCadNaqqk27iJGo9NvPgJcKPU_6bojLLMW_terAYtUxT9TkiiiNf"/>
+            <img alt="Kestrel eggs in a nest" class="nest-hero-image w-full h-full object-cover relative z-10 transform -rotate-6 scale-110 rounded-full" src="/kestrel-nest.jpg"/>
             <div class="absolute top-0 right-0 bg-surface-container-lowest p-4 shadow-xl rounded-lg z-20 max-w-[150px]">
               <p class="font-label text-[10px] text-outline uppercase mb-1">
                 {{ $t('nest.nestingHeightLabel') }}

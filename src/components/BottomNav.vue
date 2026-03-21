@@ -1,25 +1,25 @@
 <template>
   <nav class="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-[#fafaf5] dark:bg-zinc-900 border-t border-outline-variant/20 shadow-[0_-4px_16px_rgba(0,0,0,0.05)]">
-    <div class="flex justify-around items-center w-full px-4 py-3">
+    <div class="flex justify-around items-center w-full px-1 py-2">
       <router-link
         v-for="item in navItems"
         :key="item.path"
         :to="item.path"
         :class="[
-          'flex flex-col items-center justify-center cursor-pointer transition-all duration-300',
+          'flex flex-col items-center justify-center cursor-pointer transition-all duration-300 min-w-0',
           isActive(item.path)
-            ? 'bg-[#4f6d58] text-white rounded-full px-4 py-1 scale-110'
+            ? 'bg-[#4f6d58] text-white rounded-full px-2 py-1'
             : 'text-[#375541]/60 dark:text-zinc-400 group'
         ]"
       >
         <span
           :class="[
-            'material-symbols-outlined',
+            'material-symbols-outlined text-[20px] leading-none',
             !isActive(item.path) && 'transition-transform duration-300 group-hover:scale-110'
           ]"
           :style="isActive(item.path) ? { fontVariationSettings: '\'FILL\' 1' } : {}"
         >{{ item.icon }}</span>
-        <span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope mt-0.5">{{ $t(item.labelKey) }}</span>
+        <span class="font-sans font-medium text-[8px] tracking-wide uppercase mt-0.5 truncate max-w-[44px]">{{ $t(item.labelKey) }}</span>
       </router-link>
     </div>
   </nav>

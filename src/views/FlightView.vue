@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-background text-on-background selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
+  <div class="font-body text-on-surface selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
 
     <main class="pb-12 px-6 max-w-7xl mx-auto">
       <!-- Hero Section -->

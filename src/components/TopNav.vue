@@ -4,7 +4,8 @@
       <router-link to="/" class="flex items-center gap-3 no-underline">
         <span class="material-symbols-outlined text-[#375541] dark:text-[#8ba891]">nest_cam_outdoor</span>
         <h1 class="font-serif font-bold text-xl Newsreader text-[#375541] dark:text-[#8ba891] tracking-tight italic">
-          {{ $t('nav.siteTitle') }}
+          <span class="md:hidden">{{ $t('nav.siteTitleShort') }}</span>
+          <span class="hidden md:inline">{{ $t('nav.siteTitle') }}</span>
         </h1>
       </router-link>
       <div class="flex items-center gap-4">

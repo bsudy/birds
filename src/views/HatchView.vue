@@ -3,44 +3,30 @@
 
     <main class="pb-12 px-6 md:px-12 max-w-7xl mx-auto">
       <!-- Hero Section: The Specimen -->
-      <section class="relative min-h-[618px] flex flex-col md:flex-row items-center justify-between gap-12 mb-24">
-        <div class="w-full md:w-1/2 order-2 md:order-1">
-          <PhaseLabel>{{ $t('hatch.phaseLabel') }}</PhaseLabel>
-          <h2 class="font-headline text-5xl md:text-7xl text-primary leading-tight mb-8" v-html="$t('hatch.heroTitle')"></h2>
-          <div class="text-lg text-on-surface-variant leading-relaxed mb-10 max-w-md">
-            <p>{{ $t('hatch.heroDesc') }}</p>
-          </div>
-          <div class="flex items-center gap-4">
-            <button class="bg-primary text-on-primary px-8 py-3 rounded shadow-lg flex items-center gap-2 hover:opacity-90 transition-all">
-              {{ $t('hatch.observeCycle') }}
-              <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
-            </button>
-            <button class="text-primary font-bold underline underline-offset-4 decoration-primary_fixed_dim hover:opacity-80">
-              {{ $t('hatch.fieldNotes') }}
-            </button>
-          </div>
+      <SpecimenHero image-src="/bf-kestrel-eggs.jpg" image-alt="Kestrel eggs in a nest">
+        <PhaseLabel>{{ $t('hatch.phaseLabel') }}</PhaseLabel>
+        <h2 class="font-headline text-5xl md:text-7xl text-primary leading-tight mb-8" v-html="$t('hatch.heroTitle')"></h2>
+        <div class="text-lg text-on-surface-variant leading-relaxed mb-10 max-w-md">
+          <p>{{ $t('hatch.heroDesc') }}</p>
         </div>
-        <div class="w-full md:w-1/2 order-1 md:order-2 relative flex justify-center items-center">
-          <div class="relative w-full aspect-square bg-surface-container-low rounded-full flex items-center justify-center p-12 overflow-visible">
-            <div class="absolute inset-0 border-2 border-dashed border-outline-variant/30 rounded-full animate-spin-slow"></div>
-            <img alt="Kestrel eggs in a nest" class="specimen-image w-full h-full object-cover relative z-10 transform -rotate-12 scale-110 rounded-full" src="/bf-kestrel-eggs.jpg"/>
-            <div class="absolute top-0 right-0 bg-surface-container-lowest p-4 shadow-xl rounded-lg z-20 max-w-[150px]">
-              <p class="font-label text-[10px] text-outline uppercase mb-1">
-                {{ $t('hatch.incubationLabel') }}
-              </p>
-              <p class="font-headline text-2xl text-primary">
-                {{ $t('hatch.incubationValue') }}
-              </p>
-            </div>
-            <div class="absolute bottom-10 -left-10 bg-surface-container-lowest p-4 shadow-xl rounded-lg z-20 max-w-[150px]">
-              <p class="font-label text-[10px] text-outline uppercase mb-1">
-                {{ $t('hatch.successRateLabel') }}
-              </p>
-              <p class="font-headline text-2xl text-tertiary">84%</p>
-            </div>
-          </div>
+        <div class="flex items-center gap-4">
+          <button class="bg-primary text-on-primary px-8 py-3 rounded shadow-lg flex items-center gap-2 hover:opacity-90 transition-all">
+            {{ $t('hatch.observeCycle') }}
+            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+          </button>
+          <button class="text-primary font-bold underline underline-offset-4 decoration-primary_fixed_dim hover:opacity-80">
+            {{ $t('hatch.fieldNotes') }}
+          </button>
         </div>
-      </section>
+        <template #stat-top>
+          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('hatch.incubationLabel') }}</p>
+          <p class="font-headline text-2xl text-primary">{{ $t('hatch.incubationValue') }}</p>
+        </template>
+        <template #stat-bottom>
+          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('hatch.successRateLabel') }}</p>
+          <p class="font-headline text-2xl text-tertiary">84%</p>
+        </template>
+      </SpecimenHero>
 
       <!-- Detailed Content: Bento Grid Style -->
       <section class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-24">
@@ -114,17 +100,14 @@
 
 <script>
 import PhaseLabel from '@/components/PhaseLabel.vue'
+import SpecimenHero from '@/components/SpecimenHero.vue'
 export default {
   name: 'HatchView',
-  components: { PhaseLabel }
+  components: { PhaseLabel, SpecimenHero }
 }
 </script>
 
 <style>
-.specimen-image {
-  filter: drop-shadow(0 10px 15px rgba(55, 85, 65, 0.1));
-}
-
 [data-lang]:not(.active-lang) {
   display: none;
 }

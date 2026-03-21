@@ -3,30 +3,22 @@
 
     <main class="pb-12 px-6 max-w-7xl mx-auto">
       <!-- Hero Section: The Hunt in Motion -->
-      <section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end mb-20">
-        <div class="md:col-span-7 relative group">
-          <div class="aspect-[4/5] overflow-hidden rounded-xl bg-surface-container-low">
-            <img
-              alt="Kestrel portrait"
-              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              src="/bf-kestrel-portrait.jpg"
-            />
-          </div>
-          <!-- Asymmetric Specimen Overlay -->
-          <div class="absolute -bottom-6 -right-6 md:-right-12 bg-surface-container-lowest p-6 rounded-xl shadow-xl max-w-xs border-l-4 border-primary">
-            <p class="font-headline italic text-2xl text-primary mb-2">Falco tinnunculus</p>
-            <p class="text-sm text-on-surface-variant leading-relaxed">{{ $t('hunt.specimenDesc') }}</p>
-          </div>
+      <SpecimenHero image-src="/bf-male-kestrel-hunting-flight.jpg" image-alt="Male kestrel hunting in flight" :flip="true">
+        <PhaseLabel>{{ $t('hunt.stageLabel') }}</PhaseLabel>
+        <h2 class="font-headline text-5xl md:text-7xl leading-tight text-on-surface mb-8">{{ $t('hunt.heroTitle') }}</h2>
+        <div class="space-y-6 text-lg text-on-surface-variant font-light leading-relaxed mb-10">
+          <p v-html="$t('hunt.heroParagraph1')"></p>
+          <p>{{ $t('hunt.heroParagraph2') }}</p>
         </div>
-        <div class="md:col-span-5 md:pl-12 pb-12">
-          <PhaseLabel>{{ $t('hunt.stageLabel') }}</PhaseLabel>
-          <h2 class="font-headline text-5xl md:text-7xl leading-tight text-on-surface mb-8">{{ $t('hunt.heroTitle') }}</h2>
-          <div class="space-y-6 text-lg text-on-surface-variant font-light leading-relaxed">
-            <p v-html="$t('hunt.heroParagraph1')"></p>
-            <p>{{ $t('hunt.heroParagraph2') }}</p>
-          </div>
-        </div>
-      </section>
+        <template #stat-top>
+          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('hunt.volesLabel') }}</p>
+          <p class="font-headline text-2xl text-primary">75%</p>
+        </template>
+        <template #stat-bottom>
+          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('hunt.beetlesLabel') }}</p>
+          <p class="font-headline text-2xl text-tertiary">12%</p>
+        </template>
+      </SpecimenHero>
 
       <!-- Bento Grid: The Scientific Anatomy -->
       <section class="mb-24">
@@ -124,19 +116,9 @@
 
 <script>
 import PhaseLabel from '@/components/PhaseLabel.vue'
+import SpecimenHero from '@/components/SpecimenHero.vue'
 export default {
   name: 'HuntView',
-  components: { PhaseLabel }
+  components: { PhaseLabel, SpecimenHero }
 }
 </script>
-
-<style>
-.perspective-card {
-  perspective: 1000px;
-}
-
-.bg-glass {
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-}
-</style>

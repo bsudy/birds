@@ -3,34 +3,22 @@
 
     <main class="pb-12 px-6 max-w-7xl mx-auto">
       <!-- Hero Section -->
-      <section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end mb-20">
-        <div class="md:col-span-7 relative group">
-          <div class="aspect-[4/5] overflow-hidden rounded-xl bg-surface-container-low shadow-sm relative">
-            <img
-              alt="Kestrel soaring in flight"
-              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              src="/bf-kestrel-in-flight.jpg"
-            />
-            <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-[#1a1c19]/60 to-transparent">
-              <p class="text-white/80 font-label text-[10px] tracking-[0.2em] uppercase mb-1">{{ $t('flight.obsLabel') }}</p>
-              <h2 class="font-headline text-3xl text-white italic">Falco tinnunculus</h2>
-            </div>
-          </div>
-          <!-- Asymmetric Specimen Overlay -->
-          <div class="absolute -bottom-6 -right-6 md:-right-12 bg-surface-container-lowest p-6 rounded-xl shadow-xl max-w-xs border-l-4 border-primary z-10">
-            <p class="font-label text-[9px] uppercase tracking-tighter text-tertiary mb-1">{{ $t('flight.statusLabel') }}</p>
-            <p class="font-body text-sm font-bold text-on-surface">{{ $t('flight.statusText') }}</p>
-          </div>
+      <SpecimenHero image-src="/bf-kestrel-in-flight.jpg" image-alt="Kestrel soaring in flight" :flip="true">
+        <PhaseLabel>{{ $t('flight.phaseLabel') }}</PhaseLabel>
+        <h2 class="font-headline text-5xl md:text-7xl leading-tight text-on-surface mb-8">{{ $t('flight.title') }}</h2>
+        <div class="space-y-6 text-lg text-on-surface-variant font-light leading-relaxed mb-10">
+          <p>{{ $t('flight.s1Body') }}</p>
+          <p class="font-headline italic text-2xl text-tertiary-container py-4 border-l-2 border-primary-container/20 pl-6">"{{ $t('flight.fieldNotesQuote') }}"</p>
         </div>
-        <div class="md:col-span-5 md:pl-12 pb-12">
-          <PhaseLabel>{{ $t('flight.phaseLabel') }}</PhaseLabel>
-          <h2 class="font-headline text-5xl md:text-7xl leading-tight text-on-surface mb-8">{{ $t('flight.title') }}</h2>
-          <div class="space-y-6 text-lg text-on-surface-variant font-light leading-relaxed">
-            <p>{{ $t('flight.s1Body') }}</p>
-            <p class="font-headline italic text-2xl text-tertiary-container py-4 border-l-2 border-primary-container/20 pl-6">"{{ $t('flight.fieldNotesQuote') }}"</p>
-          </div>
-        </div>
-      </section>
+        <template #stat-top>
+          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('flight.stat4Label') }}</p>
+          <p class="font-headline text-2xl text-primary">60 km/h</p>
+        </template>
+        <template #stat-bottom>
+          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('flight.stat2Label') }}</p>
+          <p class="font-headline text-2xl text-tertiary">2.5k m</p>
+        </template>
+      </SpecimenHero>
 
       <!-- Bento Grid: Flight Science -->
       <section class="mb-24">
@@ -134,8 +122,9 @@
 
 <script>
 import PhaseLabel from '@/components/PhaseLabel.vue'
+import SpecimenHero from '@/components/SpecimenHero.vue'
 export default {
   name: 'FlightView',
-  components: { PhaseLabel }
+  components: { PhaseLabel, SpecimenHero }
 }
 </script>

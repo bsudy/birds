@@ -2,78 +2,36 @@
   <div class="font-body text-on-surface selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
 
     <main class="pb-12 px-6 max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
-        <!-- Left Column: Narrative Content -->
-        <div class="lg:col-span-5 flex flex-col justify-center">
-          <PhaseLabel>{{ $t('growth.phaseLabel') }}</PhaseLabel>
-          <h2 class="font-headline text-5xl md:text-7xl text-primary leading-tight mb-8">
-            {{ $t('growth.titleLine1') }} <br/>
-            <span class="italic">{{ $t('growth.titleLine2') }}</span>
-          </h2>
-
-          <div class="space-y-6 text-on-surface-variant leading-relaxed text-lg">
-            <p>{{ $t('growth.introParagraph') }}</p>
-            <p class="font-headline italic text-2xl text-tertiary-container py-4 border-l-2 border-primary-container/20 pl-6">"{{ $t('growth.quote') }}"</p>
-            <p>{{ $t('growth.secondParagraph') }}</p>
-          </div>
-
-          <div class="mt-12 flex gap-4">
-            <button class="bg-primary text-on-primary px-8 py-4 rounded shadow-sm flex items-center gap-2 hover:opacity-90 transition-all active:scale-95">
-              <span class="material-symbols-outlined">menu_book</span>
-              <span>{{ $t('growth.viewFieldData') }}</span>
-            </button>
-            <button class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded flex items-center gap-2 hover:opacity-90 transition-all">
-              <span class="material-symbols-outlined">volume_up</span>
-              <span>{{ $t('growth.calls') }}</span>
-            </button>
-          </div>
+      <!-- Hero Section -->
+      <SpecimenHero image-src="/bf-young-kestrels.jpg" image-alt="Young kestrels in a nest">
+        <PhaseLabel>{{ $t('growth.phaseLabel') }}</PhaseLabel>
+        <h2 class="font-headline text-5xl md:text-7xl text-primary leading-tight mb-8">
+          {{ $t('growth.titleLine1') }} <br/>
+          <span class="italic">{{ $t('growth.titleLine2') }}</span>
+        </h2>
+        <div class="space-y-6 text-on-surface-variant leading-relaxed text-lg mb-10">
+          <p>{{ $t('growth.introParagraph') }}</p>
+          <p class="font-headline italic text-2xl text-tertiary-container py-4 border-l-2 border-primary-container/20 pl-6">"{{ $t('growth.quote') }}"</p>
         </div>
-
-        <!-- Right Column: Specimen Illustrations -->
-        <div class="lg:col-span-7 relative">
-          <div class="bg-surface-container-low p-8 md:p-12 relative overflow-visible">
-            <div class="absolute -top-12 -right-8 w-64 h-64 md:w-80 md:h-80 bg-surface-container-highest rounded-full flex items-center justify-center shadow-xl rotate-3">
-              <img
-                alt="Young kestrels in a nest"
-                class="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-700"
-                src="/bf-young-kestrels.jpg"
-              />
-            </div>
-            <div class="pt-32 md:pt-16 max-w-md">
-              <h3 class="font-label uppercase tracking-widest text-xs text-primary mb-4">{{ $t('growth.observationLog') }}</h3>
-              <div class="space-y-4">
-                <div class="flex justify-between items-end border-b border-outline-variant/20 pb-2">
-                  <span class="text-xs font-bold uppercase tracking-tighter">{{ $t('growth.preyFrequency') }}</span>
-                  <span class="font-headline italic text-xl">4-6 / hr</span>
-                </div>
-                <div class="flex justify-between items-end border-b border-outline-variant/20 pb-2">
-                  <span class="text-xs font-bold uppercase tracking-tighter">{{ $t('growth.growthRate') }}</span>
-                  <span class="font-headline italic text-xl">14.2g / daily</span>
-                </div>
-                <div class="flex justify-between items-end border-b border-outline-variant/20 pb-2">
-                  <span class="text-xs font-bold uppercase tracking-tighter">{{ $t('growth.plumageType') }}</span>
-                  <span class="font-headline italic text-xl">Pre-juvenal</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Floating Detail Card (Asymmetry) -->
-          <div class="mt-8 ml-auto max-w-sm bg-surface-container-lowest p-6 shadow-sm relative z-10 -mr-4 border-l-4 border-tertiary">
-            <div class="flex items-start gap-4">
-              <span class="material-symbols-outlined text-tertiary mt-1">info</span>
-              <div>
-                <h4 class="font-bold text-sm mb-1 uppercase tracking-tight">
-                  {{ $t('growth.detailCardTitle') }}
-                </h4>
-                <p class="text-sm text-on-surface-variant">{{ $t('growth.detailCardBody') }}</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+        <div class="flex gap-4">
+          <button class="bg-primary text-on-primary px-8 py-4 rounded shadow-sm flex items-center gap-2 hover:opacity-90 transition-all active:scale-95">
+            <span class="material-symbols-outlined">menu_book</span>
+            <span>{{ $t('growth.viewFieldData') }}</span>
+          </button>
+          <button class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded flex items-center gap-2 hover:opacity-90 transition-all">
+            <span class="material-symbols-outlined">volume_up</span>
+            <span>{{ $t('growth.calls') }}</span>
+          </button>
         </div>
-      </div>
+        <template #stat-top>
+          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('growth.growthRate') }}</p>
+          <p class="font-headline text-2xl text-primary">14.2g/day</p>
+        </template>
+        <template #stat-bottom>
+          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('growth.preyFrequency') }}</p>
+          <p class="font-headline text-2xl text-tertiary">4-6 / hr</p>
+        </template>
+      </SpecimenHero>
 
       <!-- Secondary Content Section: Bento Grid Visuals -->
       <section class="mt-32">
@@ -120,14 +78,9 @@
 
 <script>
 import PhaseLabel from '@/components/PhaseLabel.vue'
+import SpecimenHero from '@/components/SpecimenHero.vue'
 export default {
   name: 'GrowthView',
-  components: { PhaseLabel }
+  components: { PhaseLabel, SpecimenHero }
 }
 </script>
-
-<style>
-.specimen-overlap {
-  margin-top: -4rem;
-}
-</style>

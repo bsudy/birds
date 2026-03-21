@@ -3,25 +3,21 @@
 
     <main class="pb-12 px-6 max-w-7xl mx-auto">
       <!-- Hero Section -->
-      <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end mb-24">
-        <div class="lg:col-span-7 relative">
-          <div class="aspect-[4/5] bg-surface-container-low rounded-xl overflow-hidden shadow-sm relative">
-            <img alt="Male and female kestrels perched together" class="w-full h-full object-cover grayscale-[20%] sepia-[10%] opacity-90" src="/bf-male-and-female-common-kestrels.jpg"/>
-            <!-- Overlapping Specimen Component -->
-            <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-surface-container-lowest p-4 shadow-xl rotate-3 border border-outline-variant/20 hidden md:block">
-              <img alt="Kestrel eggs in nest" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJwjUnX6oUEzB9gCAaugasQ8y3i3RVKqke1nIlft3sFpG4UYO8J-7H9om0UKdkX7ZJFtd8-Hzr_8pTahoH31Mwh_m5UvAZQ8fiA6u1J527f1rp2XbN3P-V7Y1Kt5gLymlTHR2hJX3nRz1BM3rmLU7A3Z4N1CWlcbVpflmLk4m1yheHB0JVzX5vq3fG5HSy837ZUQky-J9jQchESc_BqB8VQundgjtolH4dmGHSNZJt01pGBzELwbMCej7Fw--M9fdtMxA-xKwy8BVG"/>
-              <p class="mt-2 font-serif italic text-xs text-primary">{{ $t('mate.plateCaption') }}</p>
-            </div>
-          </div>
-        </div>
-        <div class="lg:col-span-5 mb-12">
-          <PhaseLabel>{{ $t('mate.chapterLabel') }}</PhaseLabel>
-          <h2 class="font-serif text-5xl md:text-7xl leading-[1.1] text-on-surface mb-8">
-            {{ $t('mate.heroTitleLine1') }} <br/><span class="italic text-primary">{{ $t('mate.heroTitleLine2') }}</span>
-          </h2>
-          <p class="font-body text-lg text-on-surface-variant leading-relaxed max-w-md">{{ $t('mate.heroDesc') }}</p>
-        </div>
-      </section>
+      <SpecimenHero image-src="/bf-male-and-female-common-kestrels.jpg" image-alt="Male and female kestrels perched together" :flip="true">
+        <PhaseLabel>{{ $t('mate.chapterLabel') }}</PhaseLabel>
+        <h2 class="font-serif text-5xl md:text-7xl leading-[1.1] text-on-surface mb-8">
+          {{ $t('mate.heroTitleLine1') }} <br/><span class="italic text-primary">{{ $t('mate.heroTitleLine2') }}</span>
+        </h2>
+        <p class="font-body text-lg text-on-surface-variant leading-relaxed max-w-md mb-10">{{ $t('mate.heroDesc') }}</p>
+        <template #stat-top>
+          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('mate.eggsTitle') }}</p>
+          <p class="font-headline text-2xl text-primary">3-6 eggs</p>
+        </template>
+        <template #stat-bottom>
+          <p class="font-label text-[10px] text-outline uppercase mb-1">Breeding season</p>
+          <p class="font-headline text-2xl text-tertiary">Apr–Jul</p>
+        </template>
+      </SpecimenHero>
 
       <!-- Bento Grid: Lifecycle Details -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
@@ -83,9 +79,10 @@
 
 <script>
 import PhaseLabel from '@/components/PhaseLabel.vue'
+import SpecimenHero from '@/components/SpecimenHero.vue'
 export default {
   name: 'MateView',
-  components: { PhaseLabel }
+  components: { PhaseLabel, SpecimenHero }
 }
 </script>
 

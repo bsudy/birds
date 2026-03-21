@@ -1,43 +1,7 @@
 <template>
   <div class="font-body text-on-surface antialiased overflow-x-hidden">
-    <!-- TopAppBar -->
-    <header class="fixed top-0 w-full z-50 bg-[#fafaf5]/70 dark:bg-zinc-900/70 backdrop-blur-xl flex items-center justify-between px-6 py-4 no-border bg-surface-container-low shadow-none">
-      <div class="flex items-center gap-3">
-        <span class="material-symbols-outlined text-[#375541] dark:text-[#8ba891]" data-icon="nest_cam_pigeon">nest_cam_outdoor</span>
-        <h1 class="font-serif font-bold text-xl Newsreader text-[#375541] dark:text-[#8ba891]">
-          <span v-if="currentLang === 'en'">Common Kestrel: The Living Archive</span>
-          <span v-if="currentLang === 'de'">Turmfalke: Das lebende Archiv</span>
-          <span v-if="currentLang === 'hu'">Vörös vércse: Az élő archívum</span>
-        </h1>
-      </div>
-      <div class="flex gap-4 md:gap-8 items-center">
-        <div class="hidden md:flex gap-8 items-center">
-          <router-link to="/hatch" class="text-zinc-500 font-medium transition-opacity hover:opacity-80">
-            <span v-if="currentLang === 'en'">Hatch</span>
-            <span v-if="currentLang === 'de'">Schlüpfen</span>
-            <span v-if="currentLang === 'hu'">Kikelés</span>
-          </router-link>
-          <router-link to="/nest" class="text-[#375541] dark:text-[#8ba891] font-medium transition-opacity hover:opacity-80">
-            <span v-if="currentLang === 'en'">Nest</span>
-            <span v-if="currentLang === 'de'">Nest</span>
-            <span v-if="currentLang === 'hu'">Fészek</span>
-          </router-link>
-          <router-link to="/hunt" class="text-zinc-500 font-medium transition-opacity hover:opacity-80">
-            <span v-if="currentLang === 'en'">Hunt</span>
-            <span v-if="currentLang === 'de'">Jagd</span>
-            <span v-if="currentLang === 'hu'">Vadászat</span>
-          </router-link>
-          <router-link to="/flight" class="text-zinc-500 font-medium transition-opacity hover:opacity-80">
-            <span v-if="currentLang === 'en'">Flight</span>
-            <span v-if="currentLang === 'de'">Flug</span>
-            <span v-if="currentLang === 'hu'">Repülés</span>
-          </router-link>
-        </div>
-        <LanguageSwitcher />
-      </div>
-    </header>
 
-    <main class="pt-24 pb-32 px-6 md:px-12 max-w-7xl mx-auto">
+    <main class="pb-12 px-6 md:px-12 max-w-7xl mx-auto">
       <!-- Hero Section -->
       <section class="relative min-h-[618px] flex flex-col md:flex-row items-center justify-between gap-12 mb-24">
         <div class="w-full md:w-1/2 order-2 md:order-1">
@@ -214,12 +178,10 @@
 </template>
 
 <script>
-import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
 import { languageStore } from '@/stores/language'
 
 export default {
   name: 'NestView',
-  components: { LanguageSwitcher },
   computed: {
     currentLang() {
       return languageStore.currentLang

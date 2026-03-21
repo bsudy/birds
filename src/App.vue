@@ -1,16 +1,18 @@
 <template>
-  <div class="min-h-screen pb-20">
+  <div class="min-h-screen pt-16 pb-20">
+    <TopNav />
     <router-view />
     <BottomNav />
   </div>
 </template>
 
 <script>
+import TopNav from '@/components/TopNav.vue'
 import BottomNav from '@/components/BottomNav.vue'
 
 export default {
   name: 'App',
-  components: { BottomNav }
+  components: { TopNav, BottomNav }
 }
 </script>
 

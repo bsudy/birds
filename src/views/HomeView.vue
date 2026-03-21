@@ -1,24 +1,7 @@
 <template>
   <div class="bg-background text-on-surface selection:bg-primary-fixed-dim selection:text-on-primary-fixed min-h-screen">
-    <!-- TopAppBar with Language Selector -->
-    <header class="fixed top-0 w-full z-50 bg-[#fafaf5]/70 dark:bg-zinc-900/70 backdrop-blur-xl">
-      <div class="flex items-center justify-between px-6 py-4 w-full">
-        <div class="flex items-center gap-2">
-          <span class="material-symbols-outlined text-[#375541] dark:text-[#8ba891]">nest_cam_outdoor</span>
-          <h1 class="font-serif font-bold text-xl Newsreader text-[#375541] dark:text-[#8ba891]">Common Kestrel: The Living Archive</h1>
-        </div>
-        <div class="flex items-center gap-4">
-          <div class="hidden md:flex gap-8 items-center mr-4">
-            <router-link to="/hatch" class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope text-[#375541] dark:text-[#8ba891]">Hatch</router-link>
-            <router-link to="/nest" class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope text-zinc-500 hover:opacity-80 transition-opacity">Nest</router-link>
-            <router-link to="/hunt" class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope text-zinc-500 hover:opacity-80 transition-opacity">Hunt</router-link>
-          </div>
-          <LanguageSwitcher />
-        </div>
-      </div>
-    </header>
 
-    <main class="pt-24 pb-32">
+    <main class="pb-12">
       <!-- Hero Section -->
       <section class="relative min-h-[707px] flex flex-col md:flex-row items-center px-6 md:px-12 max-w-7xl mx-auto overflow-hidden">
         <div class="w-full md:w-1/2 z-10 space-y-8 py-12">
@@ -105,15 +88,13 @@
 <script>
 import FeatureGrid from '@/components/FeatureGrid.vue'
 import SpecimenHighlight from '@/components/SpecimenHighlight.vue'
-import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
 import { languageStore } from '@/stores/language'
 
 export default {
   name: 'HomeView',
   components: {
     FeatureGrid,
-    SpecimenHighlight,
-    LanguageSwitcher
+    SpecimenHighlight
   },
   computed: {
     currentLang() {

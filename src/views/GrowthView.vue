@@ -1,22 +1,7 @@
 <template>
   <div class="font-body text-on-surface selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
-    <!-- TopAppBar -->
-    <header class="fixed top-0 w-full z-50 bg-[#fafaf5]/70 dark:bg-zinc-900/70 backdrop-blur-xl flex items-center justify-between px-6 py-4">
-      <div class="flex items-center gap-3">
-        <span class="material-symbols-outlined text-[#375541] dark:text-[#8ba891]">nest_cam_outdoor</span>
-        <h1 class="font-serif font-bold text-xl Newsreader text-[#375541] dark:text-[#8ba891] tracking-tight italic">Common Kestrel: The Living Archive</h1>
-      </div>
-      <div class="flex items-center gap-4">
-        <div class="hidden md:flex gap-8 items-center mr-4">
-          <router-link to="/" class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope text-[#375541] dark:text-[#8ba891] hover:opacity-80 transition-opacity">Archive</router-link>
-          <router-link to="/" class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope text-zinc-500 hover:opacity-80 transition-opacity">Field Notes</router-link>
-          <router-link to="/" class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope text-zinc-500 hover:opacity-80 transition-opacity">Observation Map</router-link>
-        </div>
-        <LanguageSwitcher />
-      </div>
-    </header>
 
-    <main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
+    <main class="pb-12 px-6 max-w-7xl mx-auto">
       <!-- Breadcrumb / Stage Indicator -->
       <div class="mb-12 flex items-baseline gap-4">
         <span class="text-primary font-headline italic text-4xl">02</span>
@@ -141,12 +126,10 @@
 </template>
 
 <script>
-import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
 import { languageStore } from '@/stores/language'
 
 export default {
   name: 'GrowthView',
-  components: { LanguageSwitcher },
   data() {
     return {
       translations: {

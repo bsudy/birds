@@ -1,19 +1,7 @@
 <template>
   <div class="bg-background text-on-background selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
-    <!-- TopAppBar -->
-    <header class="fixed top-0 w-full z-50 bg-[#fafaf5]/70 dark:bg-stone-900/70 backdrop-blur-xl">
-      <div class="flex justify-between items-center px-6 py-4 w-full">
-        <div class="flex items-center gap-2 text-[#375541] dark:text-[#4f6d58]">
-          <span class="material-symbols-outlined" data-icon="language">language</span>
-        </div>
-        <h1 class="font-serif italic text-2xl tracking-tight text-[#375541] dark:text-[#4f6d58]">{{ t.title }}</h1>
-        <div class="flex items-center">
-          <LanguageSwitcher />
-        </div>
-      </div>
-    </header>
 
-    <main class="pt-24 pb-32 px-6 max-w-md mx-auto overflow-x-hidden">
+    <main class="pb-12 px-6 max-w-md mx-auto overflow-x-hidden">
       <!-- Hero Section -->
       <section class="relative mb-12">
         <div class="aspect-[4/5] overflow-hidden rounded-xl bg-surface-container-low shadow-sm relative group">
@@ -109,12 +97,10 @@
 </template>
 
 <script>
-import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
 import { languageStore } from '@/stores/language'
 
 export default {
   name: 'FlightView',
-  components: { LanguageSwitcher },
   data() {
     return {
       translations: {

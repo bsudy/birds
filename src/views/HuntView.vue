@@ -1,26 +1,7 @@
 <template>
   <div class="font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
-    <!-- TopAppBar -->
-    <header class="fixed top-0 w-full z-50 bg-[#fafaf5]/70 dark:bg-zinc-900/70 backdrop-blur-xl">
-      <div class="flex items-center justify-between px-6 py-4 w-full">
-        <div class="flex items-center gap-3">
-          <span class="material-symbols-outlined text-[#375541] dark:text-[#8ba891]">nest_cam_outdoor</span>
-          <h1 class="font-serif font-bold text-xl Newsreader text-[#375541] dark:text-[#8ba891] tracking-tight italic">Common Kestrel: The Living Archive</h1>
-        </div>
-        <div class="flex items-center gap-4 md:gap-8">
-          <nav class="hidden md:flex gap-8 items-center">
-            <router-link to="/hatch" class="text-[#375541]/60 font-label uppercase tracking-widest text-xs hover:opacity-80 transition-opacity">Hatch</router-link>
-            <router-link to="/nest" class="text-[#375541]/60 font-label uppercase tracking-widest text-xs hover:opacity-80 transition-opacity">Nest</router-link>
-            <router-link to="/hunt" class="text-[#375541] font-label font-bold uppercase tracking-widest text-xs transition-opacity border-b-2 border-primary">Hunt</router-link>
-            <router-link to="/flight" class="text-[#375541]/60 font-label uppercase tracking-widest text-xs hover:opacity-80 transition-opacity">Flight</router-link>
-            <router-link to="/mate" class="text-[#375541]/60 font-label uppercase tracking-widest text-xs hover:opacity-80 transition-opacity">Mate</router-link>
-          </nav>
-          <LanguageSwitcher />
-        </div>
-      </div>
-    </header>
 
-    <main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
+    <main class="pb-12 px-6 max-w-7xl mx-auto">
       <!-- Hero Section: The Hunt in Motion -->
       <section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end mb-20">
         <div class="md:col-span-7 relative group">
@@ -142,12 +123,10 @@
 </template>
 
 <script>
-import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
 import { languageStore } from '@/stores/language'
 
 export default {
   name: 'HuntView',
-  components: { LanguageSwitcher },
   computed: {
     currentLang() {
       return languageStore.currentLang

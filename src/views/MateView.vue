@@ -1,25 +1,7 @@
 <template>
   <div class="bg-background text-on-surface min-h-screen selection:bg-primary-fixed">
-    <!-- TopAppBar -->
-    <header class="fixed top-0 w-full z-50 bg-[#fafaf5]/70 dark:bg-zinc-900/70 backdrop-blur-xl">
-      <div class="flex items-center justify-between px-6 py-4 w-full">
-        <div class="flex items-center gap-3">
-          <span class="material-symbols-outlined text-[#375541] dark:text-[#8ba891]">nest_cam_outdoor</span>
-          <h1 class="font-serif font-bold text-xl Newsreader text-[#375541] dark:text-[#8ba891] tracking-tight italic">Common Kestrel: The Living Archive</h1>
-        </div>
-        <div class="flex gap-4 items-center">
-          <div class="hidden md:flex gap-8 items-center font-sans font-medium text-[12px] tracking-widest uppercase text-zinc-500 mr-4">
-            <router-link to="/hatch" class="hover:opacity-80 transition-opacity cursor-pointer">Hatch</router-link>
-            <router-link to="/nest" class="hover:opacity-80 transition-opacity cursor-pointer">Nest</router-link>
-            <router-link to="/hunt" class="hover:opacity-80 transition-opacity cursor-pointer">Hunt</router-link>
-            <router-link to="/flight" class="hover:opacity-80 transition-opacity cursor-pointer">Flight</router-link>
-            <span class="text-[#375541] dark:text-[#8ba891] font-bold">Mate</span>
-          </div>
-          <LanguageSwitcher />
-        </div>
-      </div>
-    </header>
-    <main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
+
+    <main class="pb-12 px-6 max-w-7xl mx-auto">
       <!-- Hero Section -->
       <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end mb-24">
         <div class="lg:col-span-7 relative">
@@ -100,12 +82,10 @@
 </template>
 
 <script>
-import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
 import { languageStore } from '@/stores/language'
 
 export default {
   name: 'MateView',
-  components: { LanguageSwitcher },
   computed: {
     currentLang() {
       return languageStore.currentLang

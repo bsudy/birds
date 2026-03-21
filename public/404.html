@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      // SPA redirect trick for GitHub Pages
+      // Encodes the current path into a query string and redirects to index.html
+      var path = globalThis.location.pathname;
+      globalThis.location.replace(
+        globalThis.location.origin + '/?path=' + encodeURIComponent(path)
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,15 +1,15 @@
 <template>
   <header class="fixed top-0 w-full z-50 bg-[#fafaf5] dark:bg-zinc-900 border-b border-outline-variant/10">
     <div class="flex items-center justify-between px-6 py-4 w-full">
-      <router-link to="/" class="flex items-center gap-3 no-underline">
-        <span class="material-symbols-outlined text-[#375541] dark:text-[#8ba891]">nest_cam_outdoor</span>
-        <h1 class="font-serif font-bold text-xl Newsreader text-[#375541] dark:text-[#8ba891] tracking-tight italic">
-          <span class="md:hidden">{{ $t('nav.siteTitleShort') }}</span>
-          <span class="hidden md:inline">{{ $t('nav.siteTitle') }}</span>
+      <router-link to="/" class="flex items-center gap-3 no-underline min-w-0 overflow-hidden">
+        <span class="material-symbols-outlined text-[#375541] dark:text-[#8ba891] flex-shrink-0">home</span>
+        <h1 class="font-serif font-bold text-xl Newsreader text-[#375541] dark:text-[#8ba891] tracking-tight italic whitespace-nowrap text-ellipsis">
+          <span class="lg:hidden">{{ $t('nav.siteTitleShort') }}</span>
+          <span class="hidden lg:inline">{{ $t('nav.siteTitle') }}</span>
         </h1>
       </router-link>
       <div class="flex items-center gap-4">
-        <nav class="hidden md:flex gap-8 items-center mr-4">
+        <nav class="hidden lg:flex gap-8 items-center mr-4">
           <router-link
             v-for="item in navItems"
             :key="item.path"

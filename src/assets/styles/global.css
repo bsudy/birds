@@ -10,6 +10,10 @@
 }
 
 /* Base styles */
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Manrope', sans-serif;
     min-height: 100dvh;

@@ -1,12 +1,12 @@
 <template>
-  <section class="relative min-h-[618px] flex flex-col md:flex-row items-center justify-between gap-12 mb-24">
-    <!-- Text content -->
-    <div :class="['w-full md:w-1/2', flip ? 'order-2 md:order-2' : 'order-2 md:order-1']">
+  <section class="relative md:min-h-[618px] flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 mb-24">
+    <!-- Text content: first on mobile, order depends on flip for desktop -->
+    <div :class="['w-full md:w-1/2', flip ? 'order-1 md:order-2' : 'order-1 md:order-1']">
       <slot />
     </div>
 
-    <!-- Circular image -->
-    <div :class="['w-full md:w-1/2 relative flex justify-center items-center', flip ? 'order-1 md:order-1' : 'order-1 md:order-2']">
+    <!-- Circular image: second on mobile, order depends on flip for desktop -->
+    <div :class="['w-full md:w-1/2 relative flex justify-center items-center', flip ? 'order-2 md:order-1' : 'order-2 md:order-2']">
       <div class="relative w-full aspect-square bg-surface-container-low rounded-full flex items-center justify-center p-12 overflow-visible">
         <div class="absolute inset-0 border-2 border-dashed border-outline-variant/30 rounded-full animate-spin-slow"></div>
         <img
@@ -17,7 +17,7 @@
         <div class="absolute top-0 right-0 bg-surface-container-lowest p-4 shadow-xl rounded-lg z-20 max-w-[150px]">
           <slot name="stat-top" />
         </div>
-        <div class="absolute bottom-10 -left-10 bg-surface-container-lowest p-4 shadow-xl rounded-lg z-20 max-w-[150px]">
+        <div class="absolute bottom-10 left-0 md:-left-10 bg-surface-container-lowest p-4 shadow-xl rounded-lg z-20 max-w-[150px]">
           <slot name="stat-bottom" />
         </div>
       </div>

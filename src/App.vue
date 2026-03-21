@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen pt-16 pb-20">
+  <div class="min-h-screen pt-16 pb-20 overflow-x-hidden">
     <TopNav />
     <router-view />
     <BottomNav />

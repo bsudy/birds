@@ -24,8 +24,8 @@
       <section class="mb-24">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <!-- Eye Specimen Card -->
-          <div class="md:col-span-2 bg-surface-container-low rounded-xl p-10 relative overflow-hidden flex flex-col justify-between min-h-[400px]">
-            <div class="relative z-10 max-w-md">
+          <div class="md:col-span-2 bg-surface-container-low rounded-xl overflow-hidden flex min-h-[400px] group">
+            <div class="flex-1 p-10 flex flex-col justify-center">
               <h3 class="font-headline text-3xl mb-4">{{ $t('hunt.uvVisionTitle') }}</h3>
               <p class="text-on-surface-variant leading-relaxed mb-6">{{ $t('hunt.uvVisionDesc') }}</p>
               <div class="flex gap-4">
@@ -33,11 +33,11 @@
                 <span class="px-3 py-1 bg-primary/10 text-primary font-label text-xs uppercase tracking-widest rounded-full">{{ $t('hunt.uvTag') }}</span>
               </div>
             </div>
-            <div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
+            <div class="w-2/5 flex-shrink-0 overflow-hidden">
               <img
-                alt="Kestrel eye detail"
-                class="w-full h-full object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9vRkuXoJ78ZJ10Dh0WUEU68jJb6X62F9iTS7B6mmDGlfu4M2Qtp05D5Kogri3NucTyX2jcrSMWPb2JvQNr7pquaHH8c6eqDTpEO_1EolpTHBnEQ86VJBh2JK7qa70sN_3v_epiYb2hYV26uwMcAqE6iU6SSM6bGnPThuSJ1DAe_P_5TorqfW4PRc3TBfLlcKhRv8Qv_uwGCbBX0PtFOqvL-2WNGdbko4qCsRcT2HAgPq74f4-FkUjrn2MIxSZYI_lsak0JLd-6a9O"
+                alt="Common Kestrel portrait"
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                src="/kestrel-eye-detail.jpg"
               />
             </div>
           </div>

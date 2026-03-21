@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Flight - Wilderleaf Archive</title>
+<!-- Fonts: Newsreader for Serif, Manrope for Sans -->
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,700;1,400;1,700&amp;family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface-variant": "#424843",
+              "on-error": "#ffffff",
+              "error-container": "#ffdad6",
+              "outline": "#727972",
+              "on-secondary-container": "#795c51",
+              "background": "#fafaf5",
+              "primary-container": "#4f6d58",
+              "primary-fixed-dim": "#aecfb5",
+              "surface-bright": "#fafaf5",
+              "on-primary": "#ffffff",
+              "inverse-on-surface": "#f1f1ec",
+              "secondary-fixed": "#ffdbce",
+              "primary-fixed": "#c9ebd1",
+              "on-tertiary-container": "#d0e9f7",
+              "on-secondary": "#ffffff",
+              "on-background": "#1a1c19",
+              "inverse-surface": "#2f312e",
+              "tertiary-container": "#526a75",
+              "surface-variant": "#e3e3de",
+              "surface-container-highest": "#e3e3de",
+              "surface-container": "#eeeee9",
+              "tertiary": "#3b525d",
+              "surface": "#fafaf5",
+              "error": "#ba1a1a",
+              "on-secondary-fixed-variant": "#5b4137",
+              "secondary-container": "#fed7ca",
+              "tertiary-fixed-dim": "#b1cad7",
+              "surface-dim": "#dadad5",
+              "surface-container-lowest": "#ffffff",
+              "on-error-container": "#93000a",
+              "surface-tint": "#476550",
+              "secondary": "#75584d",
+              "on-secondary-fixed": "#2b160f",
+              "primary": "#375541",
+              "on-primary-container": "#ccedd3",
+              "outline-variant": "#c2c8c1",
+              "tertiary-fixed": "#cde6f4",
+              "inverse-primary": "#aecfb5",
+              "secondary-fixed-dim": "#e4beb2",
+              "on-surface": "#1a1c19",
+              "surface-container-high": "#e8e8e3",
+              "on-tertiary-fixed": "#051e28",
+              "on-tertiary-fixed-variant": "#334a55",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed-variant": "#304d3a",
+              "on-primary-fixed": "#032111",
+              "surface-container-low": "#f4f4ef"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        .serif-italic { font-family: 'Newsreader', serif; font-style: italic; }
+        .specimen-overlap { margin-top: -2rem; margin-bottom: 2rem; }
+        body { min-height: max(884px, 100dvh); }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fafaf5]/70 dark:bg-stone-900/70 backdrop-blur-xl">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-2 text-[#375541] dark:text-[#4f6d58]">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+</div>
+<h1 class="font-serif italic text-2xl tracking-tight text-[#375541] dark:text-[#4f6d58]" id="page-title">Taking Flight</h1>
+<div class="flex items-center">
+<!-- Unified pill-shaped language switcher -->
+<div class="flex items-center bg-surface-container rounded-full px-1 py-1">
+<button class="px-3 py-1 rounded-full text-[10px] font-bold transition-all bg-primary text-on-primary" id="btn-en" onclick="setLanguage('en')">EN</button>
+<button class="px-3 py-1 rounded-full text-[10px] font-bold transition-all text-on-surface-variant hover:bg-surface-container-high" id="btn-de" onclick="setLanguage('de')">DE</button>
+<button class="px-3 py-1 rounded-full text-[10px] font-bold transition-all text-on-surface-variant hover:bg-surface-container-high" id="btn-hu" onclick="setLanguage('hu')">HU</button>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-md mx-auto overflow-x-hidden">
+<!-- Hero Section -->
+<section class="relative mb-12">
+<div class="aspect-[4/5] overflow-hidden rounded-xl bg-surface-container-low shadow-sm relative group">
+<img alt="Kestrel taking flight" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" id="hero-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArJqhHB6WMzUzTpvSLeRtUHh9rOagN65nxNhgEyf2kLGmY2UQa6gNaF3T5FcZU0_5uSk8az2Ji4X5xZu5OkWO4JqJZ_TV8pVq5_h_FFj3OxIdQBYWxyI2DdZv6xE5RFZSAh3RUDwm1yHGV0xDOoSAl59w4tO9lYxbQRrW-8fR81u1x76QWmsO_ORF9V35-S029t26Y4Q90YEbTNTxWlAAvZbB01mDSdxAFPhASbM9dp79XwKsvDCAMSHVwT815MlzNQY5SGg_VuH-4"/>
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-[#1a1c19]/60 to-transparent">
+<p class="text-white/80 font-label text-[10px] tracking-[0.2em] uppercase mb-1" id="obs-label">Observation #042</p>
+<h2 class="font-headline text-3xl text-white italic">Falco tinnunculus</h2>
+</div>
+</div>
+<!-- Asymmetrical Floating Note -->
+<div class="absolute -bottom-6 -right-2 bg-surface-container-lowest p-4 shadow-[0_20px_40px_rgba(26,28,25,0.06)] rounded-lg max-w-[180px] z-10">
+<p class="font-label text-[9px] uppercase tracking-tighter text-tertiary mb-1" id="status-label">Status</p>
+<p class="font-body text-xs font-bold text-on-surface" id="status-text">First Flight Sequence Initiated</p>
+</div>
+</section>
+<!-- Section 1: The Threshold -->
+<section class="mb-16">
+<div class="flex items-baseline gap-4 mb-4">
+<span class="font-headline italic text-4xl text-primary-container opacity-30">01</span>
+<h3 class="font-headline text-2xl text-on-surface leading-tight" id="s1-title">The Threshold of the Sky</h3>
+</div>
+<div class="pl-12">
+<p class="font-body text-on-surface-variant leading-relaxed mb-6" id="s1-body">
+                A fledgling stands at the nest's precipice, the world unfolding beneath its talons in a dizzying map of green and gold. This is the moment of instinctual tension, where the safety of the hollow meets the ancestral pull of the wind.
+            </p>
+<!-- Field Note Card -->
+<div class="bg-surface-container-low p-5 rounded-xl">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-primary" data-icon="edit_note">edit_note</span>
+<span class="font-label text-[10px] uppercase tracking-widest font-bold text-primary" id="field-notes-label">Field Notes</span>
+</div>
+<p class="font-body text-sm italic text-secondary" id="field-notes-quote">"The bird does not use its wings because it is sure of the air, but because it is sure of its own strength."</p>
+</div>
+</div>
+</section>
+<!-- Section 2: Mastery of the Air -->
+<section class="mb-16">
+<div class="flex items-baseline gap-4 mb-6">
+<span class="font-headline italic text-4xl text-primary-container opacity-30">02</span>
+<h3 class="font-headline text-2xl text-on-surface leading-tight" id="s2-title">Mastery of the Air</h3>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="col-span-2 bg-surface-container-lowest p-6 rounded-xl shadow-sm">
+<p class="font-body text-on-surface-variant text-sm mb-4" id="s2-body">The kestrel is a master of the 'hover,' a feat of aerodynamic precision that requires constant micro-adjustments of wing and tail.</p>
+<button class="bg-gradient-to-br from-[#375541] to-[#4f6d58] text-white px-6 py-3 rounded-full font-label text-xs font-bold tracking-widest flex items-center justify-center gap-2 active:scale-95 transition-all w-full" id="s2-btn">
+                    EXPLORE FLIGHT
+                    <span class="material-symbols-outlined text-sm" data-icon="north_east">north_east</span>
+</button>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl">
+<p class="font-label text-[9px] uppercase tracking-widest text-tertiary mb-1" id="stat1-label">Hover Speed</p>
+<p class="font-headline text-2xl text-primary">0 <span class="text-xs font-body text-on-surface-variant">km/h</span></p>
+<p class="font-body text-[10px] text-on-surface-variant mt-2 leading-tight" id="stat1-desc">Static position relative to ground.</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl">
+<p class="font-label text-[9px] uppercase tracking-widest text-tertiary mb-1" id="stat2-label">Max Altitude</p>
+<p class="font-headline text-2xl text-primary">2.5k <span class="text-xs font-body text-on-surface-variant">m</span></p>
+<p class="font-body text-[10px] text-on-surface-variant mt-2 leading-tight" id="stat2-desc">Typical soaring height during migration.</p>
+</div>
+</div>
+</section>
+<!-- Section 3: The First Journey -->
+<section class="mb-12">
+<div class="flex items-baseline gap-4 mb-4">
+<span class="font-headline italic text-4xl text-primary-container opacity-30">03</span>
+<h3 class="font-headline text-2xl text-on-surface leading-tight" id="s3-title">The First Journey</h3>
+</div>
+<div class="pl-12">
+<div class="relative mb-6">
+<img alt="Horizon" class="w-full h-32 object-cover rounded-lg grayscale opacity-50 contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDNuXlVSfEfdDmsrlHD_w1FhqkTd3S1-INypIDgjexHZPp41URAglto9ks17BeGLb3MzcqzNChnvWR-5r2DWnSkHaT8wtM7u10XGzobDPmBxtX5GYggBY2BGQkZW-m5wwSdu7gmrzI_ArjJmVeFmHHQ9j7ruxuLz2YAlcLeiH9cXdsLuLYCTuzaq_15y-8RbjSfjjs8SDrW9kwcjvYHDhpReNW3hjh-rkPP4FY_tswkXi3gfDP6HnhI6-V4pxPgcrrhQSddTzN_eMV"/>
+</div>
+<p class="font-body text-on-surface-variant leading-relaxed" id="s3-body">
+                By late summer, the natal territory becomes too small. Guided by celestial cues and the changing thermal currents, the young kestrel begins its first true migration—a journey of thousands of miles across diverse biomes.
+            </p>
+<div class="mt-8">
+<a class="font-label text-xs font-bold text-primary underline underline-offset-4 decoration-primary/30 flex items-center gap-2" href="#" id="s3-link">
+                    READ ARCHIVE LOGS
+                    <span class="material-symbols-outlined text-xs" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 pb-safe bg-[#fafaf5]/70 dark:bg-zinc-900/70 backdrop-blur-xl">
+<div class="flex justify-around items-center w-full px-4 py-3">
+<div class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400 cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="egg">egg</span>
+<span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope" id="nav-hatch">Hatch</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400 cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="home_max">home_max</span>
+<span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope" id="nav-nest">Nest</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400 cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="target">target</span>
+<span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope" id="nav-hunt">Hunt</span>
+</div>
+<!-- Active State: Flight -->
+<div class="flex flex-col items-center justify-center bg-[#4f6d58] text-white rounded-full px-4 py-1 scale-110 duration-300 ease-in-out cursor-pointer shadow-lg">
+<span class="material-symbols-outlined mb-1" data-icon="flight">flight</span>
+<span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope" id="nav-flight">Flight</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400 cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="favorite">favorite</span>
+<span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope" id="nav-mate">Mate</span>
+</div>
+</div>
+</nav>
+<script>
+    const content = {
+        en: {
+            title: "Taking Flight",
+            obsLabel: "Observation #042",
+            statusLabel: "Status",
+            statusText: "First Flight Sequence Initiated",
+            s1Title: "The Threshold of the Sky",
+            s1Body: "A fledgling stands at the nest's precipice, the world unfolding beneath its talons in a dizzying map of green and gold. This is the moment of instinctual tension, where the safety of the hollow meets the ancestral pull of the wind.",
+            fieldNotesLabel: "Field Notes",
+            fieldNotesQuote: '"The bird does not use its wings because it is sure of the air, but because it is sure of its own strength."',
+            s2Title: "Mastery of the Air",
+            s2Body: "The kestrel is a master of the 'hover,' a feat of aerodynamic precision that requires constant micro-adjustments of wing and tail.",
+            s2Btn: "EXPLORE FLIGHT",
+            stat1Label: "Hover Speed",
+            stat1Desc: "Static position relative to ground.",
+            stat2Label: "Max Altitude",
+            stat2Desc: "Typical soaring height during migration.",
+            s3Title: "The First Journey",
+            s3Body: "By late summer, the natal territory becomes too small. Guided by celestial cues and the changing thermal currents, the young kestrel begins its first true migration—a journey of thousands of miles across diverse biomes.",
+            s3Link: "READ ARCHIVE LOGS",
+            navHatch: "Hatch",
+            navNest: "Nest",
+            navHunt: "Hunt",
+            navFlight: "Flight",
+            navMate: "Mate"
+        },
+        de: {
+            title: "Abflug",
+            obsLabel: "Beobachtung #042",
+            statusLabel: "Status",
+            statusText: "Erstflugsequenz eingeleitet",
+            s1Title: "Die Schwelle zum Himmel",
+            s1Body: "Ein Jungvogel steht am Abgrund des Nestes, die Welt entfaltet sich unter seinen Krallen in einer schwindelerregenden Karte aus Grün und Gold. Dies ist der Moment instinktiver Spannung, in dem die Sicherheit der Höhle auf den uralten Sog des Windes trifft.",
+            fieldNotesLabel: "Feldnotizen",
+            fieldNotesQuote: '"Der Vogel nutzt seine Flügel nicht, weil er sich der Luft sicher ist, sondern weil er sich seiner eigenen Kraft sicher ist."',
+            s2Title: "Meisterschaft der Lüfte",
+            s2Body: "Der Turmfalke ist ein Meister des ‚Rüttelns‘, einer aerodynamischen Höchstleistung, die ständige Mikro-Anpassungen von Flügeln und Schwanz erfordert.",
+            s2Btn: "FLUG ERKUNDEN",
+            stat1Label: "Rüttel-Tempo",
+            stat1Desc: "Statische Position relativ zum Boden.",
+            stat2Label: "Max. Höhe",
+            stat2Desc: "Typische Segelhöhe während des Zugs.",
+            s3Title: "Die erste Reise",
+            s3Body: "Bis zum Spätsommer wird das Geburtsrevier zu klein. Geleitet von Himmelszeichen und wechselnden Thermiken beginnt der junge Turmfalke seinen ersten echten Zug – eine Reise über tausende Kilometer durch vielfältige Biome.",
+            s3Link: "ARCHIVPROTOKOLLE LESEN",
+            navHatch: "Brut",
+            navNest: "Nest",
+            navHunt: "Jagd",
+            navFlight: "Flug",
+            navMate: "Paarung"
+        },
+        hu: {
+            title: "Repülés",
+            obsLabel: "Megfigyelés #042",
+            statusLabel: "Állapot",
+            statusText: "Első repülési sorozat elindítva",
+            s1Title: "Az égbolt küszöbe",
+            s1Body: "A fióka a fészek peremén áll, alatta a világ zöld és arany szédítő térképeként terül el. Ez az ösztönös feszültség pillanata, ahol az odú biztonsága találkozik a szél ősi vonzásával.",
+            fieldNotesLabel: "Terepi jegyzetek",
+            fieldNotesQuote: '"A madár nem azért használja a szárnyait, mert biztos a levegőben, hanem mert biztos a saját erejében."',
+            s2Title: "A levegő uralása",
+            s2Body: "A vörös vércse a „szitálás” mestere, egy olyan aerodinamikai bravúré, amely a szárny és a farok folyamatos mikromozgását igényli.",
+            s2Btn: "REPÜLÉS FELFEDEZÉSE",
+            stat1Label: "Szitálási sebesség",
+            stat1Desc: "Statikus helyzet a talajhoz képest.",
+            stat2Label: "Max. magasság",
+            stat2Desc: "Jellemző magasság a vonulás során.",
+            s3Title: "Az első utazás",
+            s3Body: "Nyár végére a szülői terület túl kicsivé válik. Égi jelek és a változó termikek által vezérelve a fiatal vércse megkezdi első valódi vonulását – egy több ezer mérföldes utat különböző biomokon keresztül.",
+            s3Link: "ARCHÍV NAPLÓK OLVASÁSA",
+            navHatch: "Kikel",
+            navNest: "Fészek",
+            navHunt: "Vadász",
+            navFlight: "Repül",
+            navMate: "Párzás"
+        }
+    };
+
+    function setLanguage(lang) {
+        document.documentElement.lang = lang;
+        const data = content[lang];
+        
+        // Update text content
+        document.getElementById('page-title').innerText = data.title;
+        document.getElementById('obs-label').innerText = data.obsLabel;
+        document.getElementById('status-label').innerText = data.statusLabel;
+        document.getElementById('status-text').innerText = data.statusText;
+        document.getElementById('s1-title').innerText = data.s1Title;
+        document.getElementById('s1-body').innerText = data.s1Body;
+        document.getElementById('field-notes-label').innerText = data.fieldNotesLabel;
+        document.getElementById('field-notes-quote').innerText = data.fieldNotesQuote;
+        document.getElementById('s2-title').innerText = data.s2Title;
+        document.getElementById('s2-body').innerText = data.s2Body;
+        document.getElementById('s2-btn').innerHTML = `${data.s2Btn} <span class="material-symbols-outlined text-sm" data-icon="north_east">north_east</span>`;
+        document.getElementById('stat1-label').innerText = data.stat1Label;
+        document.getElementById('stat1-desc').innerText = data.stat1Desc;
+        document.getElementById('stat2-label').innerText = data.stat2Label;
+        document.getElementById('stat2-desc').innerText = data.stat2Desc;
+        document.getElementById('s3-title').innerText = data.s3Title;
+        document.getElementById('s3-body').innerText = data.s3Body;
+        document.getElementById('s3-link').innerHTML = `${data.s3Link} <span class="material-symbols-outlined text-xs" data-icon="arrow_forward">arrow_forward</span>`;
+        
+        // Navigation
+        document.getElementById('nav-hatch').innerText = data.navHatch;
+        document.getElementById('nav-nest').innerText = data.navNest;
+        document.getElementById('nav-hunt').innerText = data.navHunt;
+        document.getElementById('nav-flight').innerText = data.navFlight;
+        document.getElementById('nav-mate').innerText = data.navMate;
+
+        // Button states
+        ['en', 'de', 'hu'].forEach(l => {
+            const btn = document.getElementById(`btn-${l}`);
+            if (l === lang) {
+                btn.classList.add('bg-primary', 'text-on-primary');
+                btn.classList.remove('text-on-surface-variant', 'hover:bg-surface-container-high');
+            } else {
+                btn.classList.remove('bg-primary', 'text-on-primary');
+                btn.classList.add('text-on-surface-variant', 'hover:bg-surface-container-high');
+            }
+        });
+    }
+</script>
+</body></html>

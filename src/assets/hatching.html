@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Common Kestrel: Hatching</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400;1,6..72,700&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-lowest": "#ffffff",
+              "error": "#ba1a1a",
+              "tertiary": "#3b525d",
+              "inverse-surface": "#2f312e",
+              "secondary-fixed": "#ffdbce",
+              "surface-tint": "#476550",
+              "on-primary-container": "#ccedd3",
+              "surface-dim": "#dadad5",
+              "on-secondary-container": "#795c51",
+              "surface-container": "#eeeee9",
+              "on-surface": "#1a1c19",
+              "on-tertiary": "#ffffff",
+              "surface-bright": "#fafaf5",
+              "primary-fixed": "#c9ebd1",
+              "surface-container-low": "#f4f4ef",
+              "secondary-container": "#fed7ca",
+              "background": "#fafaf5",
+              "inverse-on-surface": "#f1f1ec",
+              "surface": "#fafaf5",
+              "surface-container-high": "#e8e8e3",
+              "error-container": "#ffdad6",
+              "on-error": "#ffffff",
+              "surface-container-highest": "#e3e3de",
+              "on-secondary-fixed-variant": "#5b4137",
+              "outline": "#727972",
+              "on-surface-variant": "#424843",
+              "on-tertiary-container": "#d0e9f7",
+              "on-primary-fixed": "#032111",
+              "tertiary-fixed": "#cde6f4",
+              "surface-variant": "#e3e3de",
+              "on-background": "#1a1c19",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed": "#051e28",
+              "tertiary-container": "#526a75",
+              "on-primary-fixed-variant": "#304d3a",
+              "primary": "#375541",
+              "tertiary-fixed-dim": "#b1cad7",
+              "on-error-container": "#93000a",
+              "secondary-fixed-dim": "#e4beb2",
+              "on-secondary": "#ffffff",
+              "primary-fixed-dim": "#aecfb5",
+              "on-tertiary-fixed-variant": "#334a55",
+              "inverse-primary": "#aecfb5",
+              "primary-container": "#4f6d58",
+              "secondary": "#75584d",
+              "outline-variant": "#c2c8c1",
+              "on-secondary-fixed": "#2b160f"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fafaf5;
+        }
+        .specimen-image {
+            filter: drop-shadow(0 10px 15px rgba(55, 85, 65, 0.1));
+        }
+        body {
+          min-height: max(884px, 100dvh);
+        }
+        [data-lang]:not(.active-lang) {
+            display: none;
+        }
+    </style>
+</head>
+<body class="font-body text-on-surface antialiased overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fafaf5]/70 dark:bg-zinc-900/70 backdrop-blur-xl flex items-center justify-between px-6 py-4 w-full no-border bg-surface-container-low shadow-none">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#375541] dark:text-[#8ba891]" data-icon="nest_cam_pigeon">nest_cam_outdoor</span>
+<h1 class="font-serif font-bold text-xl Newsreader text-[#375541] dark:text-[#8ba891]">
+<span class="active-lang" data-lang="en">Common Kestrel: The Living Archive</span>
+<span data-lang="de">Turmfalke: Das lebende Archiv</span>
+<span data-lang="hu">Vörös vércse: Az élő archívum</span>
+</h1>
+</div>
+<div class="flex gap-4 md:gap-8 items-center">
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-[#375541] dark:text-[#8ba891] font-medium transition-opacity hover:opacity-80" href="#">
+<span class="active-lang" data-lang="en">Hatch</span>
+<span data-lang="de">Schlüpfen</span>
+<span data-lang="hu">Kikelés</span>
+</a>
+<a class="text-zinc-500 font-medium transition-opacity hover:opacity-80" href="#">
+<span class="active-lang" data-lang="en">Nest</span>
+<span data-lang="de">Nest</span>
+<span data-lang="hu">Fészek</span>
+</a>
+<a class="text-zinc-500 font-medium transition-opacity hover:opacity-80" href="#">
+<span class="active-lang" data-lang="en">Hunt</span>
+<span data-lang="de">Jagd</span>
+<span data-lang="hu">Vadászat</span>
+</a>
+<a class="text-zinc-500 font-medium transition-opacity hover:opacity-80" href="#">
+<span class="active-lang" data-lang="en">Flight</span>
+<span data-lang="de">Flug</span>
+<span data-lang="hu">Repülés</span>
+</a>
+</div>
+<!-- Updated Language Selector Component: Pill-shaped as per Intro screen -->
+<div class="flex items-center bg-surface-container rounded-full px-2 py-1">
+<button class="lang-btn px-3 py-1 rounded-full text-[10px] font-bold transition-all bg-primary text-on-primary" id="btn-en" onclick="setLanguage('en')">EN</button>
+<button class="lang-btn px-3 py-1 rounded-full text-[10px] font-bold transition-all text-on-surface-variant hover:bg-surface-container-high" id="btn-de" onclick="setLanguage('de')">DE</button>
+<button class="lang-btn px-3 py-1 rounded-full text-[10px] font-bold transition-all text-on-surface-variant hover:bg-surface-container-high" id="btn-hu" onclick="setLanguage('hu')">HU</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Hero Section: The Specimen -->
+<section class="relative min-h-[618px] flex flex-col md:flex-row items-center justify-between gap-12 mb-24">
+<div class="w-full md:w-1/2 order-2 md:order-1">
+<span class="inline-block py-1 px-3 mb-6 bg-secondary-container text-on-secondary-container font-label text-[10px] uppercase tracking-widest rounded-full">
+<span class="active-lang" data-lang="en">Phase 01: Genesis</span>
+<span data-lang="de">Phase 01: Genesis</span>
+<span data-lang="hu">01. fázis: Genesis</span>
+</span>
+<h2 class="font-headline text-5xl md:text-7xl text-primary leading-tight mb-8">
+<span class="active-lang" data-lang="en">The First <span class="italic">Breach</span></span>
+<span data-lang="de">Der erste <span class="italic">Durchbruch</span></span>
+<span data-lang="hu">Az első <span class="italic">áttörés</span></span>
+</h2>
+<div class="text-lg text-on-surface-variant leading-relaxed mb-10 max-w-md">
+<p class="active-lang" data-lang="en">After 28 days of incubation, the silence within the nest is broken by a rhythmic tapping. The egg tooth—a temporary anatomical tool—strikes against the calcified walls of the shell.</p>
+<p data-lang="de">Nach 28 Tagen Bebrütung wird die Stille im Nest durch ein rhythmisches Klopfen unterbrochen. Der Eizahn – ein temporäres anatomisches Werkzeug – schlägt gegen die kalkhaltigen Wände der Schale.</p>
+<p data-lang="hu">28 napos kotlás után a fészek csendjét ritmikus kopogás töri meg. A tojásfog – egy ideiglenes anatómiai eszköz – a tojáshéj meszes falának ütközik.</p>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-8 py-3 rounded shadow-lg flex items-center gap-2 hover:opacity-90 transition-all">
+<span class="active-lang" data-lang="en">Observe Cycle</span>
+<span data-lang="de">Zyklus beobachten</span>
+<span data-lang="hu">Ciklus megfigyelése</span>
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="text-primary font-bold underline underline-offset-4 decoration-primary_fixed_dim hover:opacity-80">
+<span class="active-lang" data-lang="en">Field Notes</span>
+<span data-lang="de">Feldnotizen</span>
+<span data-lang="hu">Terepi jegyzetek</span>
+</button>
+</div>
+</div>
+<div class="w-full md:w-1/2 order-1 md:order-2 relative flex justify-center items-center">
+<div class="relative w-full aspect-square bg-surface-container-low rounded-full flex items-center justify-center p-12 overflow-visible">
+<div class="absolute inset-0 border-2 border-dashed border-outline-variant/30 rounded-full animate-spin-slow"></div>
+<img alt="Cracked kestrel egg with chick emerging" class="specimen-image w-full h-full object-contain relative z-10 transform -rotate-12 scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFoqVEwtPAwahbWJBnG9rR35dg0iJiJa7CTT34zCRqU_v4s7DuYgl-gr2NXDEgPEs1KEnR81weLuF5aTnivCKHyrYyVDgAxkTl3bWBNI2VMtccMkzNFUuKvPCwNxKK53Aoqknms_KO_mg16gu8Qfj182REDrfn7yVv4Vf-gQl-1L-nyVmBd1yjSZbgiPYn36YkGpqhaENj0-FPZtIgaUP9rcUzdtNtin3IiKbjCfR95D3r_o9wvH45UQPnIIWRDwPuxzVNLL62Ww9e"/>
+<div class="absolute top-0 right-0 bg-surface-container-lowest p-4 shadow-xl rounded-lg z-20 max-w-[150px]">
+<p class="font-label text-[10px] text-outline uppercase mb-1">
+<span class="active-lang" data-lang="en">Incubation</span>
+<span data-lang="de">Inkubation</span>
+<span data-lang="hu">Inkubáció</span>
+</p>
+<p class="font-headline text-2xl text-primary">
+<span class="active-lang" data-lang="en">28 Days</span>
+<span data-lang="de">28 Tage</span>
+<span data-lang="hu">28 nap</span>
+</p>
+</div>
+<div class="absolute bottom-10 -left-10 bg-surface-container-lowest p-4 shadow-xl rounded-lg z-20 max-w-[150px]">
+<p class="font-label text-[10px] text-outline uppercase mb-1">
+<span class="active-lang" data-lang="en">Success Rate</span>
+<span data-lang="de">Erfolgsrate</span>
+<span data-lang="hu">Sikerarány</span>
+</p>
+<p class="font-headline text-2xl text-tertiary">84%</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Detailed Content: Bento Grid Style -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-24">
+<div class="md:col-span-8 bg-surface-container-low p-10 flex flex-col justify-end min-h-[400px]">
+<h3 class="font-headline text-3xl text-primary mb-6 italic">
+<span class="active-lang" data-lang="en">The Struggle of Entry</span>
+<span data-lang="de">Der Kampf des Eintritts</span>
+<span data-lang="hu">A belépés küzdelme</span>
+</h3>
+<div class="columns-1 md:columns-2 gap-8 text-on-surface-variant leading-relaxed">
+<div class="active-lang" data-lang="en">
+<p class="mb-4">Hatching is the most exhausting trial a bird will ever face. It can take up to 24 hours from the first "pip" to full emergence. The chick must rotate its entire body within the cramped space, systematically weakening the shell's structural integrity.</p>
+<p>This exhausting process is a biological filter; only the strongest chicks emerge, ensuring the gene pool remains resilient. Once the shell gives way, the chick is damp and vulnerable, requiring the immediate warmth of its mother's brooding patch.</p>
+</div>
+<div data-lang="de">
+<p class="mb-4">Das Schlüpfen ist die anstrengendste Prüfung, die ein Vogel je bestehen muss. Vom ersten Anpicken bis zum vollständigen Schlüpfen kann es bis zu 24 Stunden dauern. Das Küken muss seinen gesamten Körper auf engstem Raum drehen und so die strukturelle Integrität der Schale systematisch schwächen.</p>
+<p>Dieser anstrengende Prozess ist ein biologischer Filter; nur die stärksten Küken schlüpfen und sorgen so für die Widerstandsfähigkeit des Genpools. Sobald die Schale nachgibt, ist das Küken feucht und verletzlich und benötigt die sofortige Wärme des Brutflecks der Mutter.</p>
+</div>
+<div data-lang="hu">
+<p class="mb-4">A kikelés a legfárasztóbb próbatétel, amellyel egy madár valaha is szembesül. Az első repedéstől a teljes kikelésig akár 24 óra is eltelhet. A fiókának az egész testét el kell forgatnia a szűk helyen, szisztematikusan gyengítve a tojáshéj szerkezeti integritását.</p>
+<p>Ez a kimerítő folyamat biológiai szűrőként működik; csak a legerősebb fiókák bújnak ki, biztosítva a génállomány rugalmasságát. Amint a héj enged, a fióka nedves és sebezhető, azonnal szüksége van az anya kotlófoltjának melegére.</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-4 bg-[#375541] text-white p-10 flex flex-col items-start justify-center">
+<span class="material-symbols-outlined text-4xl mb-6" data-icon="lightbulb">lightbulb</span>
+<h4 class="font-headline text-2xl mb-4">
+<span class="active-lang" data-lang="en">Did You Know?</span>
+<span data-lang="de">Wussten Sie schon?</span>
+<span data-lang="hu">Tudtad?</span>
+</h4>
+<div class="text-on-primary-container font-body text-sm leading-relaxed">
+<p class="active-lang" data-lang="en">Kestrels practice asynchronous hatching. The eggs are laid at intervals, meaning the first-born is often significantly larger and stronger than its siblings.</p>
+<p data-lang="de">Turmfalken betreiben asynchrones Schlüpfen. Die Eier werden in Zeitabständen gelegt, was bedeutet, dass das Erstgeborene oft deutlich größer und stärker ist als seine Geschwister.</p>
+<p data-lang="hu">A vércsék aszinkron kikelést folytatnak. A tojásokat időközönként rakják le, ami azt jelenti, hogy az elsőszülött gyakran lényegesen nagyobb és erősebb, mint testvérei.</p>
+</div>
+</div>
+<div class="md:col-span-4 bg-secondary-container text-on-secondary-container p-8">
+<h4 class="font-label text-xs uppercase tracking-tighter mb-4 opacity-70">
+<span class="active-lang" data-lang="en">Primary Nutrients</span>
+<span data-lang="de">Primäre Nährstoffe</span>
+<span data-lang="hu">Elsődleges tápanyagok</span>
+</h4>
+<div class="flex items-end justify-between">
+<div>
+<p class="font-headline text-4xl">
+<span class="active-lang" data-lang="en">Yolk Sac</span>
+<span data-lang="de">Dottersack</span>
+<span data-lang="hu">Szikzacskó</span>
+</p>
+<p class="text-xs mt-1 opacity-70 italic">
+<span class="active-lang" data-lang="en">Absorbed prior to hatch</span>
+<span data-lang="de">Vor dem Schlüpfen absorbiert</span>
+<span data-lang="hu">Kikelés előtt felszívódik</span>
+</p>
+</div>
+<span class="material-symbols-outlined text-5xl opacity-40" data-icon="egg_alt">egg_alt</span>
+</div>
+</div>
+<div class="md:col-span-8 bg-surface-container-high p-8 flex items-center gap-8">
+<div class="flex-shrink-0 w-24 h-24 rounded-full overflow-hidden">
+<img alt="Close up of a chick" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPafqwrPEbz4ChdQ-MuP5ULi5J7fOq_UcRtI7xG5R1oWFgg88Gg9fxsFItjdKv9UPtO4JzW1tklj1ZSbgHVyOMh2ygoqR9YFrpfrmpIIjIbp5zHiGZR-kk4uTPiW6oyw6SzSKI6xS7N3-05cJ0IkaxXayi_L6QkVPu7sv-m3hDUovOwfqmpKYyhEpj4uGGoANvD4wvSh4bSxEND0VqLim8pqmR9YLqQYZ7MRTF85S6mVzowlZLqonTeX4ToXn1jxOh3Eu4Bnm9xoJt"/>
+</div>
+<div>
+<h4 class="font-headline text-2xl text-primary">
+<span class="active-lang" data-lang="en">Protoptile Down</span>
+<span data-lang="de">Dunen</span>
+<span data-lang="hu">Pihetoll</span>
+</h4>
+<p class="text-on-surface-variant text-sm mt-1">
+<span class="active-lang" data-lang="en">The first layer of white, fluffy feathers that provides immediate insulation against the high-altitude winds found at nesting sites.</span>
+<span data-lang="de">Die erste Schicht aus weißen, flauschigen Federn, die eine sofortige Isolierung gegen die Höhenwinde an den Nistplätzen bietet.</span>
+<span data-lang="hu">A fehér, bolyhos tollak első rétege, amely azonnali szigetelést biztosít a fészkelőhelyeken tapasztalható nagy magassági szelek ellen.</span>
+</p>
+</div>
+</div>
+</section>
+<!-- Final Vision Section -->
+<section class="bg-surface-container-low p-12 text-center max-w-4xl mx-auto rounded-xl border border-outline-variant/10">
+<h2 class="font-headline text-4xl text-primary mb-6">
+<span class="active-lang" data-lang="en">A Journey Commenced</span>
+<span data-lang="de">Eine Reise hat begonnen</span>
+<span data-lang="hu">Egy utazás vette kezdetét</span>
+</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-10 italic">
+<span class="active-lang" data-lang="en">"The breaking of the shell is not the end of a process, but the violent beginning of a flight that will eventually span continents."</span>
+<span data-lang="de">"Das Aufbrechen der Schale ist nicht das Ende eines Prozesses, sondern der gewaltige Beginn eines Fluges, der schließlich Kontinente umspannen wird."</span>
+<span data-lang="hu">"A héj áttörése nem egy folyamat vége, hanem egy olyan repülés viharos kezdete, amely végül kontinenseket ível át."</span>
+</p>
+<div class="flex justify-center gap-4">
+<div class="w-12 h-1 border-b-2 border-primary"></div>
+<span class="material-symbols-outlined text-primary" data-icon="eco">eco</span>
+<div class="w-12 h-1 border-b-2 border-primary"></div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 pb-safe bg-[#fafaf5]/70 dark:bg-zinc-900/70 backdrop-blur-xl no-border bg-surface-container-low shadow-none md:hidden">
+<div class="flex justify-around items-center w-full px-4 py-3">
+<div class="flex flex-col items-center justify-center bg-[#4f6d58] text-white rounded-full px-4 py-1 scale-110 duration-300 ease-in-out">
+<span class="material-symbols-outlined" data-icon="egg">egg</span>
+<span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope">
+<span class="active-lang" data-lang="en">Hatch</span>
+<span data-lang="de">Brut</span>
+<span data-lang="hu">Kikel</span>
+</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400 hover:text-[#375541] dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="home_max">home_max</span>
+<span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope">
+<span class="active-lang" data-lang="en">Nest</span>
+<span data-lang="de">Nest</span>
+<span data-lang="hu">Fészek</span>
+</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400 hover:text-[#375541] dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="target">target</span>
+<span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope">
+<span class="active-lang" data-lang="en">Hunt</span>
+<span data-lang="de">Jagd</span>
+<span data-lang="hu">Vadász</span>
+</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400 hover:text-[#375541] dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="Wings">flight</span>
+<span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope">
+<span class="active-lang" data-lang="en">Flight</span>
+<span data-lang="de">Flug</span>
+<span data-lang="hu">Repül</span>
+</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400 hover:text-[#375541] dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope">
+<span class="active-lang" data-lang="en">Mate</span>
+<span data-lang="de">Paarung</span>
+<span data-lang="hu">Párzás</span>
+</span>
+</div>
+</div>
+</nav>
+<script>
+    function setLanguage(lang) {
+        // Update document lang attribute
+        document.documentElement.lang = lang;
+        
+        // Update all elements with data-lang
+        const elements = document.querySelectorAll('[data-lang]');
+        elements.forEach(el => {
+            if (el.getAttribute('data-lang') === lang) {
+                el.classList.add('active-lang');
+                el.style.display = (el.tagName === 'DIV' || el.tagName === 'P' || el.tagName === 'SECTION') ? 'block' : 'inline';
+            } else {
+                el.classList.remove('active-lang');
+                el.style.display = 'none';
+            }
+        });
+
+        // Update pill-style buttons
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.remove('bg-primary', 'text-on-primary');
+            btn.classList.add('text-on-surface-variant', 'hover:bg-surface-container-high');
+        });
+        const activeBtn = document.getElementById('btn-' + lang);
+        if (activeBtn) {
+            activeBtn.classList.add('bg-primary', 'text-on-primary');
+            activeBtn.classList.remove('text-on-surface-variant', 'hover:bg-surface-container-high');
+        }
+    }
+
+    // Initialize display on load
+    window.addEventListener('DOMContentLoaded', () => {
+        setLanguage('en');
+    });
+</script>
+</body></html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wachsen &amp; Füttern - Common Kestrel: The Living Archive</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-lowest": "#ffffff",
+              "error": "#ba1a1a",
+              "tertiary": "#3b525d",
+              "inverse-surface": "#2f312e",
+              "secondary-fixed": "#ffdbce",
+              "surface-tint": "#476550",
+              "on-primary-container": "#ccedd3",
+              "surface-dim": "#dadad5",
+              "on-secondary-container": "#795c51",
+              "surface-container": "#eeeee9",
+              "on-surface": "#1a1c19",
+              "on-tertiary": "#ffffff",
+              "surface-bright": "#fafaf5",
+              "primary-fixed": "#c9ebd1",
+              "surface-container-low": "#f4f4ef",
+              "secondary-container": "#fed7ca",
+              "background": "#fafaf5",
+              "inverse-on-surface": "#f1f1ec",
+              "surface": "#fafaf5",
+              "surface-container-high": "#e8e8e3",
+              "error-container": "#ffdad6",
+              "on-error": "#ffffff",
+              "surface-container-highest": "#e3e3de",
+              "on-secondary-fixed-variant": "#5b4137",
+              "outline": "#727972",
+              "on-surface-variant": "#424843",
+              "on-tertiary-container": "#d0e9f7",
+              "on-primary-fixed": "#032111",
+              "tertiary-fixed": "#cde6f4",
+              "surface-variant": "#e3e3de",
+              "on-background": "#1a1c19",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed": "#051e28",
+              "tertiary-container": "#526a75",
+              "on-primary-fixed-variant": "#304d3a",
+              "primary": "#375541",
+              "tertiary-fixed-dim": "#b1cad7",
+              "on-error-container": "#93000a",
+              "secondary-fixed-dim": "#e4beb2",
+              "on-secondary": "#ffffff",
+              "primary-fixed-dim": "#aecfb5",
+              "on-tertiary-fixed-variant": "#334a55",
+              "inverse-primary": "#aecfb5",
+              "primary-container": "#4f6d58",
+              "secondary": "#75584d",
+              "outline-variant": "#c2c8c1",
+              "on-secondary-fixed": "#2b160f"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body { background-color: #fafaf5; }
+      .specimen-overlap { margin-top: -4rem; }
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+</head>
+<body class="font-body text-on-surface selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fafaf5]/70 dark:bg-zinc-900/70 backdrop-blur-xl flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#375541] dark:text-[#8ba891]" data-icon="nest_cam_pigeon">nest_cam_outdoor</span>
+<h1 class="font-serif font-bold text-xl Newsreader text-[#375541] dark:text-[#8ba891] tracking-tight italic">Common Kestrel: The Living Archive</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex gap-8 items-center mr-4">
+<a class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope text-[#375541] dark:text-[#8ba891] hover:opacity-80 transition-opacity" href="#">Archive</a>
+<a class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope text-zinc-500 hover:opacity-80 transition-opacity" href="#">Field Notes</a>
+<a class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope text-zinc-500 hover:opacity-80 transition-opacity" href="#">Observation Map</a>
+</div>
+<!-- Language Selector - Updated to Pill Shape -->
+<div class="flex items-center bg-surface-container rounded-full px-2 py-1">
+<button class="px-3 py-1 rounded-full text-[10px] font-bold transition-all bg-primary text-on-primary" id="btn-en">EN</button>
+<button class="px-3 py-1 rounded-full text-[10px] font-bold transition-all text-on-surface-variant hover:bg-surface-container-high" id="btn-de">DE</button>
+<button class="px-3 py-1 rounded-full text-[10px] font-bold transition-all text-on-surface-variant hover:bg-surface-container-high" id="btn-hu">HU</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
+<!-- Breadcrumb / Stage Indicator -->
+<div class="mb-12 flex items-baseline gap-4">
+<span class="text-primary font-headline italic text-4xl">02</span>
+<div class="h-px bg-outline-variant/20 flex-grow"></div>
+<span class="font-label uppercase tracking-[0.2em] text-[10px] text-outline">Phase: Development</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Left Column: Narrative Content -->
+<div class="lg:col-span-5 flex flex-col justify-center">
+<h2 class="font-headline text-5xl md:text-7xl text-primary leading-tight mb-8"><span data-de="Wachstum &amp;" data-en="Growth &amp;" data-hu="Növekedés és">Growth &amp;</span> <br/><span class="italic" data-de="Fütterung" data-en="Feeding" data-hu="Táplálkozás">Feeding</span>
+<span class="block text-2xl font-light mt-2 opacity-60" data-de="Wachstum und Fütterung" data-en="Growth and feeding" data-hu="Növekedés és táplálkozás">Growth and feeding</span></h2>
+<div class="space-y-6 text-on-surface-variant leading-relaxed text-lg">
+<p><span data-de="Nach dem zarten Schlupf wird das Nest zu einem Ort hektischer Energie. Die Turmfalkenküken (Falco tinnunculus) durchlaufen eine metamorphische Transformation, wobei sich ihr Gewicht innerhalb der ersten zwei Wochen fast verzehnfacht." data-en="Following the delicate hatch, the nest becomes a site of frantic energy. The Falco tinnunculus nestlings undergo a metamorphic transformation, their weight increasing nearly tenfold within the first fortnight." data-hu="A kényes kelést követően a fészek a lázas energia helyszínévé válik. A Falco tinnunculus fiókák metamorf átalakuláson mennek keresztül, súlyuk az első két hétben csaknem tízszeresére nő.">Following the delicate hatch, the nest becomes a site of frantic energy. The Falco tinnunculus nestlings undergo a metamorphic transformation, their weight increasing nearly tenfold within the first fortnight.</span></p>
+<p class="font-headline italic text-2xl text-tertiary-container py-4 border-l-2 border-primary-container/20 pl-6">"<span data-de="Der Hauptelternteil wacht ständig, zerkleinert proteinreiche Beute in handliche Portionen für die ständig klaffenden Schnäbel." data-en="The primary parent maintains a constant vigil, shredding high-protein prey into manageable portions for the ever-gaping beaks." data-hu="Az elsődleges szülő folyamatos virrasztást tart, a fehérjedús zsákmányt kezelhető darabokra aprítva a folyton tátongó csőrök számára.">The primary parent maintains a constant vigil, shredding high-protein prey into manageable portions for the ever-gaping beaks.</span>"</p>
+<p>
+                    As the soft down is replaced by sturdy juvenile plumage, the fledglings begin to exercise their pectoral muscles. They stand at the rim of the nest, peering into the abyss, instinctively sensing the call of the first flight.
+                </p>
+</div>
+<div class="mt-12 flex gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded shadow-sm flex items-center gap-2 hover:opacity-90 transition-all active:scale-95"><span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span data-de="Felddaten ansehen" data-en="View Field Data" data-hu="Terepadatok megtekintése">View Field Data</span></button>
+<button class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded flex items-center gap-2 hover:opacity-90 transition-all"><span class="material-symbols-outlined" data-icon="volume_up">volume_up</span>
+<span data-de="Rufe" data-en="Calls" data-hu="Hívások">Calls</span></button>
+</div>
+</div>
+<!-- Right Column: Specimen Illustrations -->
+<div class="lg:col-span-7 relative">
+<div class="bg-surface-container-low p-8 md:p-12 relative overflow-visible">
+<div class="absolute -top-12 -right-8 w-64 h-64 md:w-80 md:h-80 bg-surface-container-highest rounded-full flex items-center justify-center shadow-xl rotate-3">
+<img alt="Feeding parental kestrel and chick" class="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGWoDM3kU8o1uZTdtlKlodWCS3BrXxvP8vtPr0SV9tWxod70BjyeE49Co5cd2gN6Sx2wKt1uY5Dh9b5aLAJHWqGDQMdFpgGs-y6DjZz_zv7WYmssOl-Bhg9bcJETP_OvKQPDCBtnyN-4G9jyYjuC8mqyBzvA8bzJHhOhFA3s8dnQMZBxm0J_SHCNHeufHdk4CT8FDDHQ96E4z3wnYAY70RPz5clUkNpiDbMIUGCo_VCTvsrk9xJBVWqJQQPkrHfi8E8QQK9hdDpGfe"/>
+</div>
+<div class="pt-32 md:pt-16 max-w-md">
+<h3 class="font-label uppercase tracking-widest text-xs text-primary mb-4"><span data-de="Beobachtungsprotokoll #772" data-en="Observation Log #772" data-hu="Megfigyelési napló #772">Observation Log #772</span></h3>
+<div class="space-y-4">
+<div class="flex justify-between items-end border-b border-outline-variant/20 pb-2">
+<span class="text-xs font-bold uppercase tracking-tighter"><span data-de="Beutefrequenz" data-en="Prey Frequency" data-hu="Zsákmány gyakorisága">Prey Frequency</span></span>
+<span class="font-headline italic text-xl">4-6 / hr</span>
+</div>
+<div class="flex justify-between items-end border-b border-outline-variant/20 pb-2">
+<span class="text-xs font-bold uppercase tracking-tighter"><span data-de="Wachstumsrate" data-en="Growth Rate" data-hu="Növekedési ütem">Growth Rate</span></span>
+<span class="font-headline italic text-xl">14.2g / daily</span>
+</div>
+<div class="flex justify-between items-end border-b border-outline-variant/20 pb-2">
+<span class="text-xs font-bold uppercase tracking-tighter"><span data-de="Gefiedertyp" data-en="Plumage Type" data-hu="Tollazat típusa">Plumage Type</span></span>
+<span class="font-headline italic text-xl">Pre-juvenal</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Detail Card (Asymmetry) -->
+<div class="mt-8 ml-auto max-w-sm bg-surface-container-lowest p-6 shadow-sm relative z-10 -mr-4 border-l-4 border-tertiary">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary mt-1" data-icon="info">info</span>
+<div>
+<h4 class="font-bold text-sm mb-1 uppercase tracking-tight">
+                            Der erste Flügelschlag / Az első szárnycsapás
+                        </h4>
+<p class="text-sm text-on-surface-variant">The rapid growth phase is essential for flight muscle density. Lack of feeding during this 20-day window can lead to permanent flight disabilities.</p>
+</div>
+</div>
+</div>
+<div class="absolute -bottom-10 -left-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+</div>
+</div>
+<!-- Secondary Content Section: Bento Grid Visuals -->
+<section class="mt-32">
+<h3 class="font-headline text-3xl text-primary mb-12 italic"><span data-de="Visuelle Dokumentation" data-en="Visual Documentation" data-hu="Vizuális dokumentáció">Visual Documentation</span></h3>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[300px]">
+<!-- Large Feature -->
+<div class="md:col-span-2 md:row-span-2 bg-surface-container-high rounded overflow-hidden group">
+<img alt="Young kestrel fledgling" class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlvRsiKozVehnYhmH9IjqzwneLf3vOeUw5E81aEWP6GqB-ZLCdP40hvmSrugIJTAQularNJSrg55L9F8LtU3l9THIx4JlKjiEnb-xbBwouusQWpkwGv-ycNQXa5lN16c1q-xrKzOqY_5sPEVMpOJYPRIlQVNoRZ_Fgk_K431VqBA5UlxyyA_p7_f_N7nqHNKCI42RtZ7q1uv9Of9IwkKuaYFMvRS8VcI1vyzg0lfzd40l0K3tXhr3tQxPO7WUtpHWofniGpZzxuhqM"/>
+</div>
+<!-- Top Right -->
+<div class="bg-surface-container-low rounded p-6 flex flex-col justify-end relative overflow-hidden">
+<span class="material-symbols-outlined absolute top-4 right-4 text-primary/20 scale-150" data-icon="egg_alt">egg_alt</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-outline mb-1">Development</span>
+<h5 class="font-headline text-xl">Post-Hatch Day 5</h5>
+</div>
+<!-- Bottom Right -->
+<div class="bg-tertiary-container text-on-tertiary-container rounded p-6 flex flex-col justify-center">
+<p class="font-headline italic text-lg leading-snug">"The gaze becomes sharp, tracking insects through the air from the safety of the nest."</p>
+</div>
+<!-- Middle Right Wide -->
+<div class="md:col-span-2 bg-surface-container-lowest rounded p-6 border border-outline-variant/10 flex items-center gap-8">
+<div class="w-24 h-24 flex-shrink-0 bg-surface-variant rounded-full overflow-hidden">
+<img alt="Predatory feeding" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNZ-rcWpoc2WfbmVVch5h_c3YO2xIJ49fVuU7WN5idBfi7zN4DRobvbYPd-gKxdrRCBsywDR9YqzbQ_ldMbx_2cKardkYHNFhyxtq6PXN06ErfTpGOY-KCcchF4TPGUG6hsKOG50uCnvWbXEx-GMNIhEfZFQYuQgoMHjIEmo5eeXzfLpc2dTH9uyrHuKASkqVAZBdy04gaGJvIe72sW-NGKHcI8S5wg-JUbETuBjJChGPWd4XWMVrIm1y2HAbuaRWYzC-C3DwYHLDv"/>
+</div>
+<div>
+<h5 class="font-bold text-sm uppercase mb-2">Hauptnahrung / Elsődleges étrend</h5>
+<p class="text-sm opacity-80">During this phase, field voles and lizards comprise 85% of the caloric intake for the brood.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 pb-safe bg-[#fafaf5]/70 dark:bg-zinc-900/70 backdrop-blur-xl flex justify-around items-center w-full px-4 py-3">
+<div class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400 hover:text-[#375541] dark:hover:text-white transition-colors cursor-pointer group">
+<span class="material-symbols-outlined scale-110 duration-300 ease-in-out group-hover:scale-125" data-icon="egg">egg</span>
+<span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope mt-1">Hatch</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-[#4f6d58] text-white rounded-full px-4 py-1 scale-110 duration-300 ease-in-out cursor-pointer">
+<span class="material-symbols-outlined" data-icon="home_max">home_max</span>
+<span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope mt-1">Nest</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400 hover:text-[#375541] dark:hover:text-white transition-colors cursor-pointer group">
+<span class="material-symbols-outlined scale-110 duration-300 ease-in-out group-hover:scale-125" data-icon="target">target</span>
+<span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope mt-1">Hunt</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400 hover:text-[#375541] dark:hover:text-white transition-colors cursor-pointer group">
+<span class="material-symbols-outlined scale-110 duration-300 ease-in-out group-hover:scale-125" data-icon="flight">flight</span>
+<span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope mt-1">Flight</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400 hover:text-[#375541] dark:hover:text-white transition-colors cursor-pointer group">
+<span class="material-symbols-outlined scale-110 duration-300 ease-in-out group-hover:scale-125" data-icon="favorite">favorite</span>
+<span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope mt-1">Mate</span>
+</div>
+</nav>
+<script>
+const langButtons = {
+  en: document.getElementById('btn-en'),
+  de: document.getElementById('btn-de'),
+  hu: document.getElementById('btn-hu')
+};
+
+function setLanguage(lang) {
+  // Update text elements
+  document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+    el.innerHTML = el.getAttribute('data-' + lang);
+  });
+
+  // Update UI styles
+  Object.keys(langButtons).forEach(key => {
+    if (key === lang) {
+      langButtons[key].classList.add('bg-primary', 'text-on-primary');
+      langButtons[key].classList.remove('text-on-surface-variant', 'hover:bg-surface-container-high');
+    } else {
+      langButtons[key].classList.remove('bg-primary', 'text-on-primary');
+      langButtons[key].classList.add('text-on-surface-variant', 'hover:bg-surface-container-high');
+    }
+  });
+}
+
+langButtons.en.addEventListener('click', () => setLanguage('en'));
+langButtons.de.addEventListener('click', () => setLanguage('de'));
+langButtons.hu.addEventListener('click', () => setLanguage('hu'));
+
+// Initialize
+setLanguage('en');
+</script></body></html>

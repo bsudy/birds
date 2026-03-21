@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-lowest": "#ffffff",
+              "error": "#ba1a1a",
+              "tertiary": "#3b525d",
+              "inverse-surface": "#2f312e",
+              "secondary-fixed": "#ffdbce",
+              "surface-tint": "#476550",
+              "on-primary-container": "#ccedd3",
+              "surface-dim": "#dadad5",
+              "on-secondary-container": "#795c51",
+              "surface-container": "#eeeee9",
+              "on-surface": "#1a1c19",
+              "on-tertiary": "#ffffff",
+              "surface-bright": "#fafaf5",
+              "primary-fixed": "#c9ebd1",
+              "surface-container-low": "#f4f4ef",
+              "secondary-container": "#fed7ca",
+              "background": "#fafaf5",
+              "inverse-on-surface": "#f1f1ec",
+              "surface": "#fafaf5",
+              "surface-container-high": "#e8e8e3",
+              "error-container": "#ffdad6",
+              "on-error": "#ffffff",
+              "surface-container-highest": "#e3e3de",
+              "on-secondary-fixed-variant": "#5b4137",
+              "outline": "#727972",
+              "on-surface-variant": "#424843",
+              "on-tertiary-container": "#d0e9f7",
+              "on-primary-fixed": "#032111",
+              "tertiary-fixed": "#cde6f4",
+              "surface-variant": "#e3e3de",
+              "on-background": "#1a1c19",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed": "#051e28",
+              "tertiary-container": "#526a75",
+              "on-primary-fixed-variant": "#304d3a",
+              "primary": "#375541",
+              "tertiary-fixed-dim": "#b1cad7",
+              "on-error-container": "#93000a",
+              "secondary-fixed-dim": "#e4beb2",
+              "on-secondary": "#ffffff",
+              "primary-fixed-dim": "#aecfb5",
+              "on-tertiary-fixed-variant": "#334a55",
+              "inverse-primary": "#aecfb5",
+              "primary-container": "#4f6d58",
+              "secondary": "#75584d",
+              "outline-variant": "#c2c8c1",
+              "on-secondary-fixed": "#2b160f"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        .font-serif { font-family: 'Newsreader', serif; }
+        .glass-header { backdrop-filter: blur(20px); }
+        .lang-section { display: none; }
+        .lang-section.active { display: block; }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
+<!-- TopAppBar with Language Selector -->
+<header class="fixed top-0 w-full z-50 bg-[#fafaf5]/70 dark:bg-zinc-900/70 backdrop-blur-xl">
+<div class="flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#375541] dark:text-[#8ba891]" data-icon="nest_cam_pigeon">nest_cam_outdoor</span>
+<h1 class="font-serif font-bold text-xl Newsreader text-[#375541] dark:text-[#8ba891]">Common Kestrel: The Living Archive</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex gap-8 items-center mr-4">
+<a class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope text-[#375541] dark:text-[#8ba891]" href="#">Hatch</a>
+<a class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope text-zinc-500 hover:opacity-80 transition-opacity" href="#">Nest</a>
+<a class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope text-zinc-500 hover:opacity-80 transition-opacity" href="#">Hunt</a>
+</div>
+<!-- Language Selector Component -->
+<div class="flex items-center bg-surface-container rounded-full px-2 py-1">
+<button class="lang-btn active px-3 py-1 rounded-full text-xs font-bold transition-all bg-primary text-on-primary" id="btn-en" onclick="switchLang('en')">EN</button>
+<button class="lang-btn px-3 py-1 rounded-full text-xs font-bold transition-all text-on-surface-variant hover:bg-surface-container-high" id="btn-de" onclick="switchLang('de')">DE</button>
+<button class="lang-btn px-3 py-1 rounded-full text-xs font-bold transition-all text-on-surface-variant hover:bg-surface-container-high" id="btn-hu" onclick="switchLang('hu')">HU</button>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32">
+<!-- Hero Section -->
+<section class="relative min-h-[707px] flex flex-col md:flex-row items-center px-6 md:px-12 max-w-7xl mx-auto overflow-hidden">
+<div class="w-full md:w-1/2 z-10 space-y-8 py-12">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm" data-icon="verified">verified</span>
+<span>Specimen A-124</span>
+</div>
+<!-- Language Toggled Titles -->
+<div class="lang-section active" id="lang-en">
+<h2 class="font-serif text-6xl md:text-8xl leading-tight text-primary font-bold tracking-tight">
+                    The Falcon of <br/><span class="italic font-light">The Old Wind</span>
+</h2>
+<p class="max-w-md text-on-surface-variant text-lg leading-relaxed font-body mt-6">
+                    A digital field study of the Falco tinnunculus. This archive documents the life-cycles, aerodynamic mastery, and the silent vigil of the Kestrel.
+                </p>
+</div>
+<div class="lang-section" id="lang-de">
+<h2 class="font-serif text-6xl md:text-8xl leading-tight text-primary font-bold tracking-tight">
+                    Die Falke des <br/><span class="italic font-light">Alten Windes</span>
+</h2>
+<p class="max-w-md text-on-surface-variant text-lg leading-relaxed font-body mt-6">
+                    Eine digitale Feldstudie des Falco tinnunculus. Dieses Archiv dokumentiert die Lebenszyklen, die aerodynamische Meisterschaft und die stille Mahnwache des Turmfalken.
+                </p>
+</div>
+<div class="lang-section" id="lang-hu">
+<h2 class="font-serif text-6xl md:text-8xl leading-tight text-primary font-bold tracking-tight">
+                    Az Öreg <br/><span class="italic font-light">Szél Sólyma</span>
+</h2>
+<p class="max-w-md text-on-surface-variant text-lg leading-relaxed font-body mt-6">
+                    Egy digitális tereptanulmány a Falco tinnunculus-ról. Ez az archívum dokumentálja az életciklusokat, az aerodinamikai mesteri szintet és a vércse csendes virrasztását.
+                </p>
+</div>
+<div class="flex items-center gap-6 pt-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-bold flex items-center gap-2 hover:opacity-90 transition-opacity active:scale-95 shadow-xl shadow-primary/10">
+<span class="lang-text-en">Begin Journey</span>
+<span class="lang-text-de hidden">Reise beginnen</span>
+<span class="lang-text-hu hidden">Utazás kezdése</span>
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="text-primary font-bold underline underline-offset-8 decoration-primary-fixed-dim hover:text-primary-container transition-colors">
+<span class="lang-text-en">Explore Methodology</span>
+<span class="lang-text-de hidden">Methodik erkunden</span>
+<span class="lang-text-hu hidden">Módszertan felfedezése</span>
+</button>
+</div>
+</div>
+<!-- Specimen Component -->
+<div class="w-full md:w-1/2 relative mt-12 md:mt-0">
+<div class="relative bg-surface-container-low aspect-[4/5] rounded-xl overflow-visible p-8 md:p-12 shadow-sm">
+<div class="absolute -top-12 -right-8 w-64 h-64 md:w-96 md:h-96 z-20">
+<img alt="Common Kestrel in flight" class="w-full h-full object-contain drop-shadow-2xl transform hover:rotate-2 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAiCJnEokIij40WxwTVEgCMfEGVd_e7k1V661M2fpYg_T7hd_14RvIXXYif9uJ4Ax7yKj8zPQPiQ-38_zSQEEUnWb8hr5HHQEi3jz9Dw_idnpKEwnoN7XaWXz0MufqTigvjeA8F6THdsjA1G0_gc__p7IM8MoZtYiu-i8PfFvX3lchuiIgWyLne8lw0Xn5N82duQw7c1D3kiHqSY9-b3DYCyyFNWv-Zcwq2tqWRqRGgVzgbFUtdUTO_NfdlHbqtmbvQzsITs2oBGLP"/>
+</div>
+<div class="mt-auto pt-48 space-y-4">
+<div class="h-px bg-outline-variant/20 w-full"></div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<span class="block text-[10px] uppercase tracking-tighter text-on-surface-variant font-bold">Genus</span>
+<span class="font-serif italic text-lg text-primary">Falco</span>
+</div>
+<div>
+<span class="block text-[10px] uppercase tracking-tighter text-on-surface-variant font-bold">Status</span>
+<span class="font-serif italic text-lg text-primary">Least Concern</span>
+</div>
+</div>
+</div>
+<div class="absolute -left-4 top-1/2 -translate-y-1/2 writing-vertical-lr rotate-180 hidden md:block">
+<span class="text-[10px] uppercase tracking-[0.5em] text-outline/40 font-black">ARCHIVE-SERIAL-2024</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Grid -->
+<section class="px-6 md:px-12 max-w-7xl mx-auto mt-24">
+<div class="mb-12 space-y-2">
+<h3 class="font-serif text-4xl text-primary font-bold">
+<span class="lang-text-en">The Chapters of Flight</span>
+<span class="lang-text-de hidden">Die Kapitel des Fluges</span>
+<span class="lang-text-hu hidden">A repülés fejezetei</span>
+</h3>
+<p class="text-on-surface-variant max-w-xl">
+<span class="lang-text-en">Five stages of a singular existence, captured in high-fidelity data and living narrative.</span>
+<span class="lang-text-de hidden">Fünf Etappen einer einzigartigen Existenz, festgehalten in hochpräzisen Daten und lebendiger Erzählung.</span>
+<span class="lang-text-hu hidden">Egy egyedülálló létezés öt szakasza, nagy hűségű adatokban és élő narratívában rögzítve.</span>
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-6 gap-6">
+<!-- Large Feature -->
+<div class="md:col-span-4 bg-surface-container rounded-xl p-8 flex flex-col justify-between group cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="flex justify-between items-start">
+<div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-3xl" data-icon="egg">egg</span>
+</div>
+<span class="font-serif italic text-4xl text-primary/20 group-hover:text-primary/40 transition-colors">01</span>
+</div>
+<div class="mt-12">
+<h4 class="font-serif text-3xl font-bold text-primary mb-2">
+<span class="lang-text-en">Hatch &amp; Early Days</span>
+<span class="lang-text-de hidden">Schlüpfen &amp; Frühe Tage</span>
+<span class="lang-text-hu hidden">Kikelés és az első napok</span>
+</h4>
+<p class="text-on-surface-variant max-w-md">
+<span class="lang-text-en">From the first crack of the shell to the initial struggle for nourishment in the nest container.</span>
+<span class="lang-text-de hidden">Vom ersten Knacken der Schale bis zum ersten Kampf um Nahrung im Nest.</span>
+<span class="lang-text-hu hidden">A tojáshéj első repedésétől a táplálékért folytatott kezdeti küzdelemig a fészekben.</span>
+</p>
+</div>
+</div>
+<!-- Small Feature -->
+<div class="md:col-span-2 bg-secondary-container rounded-xl p-8 flex flex-col justify-between group hover:opacity-90 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined text-4xl text-on-secondary-container" data-icon="target">target</span>
+<div class="mt-8">
+<h4 class="font-serif text-2xl font-bold text-on-secondary-container mb-2">
+<span class="lang-text-en">The Hunt</span>
+<span class="lang-text-de hidden">Die Jagd</span>
+<span class="lang-text-hu hidden">A vadászat</span>
+</h4>
+<p class="text-on-secondary-fixed-variant text-sm">
+<span class="lang-text-en">Visualizing the kinetic energy of the perfect hover.</span>
+<span class="lang-text-de hidden">Visualisierung der kinetischen Energie des perfekten Rüttelflugs.</span>
+<span class="lang-text-hu hidden">A tökéletes lebegés kinetikus energiájának vizualizálása.</span>
+</p>
+</div>
+</div>
+<!-- Horizontal Feature -->
+<div class="md:col-span-3 bg-surface-container-low rounded-xl p-8 flex items-center gap-6 group cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex-1">
+<h4 class="font-serif text-2xl font-bold text-primary mb-2">
+<span class="lang-text-en">Flight Patterns</span>
+<span class="lang-text-de hidden">Flugmuster</span>
+<span class="lang-text-hu hidden">Repülési minták</span>
+</h4>
+<p class="text-on-surface-variant text-sm">
+<span class="lang-text-en">Mapping the thermal pathways used for effortless soaring.</span>
+<span class="lang-text-de hidden">Kartierung der thermischen Wege für müheloses Gleiten.</span>
+<span class="lang-text-hu hidden">A megerőltetés nélküli szárnyaláshoz használt termikus utak feltérképezése.</span>
+</p>
+</div>
+<span class="material-symbols-outlined text-5xl text-primary/30 group-hover:scale-110 transition-transform" data-icon="Wings">flight</span>
+</div>
+<!-- Another Feature -->
+<div class="md:col-span-3 bg-surface-container-highest rounded-xl p-8 flex items-center gap-6 group cursor-pointer hover:opacity-95 transition-opacity">
+<span class="material-symbols-outlined text-5xl text-primary" data-icon="home_max">home_max</span>
+<div class="flex-1">
+<h4 class="font-serif text-2xl font-bold text-primary mb-2">
+<span class="lang-text-en">The Nest Archive</span>
+<span class="lang-text-de hidden">Das Nest-Archiv</span>
+<span class="lang-text-hu hidden">A fészekarchívum</span>
+</h4>
+<p class="text-on-surface-variant text-sm">
+<span class="lang-text-en">A deep dive into high-altitude architecture and territory.</span>
+<span class="lang-text-de hidden">Ein tiefer Einblick in die Hochgebirgsarchitektur und Territorien.</span>
+<span class="lang-text-hu hidden">Mélymerülés a magaslati építészetbe és a területbe.</span>
+</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Specimen Highlight Section -->
+<section class="mt-32 bg-primary py-24 px-6 md:px-12 text-on-primary overflow-hidden relative">
+<div class="absolute right-0 top-0 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[400px]" data-icon="nest_cam_pigeon" style="font-variation-settings: 'FILL' 1;">nest_cam_outdoor</span>
+</div>
+<div class="max-w-7xl mx-auto relative z-10 grid md:grid-cols-2 gap-16 items-center">
+<div class="space-y-6">
+<h3 class="font-serif text-5xl leading-tight font-bold">
+<span class="lang-text-en">Enter the <br/><span class="italic text-primary-fixed-dim">Living Ledger</span></span>
+<span class="lang-text-de hidden">Betreten Sie das <br/><span class="italic text-primary-fixed-dim">Lebende Register</span></span>
+<span class="lang-text-hu hidden">Lépjen be az <br/><span class="italic text-primary-fixed-dim">Élő Nyilvántartásba</span></span>
+</h3>
+<p class="text-on-primary-container text-lg max-w-lg font-light leading-relaxed">
+<span class="lang-text-en">Access real-time tracking data, high-definition nesting streams, and the complete biological history of our tagged specimens.</span>
+<span class="lang-text-de hidden">Greifen Sie auf Echtzeit-Tracking-Daten, hochauflösende Nesting-Streams und die vollständige biologische Geschichte unserer markierten Exemplare zu.</span>
+<span class="lang-text-hu hidden">Hozzáférés valós idejű követési adatokhoz, nagy felbontású fészekrakó közvetítésekhez és megjelölt példányaink teljes biológiai történetéhez.</span>
+</p>
+<button class="bg-white text-primary px-10 py-5 rounded-lg font-bold hover:bg-primary-fixed transition-colors active:scale-95">
+<span class="lang-text-en">Create Field Account</span>
+<span class="lang-text-de hidden">Feld-Konto erstellen</span>
+<span class="lang-text-hu hidden">Terepi fiók létrehozása</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-primary-container/30 backdrop-blur-md p-6 rounded-xl space-y-2">
+<span class="block text-3xl font-serif font-bold">1,240+</span>
+<span class="text-xs uppercase tracking-widest font-bold opacity-60">
+<span class="lang-text-en">Observations</span>
+<span class="lang-text-de hidden">Beobachtungen</span>
+<span class="lang-text-hu hidden">Megfigyelések</span>
+</span>
+</div>
+<div class="bg-primary-container/30 backdrop-blur-md p-6 rounded-xl space-y-2">
+<span class="block text-3xl font-serif font-bold">14</span>
+<span class="text-xs uppercase tracking-widest font-bold opacity-60">
+<span class="lang-text-en">Active Nests</span>
+<span class="lang-text-de hidden">Aktive Nester</span>
+<span class="lang-text-hu hidden">Aktív fészkek</span>
+</span>
+</div>
+<div class="bg-primary-container/30 backdrop-blur-md p-6 rounded-xl space-y-2">
+<span class="block text-3xl font-serif font-bold">8.2k</span>
+<span class="text-xs uppercase tracking-widest font-bold opacity-60">
+<span class="lang-text-en">Miles Tracked</span>
+<span class="lang-text-de hidden">Meilen verfolgt</span>
+<span class="lang-text-hu hidden">Mérföld követve</span>
+</span>
+</div>
+<div class="bg-primary-container/30 backdrop-blur-md p-6 rounded-xl space-y-2">
+<span class="block text-3xl font-serif font-bold">100%</span>
+<span class="text-xs uppercase tracking-widest font-bold opacity-60">
+<span class="lang-text-en">Open Source</span>
+<span class="lang-text-de hidden">Open Source</span>
+<span class="lang-text-hu hidden">Nyílt forráskód</span>
+</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 md:hidden bg-[#fafaf5]/70 dark:bg-zinc-900/70 backdrop-blur-xl">
+<div class="flex justify-around items-center w-full px-4 py-3">
+<a class="flex flex-col items-center justify-center bg-[#4f6d58] text-white rounded-full px-4 py-1 scale-110 duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="egg">egg</span>
+<span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope">
+<span class="lang-text-en">Hatch</span>
+<span class="lang-text-de hidden">Schlüpfen</span>
+<span class="lang-text-hu hidden">Kikelés</span>
+</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400 hover:text-[#375541] dark:hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="home_max">home_max</span>
+<span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope">
+<span class="lang-text-en">Nest</span>
+<span class="lang-text-de hidden">Nest</span>
+<span class="lang-text-hu hidden">Fészek</span>
+</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400 hover:text-[#375541] dark:hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="target">target</span>
+<span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope">
+<span class="lang-text-en">Hunt</span>
+<span class="lang-text-de hidden">Jagd</span>
+<span class="lang-text-hu hidden">Vadászat</span>
+</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400 hover:text-[#375541] dark:hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="Wings">flight</span>
+<span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope">
+<span class="lang-text-en">Flight</span>
+<span class="lang-text-de hidden">Flug</span>
+<span class="lang-text-hu hidden">Repülés</span>
+</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#375541]/60 dark:text-zinc-400 hover:text-[#375541] dark:hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope">
+<span class="lang-text-en">Mate</span>
+<span class="lang-text-de hidden">Paarung</span>
+<span class="lang-text-hu hidden">Párzás</span>
+</span>
+</a>
+</div>
+</nav>
+<script>
+    function switchLang(lang) {
+        // Toggle language sections
+        document.querySelectorAll('.lang-section').forEach(el => {
+            el.classList.remove('active');
+        });
+        document.getElementById('lang-' + lang).classList.add('active');
+
+        // Toggle small inline text elements
+        document.querySelectorAll('[class^="lang-text-"]').forEach(el => {
+            el.classList.add('hidden');
+        });
+        document.querySelectorAll('.lang-text-' + lang).forEach(el => {
+            el.classList.remove('hidden');
+        });
+
+        // Update buttons
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.remove('bg-primary', 'text-on-primary');
+            btn.classList.add('text-on-surface-variant', 'hover:bg-surface-container-high');
+        });
+        const activeBtn = document.getElementById('btn-' + lang);
+        activeBtn.classList.add('bg-primary', 'text-on-primary');
+        activeBtn.classList.remove('text-on-surface-variant', 'hover:bg-surface-container-high');
+    }
+</script>
+</body></html>

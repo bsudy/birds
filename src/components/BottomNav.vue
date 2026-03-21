@@ -37,7 +37,7 @@ export default {
         { path: '/flight', icon: 'flight', labelKey: 'nav.flight' },
         { path: '/hunt', icon: 'target', labelKey: 'nav.hunt' },
         { path: '/mate', icon: 'favorite', labelKey: 'nav.mate' },
-        { path: '/nest', icon: 'home_max', labelKey: 'nav.nest' }
+        { path: '/nest', icon: 'forward_circle', labelKey: 'nav.nest' }
       ]
     }
   },

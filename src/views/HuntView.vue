@@ -15,7 +15,6 @@
             <router-link to="/flight" class="text-[#375541]/60 font-label uppercase tracking-widest text-xs hover:opacity-80 transition-opacity">Flight</router-link>
             <router-link to="/mate" class="text-[#375541]/60 font-label uppercase tracking-widest text-xs hover:opacity-80 transition-opacity">Mate</router-link>
           </nav>
-          <!-- Language Selector Component -->
           <LanguageSwitcher />
         </div>
       </div>
@@ -35,21 +34,15 @@
           <!-- Asymmetric Specimen Overlay -->
           <div class="absolute -bottom-6 -right-6 md:-right-12 bg-surface-container-lowest p-6 rounded-xl shadow-xl max-w-xs border-l-4 border-primary">
             <p class="font-headline italic text-2xl text-primary mb-2">Falco tinnunculus</p>
-            <p class="text-sm text-on-surface-variant leading-relaxed">
-              A master of the wind, the kestrel remains perfectly still in the air, its head locked on a single point in the grass below.
-            </p>
+            <p class="text-sm text-on-surface-variant leading-relaxed">{{ t.specimenDesc }}</p>
           </div>
         </div>
         <div class="md:col-span-5 md:pl-12 pb-12">
-          <span class="text-primary font-label uppercase tracking-[0.3em] text-sm block mb-4">Stage IV</span>
-          <h2 class="font-headline text-5xl md:text-7xl leading-tight text-on-surface mb-8">
-            Hunting &amp; Survival <br/>
-            <span class="text-3xl md:text-4xl text-on-surface-variant font-light opacity-60">Jagd &amp; Überleben (DE)</span><br/>
-            <span class="text-3xl md:text-4xl text-on-surface-variant font-light opacity-60">Vadászat és túlélés (HU)</span>
-          </h2>
+          <span class="text-primary font-label uppercase tracking-[0.3em] text-sm block mb-4">{{ t.stageLabel }}</span>
+          <h2 class="font-headline text-5xl md:text-7xl leading-tight text-on-surface mb-8">{{ t.heroTitle }}</h2>
           <div class="space-y-6 text-lg text-on-surface-variant font-light leading-relaxed">
-            <p>To survive in the open landscape, the kestrel has evolved a specialized technique known as <span class="text-primary font-semibold italic">windhovering</span>.</p>
-            <p>By flapping its wings and fanning its tail against the wind, it creates a stationary platform in mid-air, scanning the terrain for the slightest movement of voles or beetles.</p>
+            <p v-html="t.heroParagraph1"></p>
+            <p>{{ t.heroParagraph2 }}</p>
           </div>
         </div>
       </section>
@@ -60,19 +53,13 @@
           <!-- Eye Specimen Card -->
           <div class="md:col-span-2 bg-surface-container-low rounded-xl p-10 relative overflow-hidden flex flex-col justify-between min-h-[400px]">
             <div class="relative z-10 max-w-md">
-              <h3 class="font-headline text-3xl mb-4">
-                Ultraviolet Vision <br/>
-                <span class="text-xl text-on-surface-variant italic">Ultraviolette Sicht / Ultraibolya látás</span>
-              </h3>
-              <p class="text-on-surface-variant leading-relaxed mb-6">
-                The kestrel's eyes are not merely sharp; they can see into the ultraviolet spectrum. This allows them to track the urine trails of voles, which glow under UV light, leading the predator straight to its prey.
-              </p>
+              <h3 class="font-headline text-3xl mb-4">{{ t.uvVisionTitle }}</h3>
+              <p class="text-on-surface-variant leading-relaxed mb-6">{{ t.uvVisionDesc }}</p>
               <div class="flex gap-4">
-                <span class="px-3 py-1 bg-primary/10 text-primary font-label text-xs uppercase tracking-widest rounded-full">Vision x8</span>
-                <span class="px-3 py-1 bg-primary/10 text-primary font-label text-xs uppercase tracking-widest rounded-full">UV Tracking</span>
+                <span class="px-3 py-1 bg-primary/10 text-primary font-label text-xs uppercase tracking-widest rounded-full">{{ t.visionTag }}</span>
+                <span class="px-3 py-1 bg-primary/10 text-primary font-label text-xs uppercase tracking-widest rounded-full">{{ t.uvTag }}</span>
               </div>
             </div>
-            <!-- Overlapping Illustration Placeholder -->
             <div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
               <img
                 alt="Kestrel eye detail"
@@ -81,18 +68,13 @@
               />
             </div>
           </div>
-          <!-- The Talons: Precision Instrument -->
+          <!-- The Talons -->
           <div class="bg-surface-container-highest rounded-xl p-8 flex flex-col">
             <div class="mb-8">
               <span class="material-symbols-outlined text-4xl text-primary">precision_manufacturing</span>
             </div>
-            <h3 class="font-headline text-2xl mb-4">
-              Powerful Talons <br/>
-              <span class="text-lg text-on-surface-variant italic">Mächtige Krallen / Erős karmok</span>
-            </h3>
-            <p class="text-sm text-on-surface-variant leading-relaxed">
-              Once the target is acquired, the kestrel drops in a controlled 'stoop'. The impact is followed by a swift grasp of its needle-sharp yellow talons, designed for immediate incapacitation.
-            </p>
+            <h3 class="font-headline text-2xl mb-4">{{ t.talonsTitle }}</h3>
+            <p class="text-sm text-on-surface-variant leading-relaxed">{{ t.talonsDesc }}</p>
             <div class="mt-auto pt-8">
               <img
                 alt="Bird claws"
@@ -104,19 +86,16 @@
         </div>
       </section>
 
-      <!-- The Diet Table: Field Notes -->
+      <!-- The Diet Table -->
       <section class="bg-surface-container-low rounded-xl p-12 mb-24">
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 border-b border-outline-variant/20 pb-8">
           <div>
-            <h3 class="font-headline text-4xl">
-              The Hunter's Diet <br/>
-              <span class="text-2xl text-on-surface-variant font-light">Die Nahrung des Jägers / A vadász étrendje</span>
-            </h3>
-            <p class="text-on-surface-variant mt-2 font-label uppercase tracking-widest text-xs">Analysis of field samples and pellets</p>
+            <h3 class="font-headline text-4xl">{{ t.dietTitle }}</h3>
+            <p class="text-on-surface-variant mt-2 font-label uppercase tracking-widest text-xs">{{ t.dietSubtitle }}</p>
           </div>
           <div class="mt-4 md:mt-0">
             <button class="bg-primary text-on-primary px-8 py-3 font-label text-sm uppercase tracking-widest flex items-center gap-2 rounded-lg hover:shadow-lg transition-all">
-              <span>View Data Logs</span>
+              <span>{{ t.viewDataLogs }}</span>
               <span class="material-symbols-outlined text-sm">arrow_forward</span>
             </button>
           </div>
@@ -124,30 +103,30 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div class="space-y-2">
             <span class="block text-4xl font-headline text-primary">75%</span>
-            <span class="block font-label text-xs uppercase tracking-widest text-on-surface-variant">Field Voles</span>
-            <p class="text-sm italic">The primary energy source for breeding pairs.</p>
+            <span class="block font-label text-xs uppercase tracking-widest text-on-surface-variant">{{ t.volesLabel }}</span>
+            <p class="text-sm italic">{{ t.volesDesc }}</p>
           </div>
           <div class="space-y-2">
             <span class="block text-4xl font-headline text-primary">12%</span>
-            <span class="block font-label text-xs uppercase tracking-widest text-on-surface-variant">Common Beetles</span>
-            <p class="text-sm italic">Crucial during insect swarms in late summer.</p>
+            <span class="block font-label text-xs uppercase tracking-widest text-on-surface-variant">{{ t.beetlesLabel }}</span>
+            <p class="text-sm italic">{{ t.beetlesDesc }}</p>
           </div>
           <div class="space-y-2">
             <span class="block text-4xl font-headline text-primary">8%</span>
-            <span class="block font-label text-xs uppercase tracking-widest text-on-surface-variant">Small Birds</span>
-            <p class="text-sm italic">Starlings and sparrows taken on the wing.</p>
+            <span class="block font-label text-xs uppercase tracking-widest text-on-surface-variant">{{ t.birdsLabel }}</span>
+            <p class="text-sm italic">{{ t.birdsDesc }}</p>
           </div>
           <div class="space-y-2">
             <span class="block text-4xl font-headline text-primary">5%</span>
-            <span class="block font-label text-xs uppercase tracking-widest text-on-surface-variant">Others</span>
-            <p class="text-sm italic">Lizards, earthworms, and occasional frogs.</p>
+            <span class="block font-label text-xs uppercase tracking-widest text-on-surface-variant">{{ t.othersLabel }}</span>
+            <p class="text-sm italic">{{ t.othersDesc }}</p>
           </div>
         </div>
       </section>
 
       <!-- Educational CTA -->
       <section class="max-w-3xl mx-auto text-center py-12">
-        <h4 class="font-headline text-3xl mb-6 italic">"A kestrel needs the equivalent of 4-8 voles a day to survive, requiring hours of focused hovering."</h4>
+        <h4 class="font-headline text-3xl mb-6 italic">"{{ t.closingQuote }}"</h4>
         <div class="h-1 w-24 bg-primary/20 mx-auto rounded-full"></div>
       </section>
     </main>
@@ -178,7 +157,7 @@
       </div>
     </nav>
 
-    <!-- Floating Action Button: Quick Observe -->
+    <!-- Floating Action Button -->
     <div class="fixed bottom-24 right-6 md:bottom-12 md:right-12 z-40 hidden md:block">
       <button class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center shadow-[0_20px_40px_rgba(26,28,25,0.06)] hover:scale-105 transition-transform">
         <span class="material-symbols-outlined text-3xl">visibility</span>
@@ -197,6 +176,90 @@ export default {
   computed: {
     currentLang() {
       return languageStore.currentLang
+    },
+    t() {
+      return this.translations[this.currentLang]
+    }
+  },
+  data() {
+    return {
+      translations: {
+        en: {
+          stageLabel: 'Stage IV',
+          heroTitle: 'Hunting & Survival',
+          specimenDesc: 'A master of the wind, the kestrel remains perfectly still in the air, its head locked on a single point in the grass below.',
+          heroParagraph1: 'To survive in the open landscape, the kestrel has evolved a specialized technique known as <span class="text-primary font-semibold italic">windhovering</span>.',
+          heroParagraph2: 'By flapping its wings and fanning its tail against the wind, it creates a stationary platform in mid-air, scanning the terrain for the slightest movement of voles or beetles.',
+          uvVisionTitle: 'Ultraviolet Vision',
+          uvVisionDesc: "The kestrel's eyes are not merely sharp; they can see into the ultraviolet spectrum. This allows them to track the urine trails of voles, which glow under UV light, leading the predator straight to its prey.",
+          visionTag: 'Vision x8',
+          uvTag: 'UV Tracking',
+          talonsTitle: 'Powerful Talons',
+          talonsDesc: "Once the target is acquired, the kestrel drops in a controlled 'stoop'. The impact is followed by a swift grasp of its needle-sharp yellow talons, designed for immediate incapacitation.",
+          dietTitle: "The Hunter's Diet",
+          dietSubtitle: 'Analysis of field samples and pellets',
+          viewDataLogs: 'View Data Logs',
+          volesLabel: 'Field Voles',
+          volesDesc: 'The primary energy source for breeding pairs.',
+          beetlesLabel: 'Common Beetles',
+          beetlesDesc: 'Crucial during insect swarms in late summer.',
+          birdsLabel: 'Small Birds',
+          birdsDesc: 'Starlings and sparrows taken on the wing.',
+          othersLabel: 'Others',
+          othersDesc: 'Lizards, earthworms, and occasional frogs.',
+          closingQuote: 'A kestrel needs the equivalent of 4-8 voles a day to survive, requiring hours of focused hovering.'
+        },
+        de: {
+          stageLabel: 'Phase IV',
+          heroTitle: 'Jagd & Überleben',
+          specimenDesc: 'Ein Meister des Windes – der Turmfalke verharrt reglos in der Luft, den Blick auf einen einzigen Punkt im Gras unter ihm gerichtet.',
+          heroParagraph1: 'Um in der offenen Landschaft zu überleben, hat der Turmfalke eine spezialisierte Technik entwickelt, die als <span class="text-primary font-semibold italic">Rüttelflug</span> bekannt ist.',
+          heroParagraph2: 'Indem er mit den Flügeln schlägt und seinen Schwanz gegen den Wind fächert, schafft er eine stationäre Plattform in der Luft und durchsucht das Gelände nach der geringsten Bewegung von Wühlmäusen oder Käfern.',
+          uvVisionTitle: 'Ultraviolette Sicht',
+          uvVisionDesc: 'Die Augen des Turmfalken sind nicht nur scharf; sie können das ultraviolette Spektrum wahrnehmen. So können sie die Urinspuren von Wühlmäusen verfolgen, die unter UV-Licht leuchten und den Räuber direkt zu seiner Beute führen.',
+          visionTag: 'Sicht x8',
+          uvTag: 'UV-Ortung',
+          talonsTitle: 'Mächtige Krallen',
+          talonsDesc: 'Sobald das Ziel erfasst ist, lässt sich der Turmfalke in einem kontrollierten Sturzflug fallen. Dem Aufprall folgt ein schneller Griff seiner nadelspitzen gelben Krallen, die für sofortige Handlungsunfähigkeit konzipiert sind.',
+          dietTitle: 'Die Nahrung des Jägers',
+          dietSubtitle: 'Analyse von Feldproben und Gewöllen',
+          viewDataLogs: 'Datenprotokolle ansehen',
+          volesLabel: 'Feldmäuse',
+          volesDesc: 'Die primäre Energiequelle für Brutpaare.',
+          beetlesLabel: 'Gemeine Käfer',
+          beetlesDesc: 'Entscheidend während der Insektenschwärme im Spätsommer.',
+          birdsLabel: 'Kleine Vögel',
+          birdsDesc: 'Stare und Spatzen, im Flug gefangen.',
+          othersLabel: 'Sonstiges',
+          othersDesc: 'Eidechsen, Regenwürmer und gelegentlich Frösche.',
+          closingQuote: 'Ein Turmfalke benötigt täglich das Äquivalent von 4-8 Wühlmäusen zum Überleben, was stundenlangen konzentrierten Rüttelflug erfordert.'
+        },
+        hu: {
+          stageLabel: 'IV. szakasz',
+          heroTitle: 'Vadászat és túlélés',
+          specimenDesc: 'A szél mestere – a vércse mozdulatlanul lebeg a levegőben, tekintete egyetlen pontra szegezve az alatta lévő fűben.',
+          heroParagraph1: 'A nyílt tájon való túléléshez a vércse egy speciális technikát fejlesztett ki, amelyet <span class="text-primary font-semibold italic">szitálásnak</span> neveznek.',
+          heroParagraph2: 'Szárnyait csapkodva és farkát a szél ellen legyezve egy álló platformot hoz létre a levegőben, miközben a terepet pásztázza a pockok vagy bogarak legkisebb mozgása után kutatva.',
+          uvVisionTitle: 'Ultraibolya látás',
+          uvVisionDesc: 'A vércse szeme nemcsak éles; képes az ultraibolya spektrumba is látni. Ezáltal követni tudja a pockok vizeletnyomait, amelyek UV-fény alatt világítanak, és egyenesen a zsákmányhoz vezetik a ragadozót.',
+          visionTag: 'Látás x8',
+          uvTag: 'UV-követés',
+          talonsTitle: 'Erős karmok',
+          talonsDesc: 'Amint a célpont megvan, a vércse kontrollált zuhanásba kezd. A becsapódást a tűhegyes sárga karmok villámgyors megragadása követi, amelyek az azonnali hatástalanításra lettek tervezve.',
+          dietTitle: 'A vadász étrendje',
+          dietSubtitle: 'Terepminták és köpetek elemzése',
+          viewDataLogs: 'Adatnaplók megtekintése',
+          volesLabel: 'Mezei pockok',
+          volesDesc: 'A költőpárok elsődleges energiaforrása.',
+          beetlesLabel: 'Közönséges bogarak',
+          beetlesDesc: 'Kulcsfontosságú a késő nyári rovarrajzás idején.',
+          birdsLabel: 'Kisebb madarak',
+          birdsDesc: 'Seregélyek és verebek, röptükben elkapva.',
+          othersLabel: 'Egyéb',
+          othersDesc: 'Gyíkok, földigiliszták és alkalmanként békák.',
+          closingQuote: 'Egy vércsének napi 4-8 pocoknak megfelelő táplálékra van szüksége a túléléshez, ami órákig tartó koncentrált szitálást igényel.'
+        }
+      }
     }
   }
 }

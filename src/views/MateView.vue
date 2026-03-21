@@ -39,6 +39,25 @@
         </div>
       </div>
 
+      <!-- Kestrel Call -->
+      <div class="bg-surface-container-low rounded-xl p-8 mb-24 flex flex-col sm:flex-row items-start sm:items-center gap-8">
+        <div class="flex-shrink-0 w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
+          <span class="material-symbols-outlined text-primary text-3xl">graphic_eq</span>
+        </div>
+        <div class="flex-1 min-w-0">
+          <p class="font-label text-[10px] text-outline uppercase tracking-widest mb-1">Kestrel Call</p>
+          <h4 class="font-serif text-xl text-on-surface mb-3"><span class="italic">Falco tinnunculus tinnunculus</span> — flight call</h4>
+          <audio controls class="w-full" style="accent-color: var(--md-sys-color-primary)">
+            <source src="/XC608709 - Common Kestrel - Falco tinnunculus tinnunculus.mp3" type="audio/mpeg" />
+          </audio>
+          <p class="mt-3 text-xs text-on-surface-variant">
+            Recording: XC608709 via
+            <a href="https://xeno-canto.org/species/Falco-tinnunculus" target="_blank" rel="noopener" class="text-primary underline underline-offset-2 hover:opacity-70 transition-opacity">xeno-canto.org</a>
+            — explore more kestrel recordings there.
+          </p>
+        </div>
+      </div>
+
       <!-- Asymmetric Content Block -->
       <section class="flex flex-col md:flex-row gap-16 items-start">
         <div class="md:w-1/3">

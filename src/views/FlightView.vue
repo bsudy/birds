@@ -60,9 +60,9 @@
                 <span class="material-symbols-outlined text-on-primary text-3xl">play_arrow</span>
               </div>
               <div>
-                <p class="font-label text-[10px] text-outline uppercase mb-1">Video</p>
-                <h4 class="font-headline text-2xl text-primary">The Kestrel in Flight</h4>
-                <p class="text-on-surface-variant text-sm mt-1">Watch the kestrel's remarkable hovering technique in the wild.</p>
+                <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('flight.videoLabel') }}</p>
+                <h4 class="font-headline text-2xl text-primary">{{ $t('flight.videoTitle') }}</h4>
+                <p class="text-on-surface-variant text-sm mt-1">{{ $t('flight.videoDesc') }}</p>
               </div>
             </div>
           </div>

@@ -13,7 +13,16 @@
     "heroTitle": "Die Falke des <br/><span class=\"italic font-light\">Alten Windes</span>",
     "heroDesc": "Ein ausführlicher Leitfaden zum Falco tinnunculus — mit einem Blick auf seine Lebenszyklen, aerodynamische Meisterschaft und die bemerkenswerte Welt des Turmfalken.",
     "beginJourney": "Reise beginnen",
-    "exploreMethodology": "Methodik erkunden"
+    "exploreMethodology": "Methodik erkunden",
+    "statGenusLabel": "Gattung",
+    "statStatusLabel": "Status",
+    "statStatusValue": "Nicht gefährdet",
+    "mapRangeLabel": "Weltweites Verbreitungsgebiet",
+    "mapTitle": "Das Verbreitungsgebiet des Turmfalken",
+    "mapBreeding": "Brutgebiet",
+    "mapYearRound": "Ganzjährig",
+    "mapWintering": "Überwinterungsgebiet",
+    "mapAttribution": "Cornell Lab of Ornithology (2025) Verbreitungskarte für den Turmfalken <span class=\"italic\">Falco tinnunculus</span>. Angepasst unter Berücksichtigung taxonomischer Unterschiede von BirdLife International und Handbook of the Birds of the World (2021) Verbreitungskarten der Vogelarten der Welt. Version 2021.1."
   },
   "hatch": {
     "phaseLabel": "Der Anfang",
@@ -35,7 +44,9 @@
     "protoptileDown": "Dunen",
     "protoptileDownDesc": "Die erste Schicht aus weißen, flauschigen Federn, die eine sofortige Isolierung gegen die Höhenwinde an den Nistplätzen bietet.",
     "closingTitle": "Eine Reise hat begonnen",
-    "closingQuote": "\"Das Aufbrechen der Schale ist nicht das Ende eines Prozesses, sondern der gewaltige Beginn eines Fluges, der schließlich Kontinente umspannen wird.\""
+    "closingQuote": "\"Das Aufbrechen der Schale ist nicht das Ende eines Prozesses, sondern der gewaltige Beginn eines Fluges, der schließlich Kontinente umspannen wird.\"",
+    "videoLabel": "Video",
+    "videoTitle": "Die Wache des Vaters"
   },
   "growth": {
     "phaseLabel": "Die Verwandlung",
@@ -56,7 +67,9 @@
     "visualDocumentation": "Visuelle Dokumentation",
     "bentoQuote": "Der Blick wird scharf und verfolgt Insekten durch die Luft aus der Sicherheit des Nestes.",
     "dietTitle": "Hauptnahrung",
-    "dietBody": "In dieser Phase machen Feldmäuse und Eidechsen 85% der Kalorienaufnahme der Brut aus."
+    "dietBody": "In dieser Phase machen Feldmäuse und Eidechsen 85% der Kalorienaufnahme der Brut aus.",
+    "developmentLabel": "Entwicklung",
+    "postHatchDay5": "Tag 5 nach dem Schlüpfen"
   },
   "flight": {
     "title": "Abflug",
@@ -84,7 +97,10 @@
     "s3Link": "Archivprotokolle lesen",
     "didYouKnow": "Wussten Sie schon?",
     "didYouKnowBody": "Turmfalken können Magnetfelder mithilfe spezialisierter Zellen in ihrem Schnabel erkennen, was ihnen hilft, während der Migration über weite Entfernungen zu navigieren.",
-    "closingQuote": "Das Brechen der Stille ist nicht das Ende der Ruhe, sondern der gewaltige Beginn eines Fluges, der Kontinente umspannen wird."
+    "closingQuote": "Das Brechen der Stille ist nicht das Ende der Ruhe, sondern der gewaltige Beginn eines Fluges, der Kontinente umspannen wird.",
+    "videoLabel": "Video",
+    "videoTitle": "Der Turmfalke im Flug",
+    "videoDesc": "Erleben Sie die bemerkenswerte Rütteltechnik des Turmfalken in freier Wildbahn."
   },
   "hunt": {
     "stageLabel": "Die Jagd",
@@ -109,7 +125,10 @@
     "birdsDesc": "Stare und Spatzen, im Flug gefangen.",
     "othersLabel": "Sonstiges",
     "othersDesc": "Eidechsen, Regenwürmer und gelegentlich Frösche.",
-    "closingQuote": "Ein Turmfalke benötigt täglich das Äquivalent von 4-8 Wühlmäusen zum Überleben, was stundenlangen konzentrierten Rüttelflug erfordert."
+    "closingQuote": "Ein Turmfalke benötigt täglich das Äquivalent von 4-8 Wühlmäusen zum Überleben, was stundenlangen konzentrierten Rüttelflug erfordert.",
+    "videoLabel": "Video",
+    "videoTitle": "Die Jagd",
+    "videoDesc": "Beobachten Sie den präzisen Jagdangriff des Turmfalken in freier Wildbahn."
   },
   "mate": {
     "chapterLabel": "Das Band",
@@ -129,7 +148,13 @@
     "plumageTitle": "Das Gefieder",
     "plumageDesc": "Der blaugraue Kopf und der rotbraune Rücken des Männchens dienen als wichtige visuelle Signale während der Balzvorführungen und zeigen genetische Fitness und Territorialbesitz an.",
     "sanctuaryTitle": "Das Refugium",
-    "sanctuaryDesc": "Die Balz gipfelt in der Wahl eines Nistplatzes hoch über der Landschaft, eine gemeinsame Entscheidung, die das endgültige Bekenntnis der Bindung markiert."
+    "sanctuaryDesc": "Die Balz gipfelt in der Wahl eines Nistplatzes hoch über der Landschaft, eine gemeinsame Entscheidung, die das endgültige Bekenntnis der Bindung markiert.",
+    "breedingSeasonLabel": "Brutzeit",
+    "breedingSeasonValue": "Apr–Jul",
+    "kestrelCallLabel": "Turmfalkenruf",
+    "flightCallSuffix": "— Fluggesang",
+    "audioRecordingPrefix": "Aufnahme: XC608709 via",
+    "audioRecordingSuffix": "— Entdecken Sie dort weitere Turmfalken-Aufnahmen."
   },
   "nest": {
     "phaseLabel": "Das Vermächtnis",

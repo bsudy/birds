@@ -37,8 +37,8 @@
           </div>
           <div class="bg-surface-container-low rounded p-6 flex flex-col justify-end relative overflow-hidden">
             <span class="material-symbols-outlined absolute top-4 right-4 text-primary/20 scale-150">egg_alt</span>
-            <span class="text-[10px] font-bold uppercase tracking-widest text-outline mb-1">Development</span>
-            <h5 class="font-headline text-xl">Post-Hatch Day 5</h5>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-outline mb-1">{{ $t('growth.developmentLabel') }}</span>
+            <h5 class="font-headline text-xl">{{ $t('growth.postHatchDay5') }}</h5>
           </div>
           <div class="bg-tertiary-container text-on-tertiary-container rounded p-6 flex flex-col justify-center">
             <p class="font-headline italic text-lg leading-snug">"{{ $t('growth.bentoQuote') }}"</p>

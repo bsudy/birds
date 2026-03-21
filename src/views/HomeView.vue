@@ -14,12 +14,12 @@
             </button>
           </div>
           <template #stat-top>
-            <p class="font-label text-[10px] text-outline uppercase mb-1">Genus</p>
+            <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('home.statGenusLabel') }}</p>
             <p class="font-headline text-2xl text-primary italic">Falco</p>
           </template>
           <template #stat-bottom>
-            <p class="font-label text-[10px] text-outline uppercase mb-1">Status</p>
-            <p class="font-headline text-2xl text-tertiary">Least Concern</p>
+            <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('home.statStatusLabel') }}</p>
+            <p class="font-headline text-2xl text-tertiary">{{ $t('home.statStatusValue') }}</p>
           </template>
         </SpecimenHero>
       </div>
@@ -31,21 +31,19 @@
       <section class="px-6 md:px-12 max-w-7xl mx-auto mt-24 mb-12">
         <div class="mb-8 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
           <div>
-            <p class="font-label text-xs uppercase tracking-widest text-primary mb-2">Global Range</p>
-            <h3 class="font-serif text-4xl text-on-surface font-bold">Where Kestrels Live</h3>
+            <p class="font-label text-xs uppercase tracking-widest text-primary mb-2">{{ $t('home.mapRangeLabel') }}</p>
+            <h3 class="font-serif text-4xl text-on-surface font-bold">{{ $t('home.mapTitle') }}</h3>
           </div>
           <div class="flex items-center gap-6 text-xs text-on-surface-variant font-label uppercase tracking-wider">
-            <span class="flex items-center gap-2"><span class="inline-block w-3 h-3 rounded-full bg-[#e8956d]"></span>Breeding</span>
-            <span class="flex items-center gap-2"><span class="inline-block w-3 h-3 rounded-full bg-[#8b9dc3]"></span>Year-round</span>
-            <span class="flex items-center gap-2"><span class="inline-block w-3 h-3 rounded-full bg-[#e8d44d]"></span>Wintering</span>
+            <span class="flex items-center gap-2"><span class="inline-block w-3 h-3 rounded-full bg-[#e8956d]"></span>{{ $t('home.mapBreeding') }}</span>
+            <span class="flex items-center gap-2"><span class="inline-block w-3 h-3 rounded-full bg-[#8b9dc3]"></span>{{ $t('home.mapYearRound') }}</span>
+            <span class="flex items-center gap-2"><span class="inline-block w-3 h-3 rounded-full bg-[#e8d44d]"></span>{{ $t('home.mapWintering') }}</span>
           </div>
         </div>
         <div class="rounded-xl overflow-hidden border border-outline-variant/10 shadow-sm">
           <img src="/map.png" alt="Distribution map of the Eurasian Kestrel showing breeding, year-round and wintering ranges across Europe, Asia and Africa" class="w-full" />
         </div>
-        <p class="mt-4 text-[11px] text-on-surface-variant/60 leading-relaxed max-w-3xl">
-          Cornell Lab of Ornithology (2025) Distribution map for Eurasian Kestrel <span class="italic">Falco tinnunculus</span>. Modified accounting for taxonomic differences from BirdLife International and Handbook of the Birds of the World (2021) Bird species distribution maps of the world. Version 2021.1.
-        </p>
+        <p class="mt-4 text-[11px] text-on-surface-variant/60 leading-relaxed max-w-3xl" v-html="$t('home.mapAttribution')"></p>
       </section>
     </main>
   </div>

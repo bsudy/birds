@@ -13,7 +13,16 @@
     "heroTitle": "The Falcon of <br/><span class=\"italic font-light\">The Old Wind</span>",
     "heroDesc": "An in-depth guide to the Falco tinnunculus — exploring its life-cycles, aerodynamic mastery, and the remarkable world of the Common Kestrel.",
     "beginJourney": "Begin Journey",
-    "exploreMethodology": "Explore Methodology"
+    "exploreMethodology": "Explore Methodology",
+    "statGenusLabel": "Genus",
+    "statStatusLabel": "Status",
+    "statStatusValue": "Least Concern",
+    "mapRangeLabel": "Global Range",
+    "mapTitle": "Where Kestrels Live",
+    "mapBreeding": "Breeding",
+    "mapYearRound": "Year-round",
+    "mapWintering": "Wintering",
+    "mapAttribution": "Cornell Lab of Ornithology (2025) Distribution map for Eurasian Kestrel <span class=\"italic\">Falco tinnunculus</span>. Modified accounting for taxonomic differences from BirdLife International and Handbook of the Birds of the World (2021) Bird species distribution maps of the world. Version 2021.1."
   },
   "hatch": {
     "phaseLabel": "The Beginning",
@@ -35,7 +44,9 @@
     "protoptileDown": "Protoptile Down",
     "protoptileDownDesc": "The first layer of white, fluffy feathers that provides immediate insulation against the high-altitude winds found at nesting sites.",
     "closingTitle": "A Journey Commenced",
-    "closingQuote": "\"The breaking of the shell is not the end of a process, but the violent beginning of a flight that will eventually span continents.\""
+    "closingQuote": "\"The breaking of the shell is not the end of a process, but the violent beginning of a flight that will eventually span continents.\"",
+    "videoLabel": "Video",
+    "videoTitle": "A Father's Vigil"
   },
   "growth": {
     "phaseLabel": "The Metamorphosis",
@@ -56,7 +67,9 @@
     "visualDocumentation": "Visual Documentation",
     "bentoQuote": "The gaze becomes sharp, tracking insects through the air from the safety of the nest.",
     "dietTitle": "Primary Diet",
-    "dietBody": "During this phase, field voles and lizards comprise 85% of the caloric intake for the brood."
+    "dietBody": "During this phase, field voles and lizards comprise 85% of the caloric intake for the brood.",
+    "developmentLabel": "Development",
+    "postHatchDay5": "Post-Hatch Day 5"
   },
   "flight": {
     "title": "Taking Flight",
@@ -84,7 +97,10 @@
     "s3Link": "Read Archive Logs",
     "didYouKnow": "Did You Know?",
     "didYouKnowBody": "Kestrels can detect magnetic fields using specialized cells in their beaks, helping them navigate across vast distances during migration.",
-    "closingQuote": "The breaking of stillness is not the end of rest, but the violent beginning of a flight that will span continents."
+    "closingQuote": "The breaking of stillness is not the end of rest, but the violent beginning of a flight that will span continents.",
+    "videoLabel": "Video",
+    "videoTitle": "The Kestrel in Flight",
+    "videoDesc": "Watch the kestrel's remarkable hovering technique in the wild."
   },
   "hunt": {
     "stageLabel": "The Pursuit",
@@ -109,7 +125,10 @@
     "birdsDesc": "Starlings and sparrows taken on the wing.",
     "othersLabel": "Others",
     "othersDesc": "Lizards, earthworms, and occasional frogs.",
-    "closingQuote": "A kestrel needs the equivalent of 4-8 voles a day to survive, requiring hours of focused hovering."
+    "closingQuote": "A kestrel needs the equivalent of 4-8 voles a day to survive, requiring hours of focused hovering.",
+    "videoLabel": "Video",
+    "videoTitle": "The Hunt",
+    "videoDesc": "Watch the kestrel's precision strike as it hunts in the wild."
   },
   "mate": {
     "chapterLabel": "The Bond",
@@ -129,7 +148,13 @@
     "plumageTitle": "The Plumage",
     "plumageDesc": "The male's blue-grey head and rufous back serve as key visual signals during courtship displays, indicating genetic fitness and territory ownership.",
     "sanctuaryTitle": "The Sanctuary",
-    "sanctuaryDesc": "Courtship culminates in the selection of a nesting site high above the landscape, a shared decision that marks the final commitment of the bond."
+    "sanctuaryDesc": "Courtship culminates in the selection of a nesting site high above the landscape, a shared decision that marks the final commitment of the bond.",
+    "breedingSeasonLabel": "Breeding season",
+    "breedingSeasonValue": "Apr–Jul",
+    "kestrelCallLabel": "Kestrel Call",
+    "flightCallSuffix": "— flight call",
+    "audioRecordingPrefix": "Recording: XC608709 via",
+    "audioRecordingSuffix": "— explore more kestrel recordings there."
   },
   "nest": {
     "phaseLabel": "The Legacy",

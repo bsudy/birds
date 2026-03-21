@@ -64,9 +64,9 @@
                 <span class="material-symbols-outlined text-on-primary text-3xl">play_arrow</span>
               </div>
               <div>
-                <p class="font-label text-[10px] text-outline uppercase mb-1">Video</p>
-                <h4 class="font-headline text-2xl text-primary">The Hunt</h4>
-                <p class="text-on-surface-variant text-sm mt-1">Watch the kestrel's precision strike as it hunts in the wild.</p>
+                <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('hunt.videoLabel') }}</p>
+                <h4 class="font-headline text-2xl text-primary">{{ $t('hunt.videoTitle') }}</h4>
+                <p class="text-on-surface-variant text-sm mt-1">{{ $t('hunt.videoDesc') }}</p>
               </div>
             </div>
           </div>

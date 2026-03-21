@@ -69,8 +69,8 @@
             <div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 mb-4">
               <span class="material-symbols-outlined text-on-primary text-3xl">play_arrow</span>
             </div>
-            <p class="font-label text-[10px] text-outline uppercase mb-1">Video</p>
-            <h4 class="font-headline text-xl text-primary">A Father's Vigil</h4>
+            <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('hatch.videoLabel') }}</p>
+            <h4 class="font-headline text-xl text-primary">{{ $t('hatch.videoTitle') }}</h4>
           </div>
         </div>
         <div class="md:col-span-4 bg-[#375541] text-white p-8 flex flex-col items-start justify-center">

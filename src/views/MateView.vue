@@ -14,8 +14,8 @@
           <p class="font-headline text-2xl text-primary">3-6 eggs</p>
         </template>
         <template #stat-bottom>
-          <p class="font-label text-[10px] text-outline uppercase mb-1">Breeding season</p>
-          <p class="font-headline text-2xl text-tertiary">Apr–Jul</p>
+          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('mate.breedingSeasonLabel') }}</p>
+          <p class="font-headline text-2xl text-tertiary">{{ $t('mate.breedingSeasonValue') }}</p>
         </template>
       </SpecimenHero>
 
@@ -45,15 +45,15 @@
           <span class="material-symbols-outlined text-primary text-3xl">graphic_eq</span>
         </div>
         <div class="flex-1 min-w-0">
-          <p class="font-label text-[10px] text-outline uppercase tracking-widest mb-1">Kestrel Call</p>
-          <h4 class="font-serif text-xl text-on-surface mb-3"><span class="italic">Falco tinnunculus tinnunculus</span> — flight call</h4>
+          <p class="font-label text-[10px] text-outline uppercase tracking-widest mb-1">{{ $t('mate.kestrelCallLabel') }}</p>
+          <h4 class="font-serif text-xl text-on-surface mb-3"><span class="italic">Falco tinnunculus tinnunculus</span> {{ $t('mate.flightCallSuffix') }}</h4>
           <audio controls class="w-full" style="accent-color: var(--md-sys-color-primary)">
             <source src="/XC608709 - Common Kestrel - Falco tinnunculus tinnunculus.mp3" type="audio/mpeg" />
           </audio>
           <p class="mt-3 text-xs text-on-surface-variant">
-            Recording: XC608709 via
+            {{ $t('mate.audioRecordingPrefix') }}
             <a href="https://xeno-canto.org/species/Falco-tinnunculus" target="_blank" rel="noopener" class="text-primary underline underline-offset-2 hover:opacity-70 transition-opacity">xeno-canto.org</a>
-            — explore more kestrel recordings there.
+            {{ $t('mate.audioRecordingSuffix') }}
           </p>
         </div>
       </div>

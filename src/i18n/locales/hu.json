@@ -13,7 +13,16 @@
     "heroTitle": "Az Öreg <br/><span class=\"italic font-light\">Szél Sólyma</span>",
     "heroDesc": "Részletes útmutató a Falco tinnunculus-hoz — életciklusainak, aerodinamikai képességeinek és a vörös vércse figyelemre méltó világának bemutatása.",
     "beginJourney": "Utazás kezdése",
-    "exploreMethodology": "Módszertan felfedezése"
+    "exploreMethodology": "Módszertan felfedezése",
+    "statGenusLabel": "Nem",
+    "statStatusLabel": "Státusz",
+    "statStatusValue": "Nem fenyegetett",
+    "mapRangeLabel": "Globális elterjedés",
+    "mapTitle": "A vörös vércse élőhelye",
+    "mapBreeding": "Fészkelési terület",
+    "mapYearRound": "Egész évben",
+    "mapWintering": "Telelőterület",
+    "mapAttribution": "Cornell Lab of Ornithology (2025) Elterjedési térkép az eurázsiai vörös vércse <span class=\"italic\">Falco tinnunculus</span> számára. Módosítva a BirdLife International és a Handbook of the Birds of the World (2021) taxonómiai különbségeire tekintettel. A világ madárfajainak elterjedési térképei. 2021.1-es verzió."
   },
   "hatch": {
     "phaseLabel": "A kezdet",
@@ -35,7 +44,9 @@
     "protoptileDown": "Pihetoll",
     "protoptileDownDesc": "A fehér, bolyhos tollak első rétege, amely azonnali szigetelést biztosít a fészkelőhelyeken tapasztalható nagy magassági szelek ellen.",
     "closingTitle": "Egy utazás vette kezdetét",
-    "closingQuote": "\"A héj áttörése nem egy folyamat vége, hanem egy olyan repülés viharos kezdete, amely végül kontinenseket ível át.\""
+    "closingQuote": "\"A héj áttörése nem egy folyamat vége, hanem egy olyan repülés viharos kezdete, amely végül kontinenseket ível át.\"",
+    "videoLabel": "Videó",
+    "videoTitle": "Az apa virrasztása"
   },
   "growth": {
     "phaseLabel": "Az átváltozás",
@@ -56,7 +67,9 @@
     "visualDocumentation": "Vizuális dokumentáció",
     "bentoQuote": "A tekintet élessé válik, a fészek biztonságából követi a rovarokat a levegőben.",
     "dietTitle": "Elsődleges étrend",
-    "dietBody": "Ebben a fázisban a mezei pockok és gyíkok teszik ki a költés kalóriabevételének 85%-át."
+    "dietBody": "Ebben a fázisban a mezei pockok és gyíkok teszik ki a költés kalóriabevételének 85%-át.",
+    "developmentLabel": "Fejlődés",
+    "postHatchDay5": "5. nap kikelés után"
   },
   "flight": {
     "title": "Repülés",
@@ -84,7 +97,10 @@
     "s3Link": "Archív naplók olvasása",
     "didYouKnow": "Tudtad?",
     "didYouKnowBody": "A vércsék képesek a mágneses mezőket érzékelni a csőrükben lévő specializált sejtek segítségével, ami segíti őket a vonulás során a hatalmas távolságokon való navigálásban.",
-    "closingQuote": "A mozdulatlanság megtörése nem a pihenés vége, hanem egy kontinenseket átívelő repülés viharos kezdete."
+    "closingQuote": "A mozdulatlanság megtörése nem a pihenés vége, hanem egy kontinenseket átívelő repülés viharos kezdete.",
+    "videoLabel": "Videó",
+    "videoTitle": "A vércse repülés közben",
+    "videoDesc": "Figyeld meg a vércse figyelemre méltó szitálási technikáját a természetben."
   },
   "hunt": {
     "stageLabel": "Az üldözés",
@@ -109,7 +125,10 @@
     "birdsDesc": "Seregélyek és verebek, röptükben elkapva.",
     "othersLabel": "Egyéb",
     "othersDesc": "Gyíkok, földigiliszták és alkalmanként békák.",
-    "closingQuote": "Egy vércsének napi 4-8 pocoknak megfelelő táplálékra van szüksége a túléléshez, ami órákig tartó koncentrált szitálást igényel."
+    "closingQuote": "Egy vércsének napi 4-8 pocoknak megfelelő táplálékra van szüksége a túléléshez, ami órákig tartó koncentrált szitálást igényel.",
+    "videoLabel": "Videó",
+    "videoTitle": "A vadászat",
+    "videoDesc": "Figyeld meg a vércse precíziós vadászatát a természetben."
   },
   "mate": {
     "chapterLabel": "A kötelék",
@@ -129,7 +148,13 @@
     "plumageTitle": "A tollazat",
     "plumageDesc": "A hím kékesszürke feje és rozsdavörös háta kulcsfontosságú vizuális jelzésekként szolgálnak az udvarlási bemutatók során, jelezve a genetikai fitneszt és a területi tulajdonjogot.",
     "sanctuaryTitle": "A szentély",
-    "sanctuaryDesc": "Az udvarlás a táj felett magasan elhelyezkedő fészkelőhely kiválasztásában csúcsosodik ki, egy közös döntés, amely a kötelék végső elköteleződését jelzi."
+    "sanctuaryDesc": "Az udvarlás a táj felett magasan elhelyezkedő fészkelőhely kiválasztásában csúcsosodik ki, egy közös döntés, amely a kötelék végső elköteleződését jelzi.",
+    "breedingSeasonLabel": "Költési időszak",
+    "breedingSeasonValue": "Ápr–Júl",
+    "kestrelCallLabel": "Vércse hívóhang",
+    "flightCallSuffix": "— repülési hívóhang",
+    "audioRecordingPrefix": "Felvétel: XC608709 via",
+    "audioRecordingSuffix": "— fedezz fel ott további vércse felvételeket."
   },
   "nest": {
     "phaseLabel": "Az örökség",

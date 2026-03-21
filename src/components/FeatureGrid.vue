@@ -71,12 +71,13 @@
 </template>
 
 <script>
+import { languageStore } from '@/stores/language'
+
 export default {
   name: 'FeatureGrid',
-  props: {
-    currentLang: {
-      type: String,
-      default: 'en'
+  computed: {
+    currentLang() {
+      return languageStore.currentLang
     }
   },
   data() {

@@ -8,24 +8,7 @@
         </div>
         <h1 class="font-serif italic text-2xl tracking-tight text-[#375541] dark:text-[#4f6d58]">{{ t.title }}</h1>
         <div class="flex items-center">
-          <!-- Unified pill-shaped language switcher -->
-          <div class="flex items-center bg-surface-container rounded-full px-1 py-1">
-            <button
-              :class="currentLang === 'en' ? 'bg-primary text-on-primary' : 'text-on-surface-variant hover:bg-surface-container-high'"
-              class="px-3 py-1 rounded-full text-[10px] font-bold transition-all"
-              @click="switchLang('en')"
-            >EN</button>
-            <button
-              :class="currentLang === 'de' ? 'bg-primary text-on-primary' : 'text-on-surface-variant hover:bg-surface-container-high'"
-              class="px-3 py-1 rounded-full text-[10px] font-bold transition-all"
-              @click="switchLang('de')"
-            >DE</button>
-            <button
-              :class="currentLang === 'hu' ? 'bg-primary text-on-primary' : 'text-on-surface-variant hover:bg-surface-container-high'"
-              class="px-3 py-1 rounded-full text-[10px] font-bold transition-all"
-              @click="switchLang('hu')"
-            >HU</button>
-          </div>
+          <LanguageSwitcher />
         </div>
       </div>
     </header>
@@ -152,11 +135,14 @@
 </template>
 
 <script>
+import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
+import { languageStore } from '@/stores/language'
+
 export default {
   name: 'FlightView',
+  components: { LanguageSwitcher },
   data() {
     return {
-      currentLang: 'en',
       translations: {
         en: {
           title: 'Taking Flight',
@@ -237,13 +223,11 @@ export default {
     }
   },
   computed: {
+    currentLang() {
+      return languageStore.currentLang
+    },
     t() {
-      return this.translations[this.currentLang]
-    }
-  },
-  methods: {
-    switchLang(lang) {
-      this.currentLang = lang
+      return this.translations[languageStore.currentLang]
     }
   }
 }

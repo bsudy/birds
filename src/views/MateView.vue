@@ -15,24 +15,7 @@
             <router-link to="/flight" class="hover:opacity-80 transition-opacity cursor-pointer">Flight</router-link>
             <span class="text-[#375541] dark:text-[#8ba891] font-bold">Mate</span>
           </div>
-          <!-- Language Selector Component -->
-          <div class="flex items-center bg-surface-container rounded-full px-2 py-1">
-            <button
-              @click="switchLang('en')"
-              :class="currentLang === 'en' ? 'bg-primary text-on-primary' : 'text-on-surface-variant hover:bg-surface-container-high'"
-              class="px-3 py-1 rounded-full text-[10px] font-bold transition-all"
-            >EN</button>
-            <button
-              @click="switchLang('de')"
-              :class="currentLang === 'de' ? 'bg-primary text-on-primary' : 'text-on-surface-variant hover:bg-surface-container-high'"
-              class="px-3 py-1 rounded-full text-[10px] font-bold transition-all"
-            >DE</button>
-            <button
-              @click="switchLang('hu')"
-              :class="currentLang === 'hu' ? 'bg-primary text-on-primary' : 'text-on-surface-variant hover:bg-surface-container-high'"
-              class="px-3 py-1 rounded-full text-[10px] font-bold transition-all"
-            >HU</button>
-          </div>
+          <LanguageSwitcher />
         </div>
       </div>
     </header>
@@ -160,17 +143,15 @@
 </template>
 
 <script>
+import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
+import { languageStore } from '@/stores/language'
+
 export default {
   name: 'MateView',
-  data() {
-    return {
-      currentLang: 'en',
-      languages: ['en', 'de', 'hu']
-    }
-  },
-  methods: {
-    switchLang(lang) {
-      this.currentLang = lang
+  components: { LanguageSwitcher },
+  computed: {
+    currentLang() {
+      return languageStore.currentLang
     }
   }
 }

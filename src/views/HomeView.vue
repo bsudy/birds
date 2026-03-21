@@ -13,18 +13,7 @@
             <router-link to="/nest" class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope text-zinc-500 hover:opacity-80 transition-opacity">Nest</router-link>
             <router-link to="/hunt" class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope text-zinc-500 hover:opacity-80 transition-opacity">Hunt</router-link>
           </div>
-          <!-- Language Selector Component -->
-          <div class="flex items-center bg-surface-container rounded-full px-2 py-1">
-            <button 
-              v-for="lang in languages" 
-              :key="lang"
-              @click="switchLang(lang)"
-              :class="['px-3 py-1 rounded-full text-xs font-bold transition-all', 
-                currentLang === lang ? 'bg-primary text-on-primary' : 'text-on-surface-variant hover:bg-surface-container-high']"
-            >
-              {{ lang.toUpperCase() }}
-            </button>
-          </div>
+          <LanguageSwitcher />
         </div>
       </div>
     </header>
@@ -105,10 +94,10 @@
       </section>
 
       <!-- Feature Grid -->
-      <FeatureGrid :currentLang="currentLang" />
-      
+      <FeatureGrid />
+
       <!-- Specimen Highlight Section -->
-      <SpecimenHighlight :currentLang="currentLang" />
+      <SpecimenHighlight />
     </main>
   </div>
 </template>
@@ -116,17 +105,23 @@
 <script>
 import FeatureGrid from '@/components/FeatureGrid.vue'
 import SpecimenHighlight from '@/components/SpecimenHighlight.vue'
+import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
+import { languageStore } from '@/stores/language'
 
 export default {
   name: 'HomeView',
   components: {
     FeatureGrid,
-    SpecimenHighlight
+    SpecimenHighlight,
+    LanguageSwitcher
+  },
+  computed: {
+    currentLang() {
+      return languageStore.currentLang
+    }
   },
   data() {
     return {
-      currentLang: 'en',
-      languages: ['en', 'de', 'hu'],
       translations: {
         en: {
           beginJourney: 'Begin Journey',
@@ -141,11 +136,6 @@ export default {
           exploreMethodology: 'Módszertan felfedezése'
         }
       }
-    }
-  },
-  methods: {
-    switchLang(lang) {
-      this.currentLang = lang
     }
   }
 }

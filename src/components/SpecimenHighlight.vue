@@ -46,12 +46,13 @@
 </template>
 
 <script>
+import { languageStore } from '@/stores/language'
+
 export default {
   name: 'SpecimenHighlight',
-  props: {
-    currentLang: {
-      type: String,
-      default: 'en'
+  computed: {
+    currentLang() {
+      return languageStore.currentLang
     }
   },
   data() {

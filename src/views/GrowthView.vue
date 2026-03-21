@@ -12,24 +12,7 @@
           <router-link to="/" class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope text-zinc-500 hover:opacity-80 transition-opacity">Field Notes</router-link>
           <router-link to="/" class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope text-zinc-500 hover:opacity-80 transition-opacity">Observation Map</router-link>
         </div>
-        <!-- Language Selector - Pill Shape -->
-        <div class="flex items-center bg-surface-container rounded-full px-2 py-1">
-          <button
-            @click="switchLang('en')"
-            :class="currentLang === 'en' ? 'bg-primary text-on-primary' : 'text-on-surface-variant hover:bg-surface-container-high'"
-            class="px-3 py-1 rounded-full text-[10px] font-bold transition-all"
-          >EN</button>
-          <button
-            @click="switchLang('de')"
-            :class="currentLang === 'de' ? 'bg-primary text-on-primary' : 'text-on-surface-variant hover:bg-surface-container-high'"
-            class="px-3 py-1 rounded-full text-[10px] font-bold transition-all"
-          >DE</button>
-          <button
-            @click="switchLang('hu')"
-            :class="currentLang === 'hu' ? 'bg-primary text-on-primary' : 'text-on-surface-variant hover:bg-surface-container-high'"
-            class="px-3 py-1 rounded-full text-[10px] font-bold transition-all"
-          >HU</button>
-        </div>
+        <LanguageSwitcher />
       </div>
     </header>
 
@@ -181,11 +164,14 @@
 </template>
 
 <script>
+import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
+import { languageStore } from '@/stores/language'
+
 export default {
   name: 'GrowthView',
+  components: { LanguageSwitcher },
   data() {
     return {
-      currentLang: 'en',
       translations: {
         titleLine1: {
           en: 'Growth &',
@@ -281,17 +267,15 @@ export default {
     }
   },
   computed: {
+    currentLang() {
+      return languageStore.currentLang
+    },
     t() {
       const result = {}
       for (const key in this.translations) {
-        result[key] = this.translations[key][this.currentLang]
+        result[key] = this.translations[key][languageStore.currentLang]
       }
       return result
-    }
-  },
-  methods: {
-    switchLang(lang) {
-      this.currentLang = lang
     }
   }
 }

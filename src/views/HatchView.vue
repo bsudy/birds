@@ -34,23 +34,7 @@
           </router-link>
         </div>
         <!-- Language Selector Component -->
-        <div class="flex items-center bg-surface-container rounded-full px-2 py-1">
-          <button
-            class="lang-btn px-3 py-1 rounded-full text-[10px] font-bold transition-all"
-            :class="currentLang === 'en' ? 'bg-primary text-on-primary' : 'text-on-surface-variant hover:bg-surface-container-high'"
-            @click="switchLang('en')"
-          >EN</button>
-          <button
-            class="lang-btn px-3 py-1 rounded-full text-[10px] font-bold transition-all"
-            :class="currentLang === 'de' ? 'bg-primary text-on-primary' : 'text-on-surface-variant hover:bg-surface-container-high'"
-            @click="switchLang('de')"
-          >DE</button>
-          <button
-            class="lang-btn px-3 py-1 rounded-full text-[10px] font-bold transition-all"
-            :class="currentLang === 'hu' ? 'bg-primary text-on-primary' : 'text-on-surface-variant hover:bg-surface-container-high'"
-            @click="switchLang('hu')"
-          >HU</button>
-        </div>
+        <LanguageSwitcher />
       </div>
     </header>
 
@@ -261,17 +245,15 @@
 </template>
 
 <script>
+import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
+import { languageStore } from '@/stores/language'
+
 export default {
   name: 'HatchView',
-  data() {
-    return {
-      currentLang: 'en',
-      languages: ['en', 'de', 'hu']
-    }
-  },
-  methods: {
-    switchLang(lang) {
-      this.currentLang = lang
+  components: { LanguageSwitcher },
+  computed: {
+    currentLang() {
+      return languageStore.currentLang
     }
   }
 }

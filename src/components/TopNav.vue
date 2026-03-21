@@ -4,7 +4,7 @@
       <router-link to="/" class="flex items-center gap-3 no-underline">
         <span class="material-symbols-outlined text-[#375541] dark:text-[#8ba891]">nest_cam_outdoor</span>
         <h1 class="font-serif font-bold text-xl Newsreader text-[#375541] dark:text-[#8ba891] tracking-tight italic">
-          {{ titles[currentLang] }}
+          {{ $t('nav.siteTitle') }}
         </h1>
       </router-link>
       <div class="flex items-center gap-4">
@@ -19,7 +19,7 @@
                 ? 'text-[#375541] dark:text-[#8ba891] font-bold border-b-2 border-primary'
                 : 'text-zinc-500'
             ]"
-          >{{ item.labels[currentLang] }}</router-link>
+          >{{ $t(item.labelKey) }}</router-link>
         </nav>
         <LanguageSwitcher />
       </div>
@@ -29,30 +29,19 @@
 
 <script>
 import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
-import { languageStore } from '@/stores/language'
 
 export default {
   name: 'TopNav',
   components: { LanguageSwitcher },
   data() {
     return {
-      titles: {
-        en: 'Common Kestrel: The Living Archive',
-        de: 'Turmfalke: Das lebende Archiv',
-        hu: 'Vörös vércse: Az élő archívum'
-      },
       navItems: [
-        { path: '/hatch', labels: { en: 'Hatch', de: 'Schlüpfen', hu: 'Kikelés' } },
-        { path: '/nest', labels: { en: 'Nest', de: 'Nest', hu: 'Fészek' } },
-        { path: '/flight', labels: { en: 'Flight', de: 'Flug', hu: 'Repülés' } },
-        { path: '/hunt', labels: { en: 'Hunt', de: 'Jagd', hu: 'Vadászat' } },
-        { path: '/mate', labels: { en: 'Mate', de: 'Paarung', hu: 'Párzás' } }
+        { path: '/hatch', labelKey: 'nav.hatch' },
+        { path: '/nest', labelKey: 'nav.nest' },
+        { path: '/flight', labelKey: 'nav.flight' },
+        { path: '/hunt', labelKey: 'nav.hunt' },
+        { path: '/mate', labelKey: 'nav.mate' }
       ]
-    }
-  },
-  computed: {
-    currentLang() {
-      return languageStore.currentLang
     }
   },
   methods: {

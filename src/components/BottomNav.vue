@@ -19,7 +19,7 @@
           ]"
           :style="isActive(item.path) ? { fontVariationSettings: '\'FILL\' 1' } : {}"
         >{{ item.icon }}</span>
-        <span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope mt-0.5">{{ item.label }}</span>
+        <span class="font-sans font-medium text-[10px] tracking-widest uppercase Manrope mt-0.5">{{ $t(item.labelKey) }}</span>
       </router-link>
     </div>
   </nav>
@@ -31,12 +31,12 @@ export default {
   data() {
     return {
       navItems: [
-        { path: '/', icon: 'nest_cam_outdoor', label: 'Home' },
-        { path: '/hatch', icon: 'egg', label: 'Hatch' },
-        { path: '/nest', icon: 'home_max', label: 'Nest' },
-        { path: '/flight', icon: 'flight', label: 'Flight' },
-        { path: '/hunt', icon: 'target', label: 'Hunt' },
-        { path: '/mate', icon: 'favorite', label: 'Mate' }
+        { path: '/', icon: 'nest_cam_outdoor', labelKey: 'nav.home' },
+        { path: '/hatch', icon: 'egg', labelKey: 'nav.hatch' },
+        { path: '/nest', icon: 'home_max', labelKey: 'nav.nest' },
+        { path: '/flight', icon: 'flight', labelKey: 'nav.flight' },
+        { path: '/hunt', icon: 'target', labelKey: 'nav.hunt' },
+        { path: '/mate', icon: 'favorite', labelKey: 'nav.mate' }
       ]
     }
   },

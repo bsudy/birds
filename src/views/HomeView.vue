@@ -10,41 +10,18 @@
             <span>Specimen A-124</span>
           </div>
           
-          <!-- Language Toggled Titles -->
-          <div v-if="currentLang === 'en'">
-            <h2 class="font-serif text-6xl md:text-8xl leading-tight text-primary font-bold tracking-tight">
-              The Falcon of <br/><span class="italic font-light">The Old Wind</span>
-            </h2>
-            <p class="max-w-md text-on-surface-variant text-lg leading-relaxed font-body mt-6">
-              A digital field study of the Falco tinnunculus. This archive documents the life-cycles, aerodynamic mastery, and the silent vigil of the Kestrel.
-            </p>
-          </div>
-          
-          <div v-if="currentLang === 'de'">
-            <h2 class="font-serif text-6xl md:text-8xl leading-tight text-primary font-bold tracking-tight">
-              Die Falke des <br/><span class="italic font-light">Alten Windes</span>
-            </h2>
-            <p class="max-w-md text-on-surface-variant text-lg leading-relaxed font-body mt-6">
-              Eine digitale Feldstudie des Falco tinnunculus. Dieses Archiv dokumentiert die Lebenszyklen, die aerodynamische Meisterschaft und die stille Mahnwache des Turmfalken.
-            </p>
-          </div>
-          
-          <div v-if="currentLang === 'hu'">
-            <h2 class="font-serif text-6xl md:text-8xl leading-tight text-primary font-bold tracking-tight">
-              Az Öreg <br/><span class="italic font-light">Szél Sólyma</span>
-            </h2>
-            <p class="max-w-md text-on-surface-variant text-lg leading-relaxed font-body mt-6">
-              Egy digitális tereptanulmány a Falco tinnunculus-ról. Ez az archívum dokumentálja az életciklusokat, az aerodinamikai mesteri szintet és a vércse csendes virrasztását.
-            </p>
+          <div>
+            <h2 class="font-serif text-6xl md:text-8xl leading-tight text-primary font-bold tracking-tight" v-html="$t('home.heroTitle')"></h2>
+            <p class="max-w-md text-on-surface-variant text-lg leading-relaxed font-body mt-6">{{ $t('home.heroDesc') }}</p>
           </div>
           
           <div class="flex items-center gap-6 pt-4">
             <button @click="$router.push('/journey')" class="bg-primary text-on-primary px-8 py-4 rounded-lg font-bold flex items-center gap-2 hover:opacity-90 transition-opacity active:scale-95 shadow-xl shadow-primary/10">
-              <span>{{ translations[currentLang].beginJourney }}</span>
+              <span>{{ $t('home.beginJourney') }}</span>
               <span class="material-symbols-outlined">arrow_forward</span>
             </button>
             <button class="text-primary font-bold underline underline-offset-8 decoration-primary-fixed-dim hover:text-primary-container transition-colors">
-              <span>{{ translations[currentLang].exploreMethodology }}</span>
+              <span>{{ $t('home.exploreMethodology') }}</span>
             </button>
           </div>
         </div>
@@ -88,36 +65,12 @@
 <script>
 import FeatureGrid from '@/components/FeatureGrid.vue'
 import SpecimenHighlight from '@/components/SpecimenHighlight.vue'
-import { languageStore } from '@/stores/language'
 
 export default {
   name: 'HomeView',
   components: {
     FeatureGrid,
     SpecimenHighlight
-  },
-  computed: {
-    currentLang() {
-      return languageStore.currentLang
-    }
-  },
-  data() {
-    return {
-      translations: {
-        en: {
-          beginJourney: 'Begin Journey',
-          exploreMethodology: 'Explore Methodology'
-        },
-        de: {
-          beginJourney: 'Reise beginnen',
-          exploreMethodology: 'Methodik erkunden'
-        },
-        hu: {
-          beginJourney: 'Utazás kezdése',
-          exploreMethodology: 'Módszertan felfedezése'
-        }
-      }
-    }
   }
 }
 </script>

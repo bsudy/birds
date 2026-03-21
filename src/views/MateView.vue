@@ -10,16 +10,16 @@
             <!-- Overlapping Specimen Component -->
             <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-surface-container-lowest p-4 shadow-xl rotate-3 border border-outline-variant/20 hidden md:block">
               <img alt="Kestrel eggs in nest" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJwjUnX6oUEzB9gCAaugasQ8y3i3RVKqke1nIlft3sFpG4UYO8J-7H9om0UKdkX7ZJFtd8-Hzr_8pTahoH31Mwh_m5UvAZQ8fiA6u1J527f1rp2XbN3P-V7Y1Kt5gLymlTHR2hJX3nRz1BM3rmLU7A3Z4N1CWlcbVpflmLk4m1yheHB0JVzX5vq3fG5HSy837ZUQky-J9jQchESc_BqB8VQundgjtolH4dmGHSNZJt01pGBzELwbMCej7Fw--M9fdtMxA-xKwy8BVG"/>
-              <p class="mt-2 font-serif italic text-xs text-primary">{{ t.plateCaption }}</p>
+              <p class="mt-2 font-serif italic text-xs text-primary">{{ $t('mate.plateCaption') }}</p>
             </div>
           </div>
         </div>
         <div class="lg:col-span-5 mb-12">
-          <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-primary mb-4 block font-bold">{{ t.chapterLabel }}</span>
+          <span class="font-sans text-[10px] tracking-[0.2em] uppercase text-primary mb-4 block font-bold">{{ $t('mate.chapterLabel') }}</span>
           <h2 class="font-serif text-5xl md:text-7xl leading-[1.1] text-on-surface mb-8">
-            {{ t.heroTitleLine1 }} <br/><span class="italic text-primary">{{ t.heroTitleLine2 }}</span>
+            {{ $t('mate.heroTitleLine1') }} <br/><span class="italic text-primary">{{ $t('mate.heroTitleLine2') }}</span>
           </h2>
-          <p class="font-body text-lg text-on-surface-variant leading-relaxed max-w-md">{{ t.heroDesc }}</p>
+          <p class="font-body text-lg text-on-surface-variant leading-relaxed max-w-md">{{ $t('mate.heroDesc') }}</p>
         </div>
       </section>
 
@@ -30,11 +30,11 @@
           <div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
             <span class="material-symbols-outlined text-[200px]">favorite</span>
           </div>
-          <h3 class="font-serif text-3xl mb-4">{{ t.selectionTitle }}</h3>
-          <p class="text-on-surface-variant font-body leading-relaxed max-w-xl">{{ t.selectionDesc }}</p>
+          <h3 class="font-serif text-3xl mb-4">{{ $t('mate.selectionTitle') }}</h3>
+          <p class="text-on-surface-variant font-body leading-relaxed max-w-xl">{{ $t('mate.selectionDesc') }}</p>
           <div class="mt-8 flex gap-4">
-            <button class="bg-gradient-to-r from-primary to-primary-container text-white px-8 py-3 rounded-[0.25rem] font-sans font-bold text-xs uppercase tracking-widest hover:opacity-90 transition-all">{{ t.recordSighting }}</button>
-            <button class="text-primary border-b border-primary/30 py-3 font-sans font-bold text-xs uppercase tracking-widest">{{ t.fieldManual }}</button>
+            <button class="bg-gradient-to-r from-primary to-primary-container text-white px-8 py-3 rounded-[0.25rem] font-sans font-bold text-xs uppercase tracking-widest hover:opacity-90 transition-all">{{ $t('mate.recordSighting') }}</button>
+            <button class="text-primary border-b border-primary/30 py-3 font-sans font-bold text-xs uppercase tracking-widest">{{ $t('mate.fieldManual') }}</button>
           </div>
         </div>
         <!-- Eggs Card -->
@@ -42,8 +42,8 @@
           <div class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center mb-6 shadow-sm">
             <span class="material-symbols-outlined text-on-secondary-container" style="font-variation-settings: 'FILL' 1;">egg</span>
           </div>
-          <h4 class="font-serif text-2xl text-on-secondary-container mb-1">{{ t.eggsTitle }}</h4>
-          <p class="text-on-secondary-container/80 text-sm font-body">{{ t.eggsDesc }}</p>
+          <h4 class="font-serif text-2xl text-on-secondary-container mb-1">{{ $t('mate.eggsTitle') }}</h4>
+          <p class="text-on-secondary-container/80 text-sm font-body">{{ $t('mate.eggsDesc') }}</p>
         </div>
       </div>
 
@@ -51,10 +51,10 @@
       <section class="flex flex-col md:flex-row gap-16 items-start">
         <div class="md:w-1/3">
           <div class="sticky top-32">
-            <h3 class="font-serif text-4xl mb-4">{{ t.archiveTitle }}</h3>
-            <p class="font-body text-on-surface-variant mb-8">{{ t.archiveDesc }}</p>
+            <h3 class="font-serif text-4xl mb-4">{{ $t('mate.archiveTitle') }}</h3>
+            <p class="font-body text-on-surface-variant mb-8">{{ $t('mate.archiveDesc') }}</p>
             <div class="p-6 bg-surface-container-high rounded-lg border-l-4 border-primary">
-              <p class="italic font-serif text-lg text-primary">"{{ t.quote }}"</p>
+              <p class="italic font-serif text-lg text-primary">"{{ $t('mate.quote') }}"</p>
               <p class="mt-2 font-sans text-[10px] uppercase tracking-wider">— Dr. Elias Thorne, 1924</p>
             </div>
           </div>
@@ -64,15 +64,15 @@
             <div class="h-64 bg-surface-container-low rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
               <img alt="Feather detail" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANbEoErhVK8vY1cuTe_ahuRCZ7eeAtibC5Gb_uXytEb7in2gENskpxKDIpC2YQu7JwotCS2fsdRrFKhoRQ6R7755SX-8oldmTZF6Hi2VKdCGzPcxzuGJ7tKIUnxo7UCL_2X1tehMXA2fLYO7Peme6QkZlwfqlr55BvO2TyR8BrciXBw9JE6Eo_WNYdt7NzreGdwzfx7AnQz1dF2Gqy-JPR02Mmhuzu6P1CYHSyCvhxI5l-TXaZ-zIg5mcQtKlnx-t4LlUKkgWEjRzT"/>
             </div>
-            <h5 class="font-serif text-xl">{{ t.plumageTitle }}</h5>
-            <p class="text-sm text-on-surface-variant leading-relaxed">{{ t.plumageDesc }}</p>
+            <h5 class="font-serif text-xl">{{ $t('mate.plumageTitle') }}</h5>
+            <p class="text-sm text-on-surface-variant leading-relaxed">{{ $t('mate.plumageDesc') }}</p>
           </div>
           <div class="space-y-4 mt-12">
             <div class="h-64 bg-surface-container-low rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
               <img alt="Ancient tree hollow" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0VdzSnDgajSW5H4T7GiFgpXBdBNwmhQSIAJoUFtr2WfAGw7vJAqpVNCDMZdJrE_vtQkRnSo8tuLVpkgkaEaXxP3RznYDiOQL9M0BKhinniHqUE1Sy1FqQt7kzIenYmEcB6HtooZrbMRfBneWrsK6gIm54-F7ISEjvKyLHqkj2vqGORr0ZDmcBmUzLi1fyZ8FDPglcCQeR8hRPZAAPbnlkrlP0oCadNaqqk27iJGo9NvPgJcKPU_6bojLLMW_terAYtUxT9TkiiiNf"/>
             </div>
-            <h5 class="font-serif text-xl">{{ t.sanctuaryTitle }}</h5>
-            <p class="text-sm text-on-surface-variant leading-relaxed">{{ t.sanctuaryDesc }}</p>
+            <h5 class="font-serif text-xl">{{ $t('mate.sanctuaryTitle') }}</h5>
+            <p class="text-sm text-on-surface-variant leading-relaxed">{{ $t('mate.sanctuaryDesc') }}</p>
           </div>
         </div>
       </section>
@@ -82,84 +82,8 @@
 </template>
 
 <script>
-import { languageStore } from '@/stores/language'
-
 export default {
-  name: 'MateView',
-  computed: {
-    currentLang() {
-      return languageStore.currentLang
-    },
-    t() {
-      return this.translations[this.currentLang]
-    }
-  },
-  data() {
-    return {
-      translations: {
-        en: {
-          chapterLabel: 'The Final Chapter',
-          heroTitleLine1: 'Courtship &',
-          heroTitleLine2: 'Continuity',
-          heroDesc: 'The journey of the Common Kestrel finds its resolution not in solitude, but in the collaborative dance of survival. As winter fades, the sky becomes a theater for aerial displays—high-speed chases and food offerings that cement the bond between pair.',
-          plateCaption: 'Plate IV: The Clutch',
-          selectionTitle: 'The Selection',
-          selectionDesc: 'Unlike many birds of prey, the Kestrel does not build its own nest. Instead, they find sanctuary in the abandoned homes of crows or the hollows of ancient trees. This selection is a critical moment of legacy—a choice of security for the generation yet to hatch.',
-          recordSighting: 'Record Sighting',
-          fieldManual: 'Field Manual',
-          eggsTitle: '3-6 Eggs',
-          eggsDesc: 'The standard clutch size, laid in late April, ensuring the survival of the species.',
-          archiveTitle: 'A Living Archive',
-          archiveDesc: 'The Common Kestrel remains a sentinel of our changing landscapes. This archive serves to document their grace, their struggle, and their unwavering resilience.',
-          quote: 'In the presence of the kestrel, one sees the ancient world still breathing in the modern sky.',
-          plumageTitle: 'The Plumage',
-          plumageDesc: "During courtship, the brightness of the male's plumage serves as a primary signal of health and vitality.",
-          sanctuaryTitle: 'The Sanctuary',
-          sanctuaryDesc: 'A nest is more than a shelter; it is a point of origin where the cycle begins anew every spring.'
-        },
-        de: {
-          chapterLabel: 'Das letzte Kapitel',
-          heroTitleLine1: 'Balz &',
-          heroTitleLine2: 'Kontinuität',
-          heroDesc: 'Die Reise des Turmfalken findet ihre Auflösung nicht in der Einsamkeit, sondern im gemeinsamen Tanz des Überlebens. Wenn der Winter verblasst, wird der Himmel zum Theater für Flugvorführungen – Hochgeschwindigkeitsjagden und Futterangebote, die die Bindung zwischen dem Paar festigen.',
-          plateCaption: 'Tafel IV: Das Gelege',
-          selectionTitle: 'Die Auswahl',
-          selectionDesc: 'Im Gegensatz zu vielen Greifvögeln baut der Turmfalke kein eigenes Nest. Stattdessen findet er Zuflucht in den verlassenen Nestern von Krähen oder den Höhlen alter Bäume. Diese Auswahl ist ein entscheidender Moment des Vermächtnisses – eine Wahl der Sicherheit für die noch ungeschlüpfte Generation.',
-          recordSighting: 'Sichtung melden',
-          fieldManual: 'Feldhandbuch',
-          eggsTitle: '3-6 Eier',
-          eggsDesc: 'Die übliche Gelegegröße, gelegt Ende April, um das Überleben der Art zu sichern.',
-          archiveTitle: 'Ein lebendiges Archiv',
-          archiveDesc: 'Der Turmfalke bleibt ein Wächter unserer sich verändernden Landschaften. Dieses Archiv dient dazu, ihre Anmut, ihren Kampf und ihre unerschütterliche Widerstandsfähigkeit zu dokumentieren.',
-          quote: 'In der Gegenwart des Turmfalken sieht man die alte Welt noch im modernen Himmel atmen.',
-          plumageTitle: 'Das Gefieder',
-          plumageDesc: 'Während der Balz dient die Helligkeit des männlichen Gefieders als primäres Signal für Gesundheit und Vitalität.',
-          sanctuaryTitle: 'Das Heiligtum',
-          sanctuaryDesc: 'Ein Nest ist mehr als ein Unterschlupf; es ist ein Ursprungsort, an dem der Kreislauf jeden Frühling von neuem beginnt.'
-        },
-        hu: {
-          chapterLabel: 'Az utolsó fejezet',
-          heroTitleLine1: 'Udvarlás és',
-          heroTitleLine2: 'folytonosság',
-          heroDesc: 'A vércse útja nem a magányban, hanem a túlélés közös táncában leli megoldását. Ahogy a tél elhalványul, az égbolt a légi bemutatók színházává válik – nagysebességű üldözések és táplálékajándékok, amelyek megszilárdítják a pár közötti köteléket.',
-          plateCaption: 'IV. tábla: A fészekalja',
-          selectionTitle: 'A választás',
-          selectionDesc: 'Sok ragadozó madártól eltérően a vércse nem épít saját fészket. Ehelyett a varjak elhagyott otthonaiban vagy öreg fák odvaiban talál menedéket. Ez a választás az örökség kritikus pillanata – a biztonság választása a még ki nem kelt nemzedék számára.',
-          recordSighting: 'Észlelés rögzítése',
-          fieldManual: 'Terepi kézikönyv',
-          eggsTitle: '3-6 tojás',
-          eggsDesc: 'A szokásos fészekalj méret, amelyet április végén raknak le, biztosítva a faj fennmaradását.',
-          archiveTitle: 'Egy élő archívum',
-          archiveDesc: 'A vércse változó tájaink őrszeme marad. Ez az archívum kecsességük, küzdelmük és rendíthetetlen rugalmasságuk dokumentálására szolgál.',
-          quote: 'A vércse jelenlétében az ember látja, hogy az ősi világ még mindig lélegzik a modern égbolton.',
-          plumageTitle: 'A tollazat',
-          plumageDesc: 'Az udvarlás során a hím tollazatának fényessége az egészség és életerő elsődleges jelzéseként szolgál.',
-          sanctuaryTitle: 'A szentély',
-          sanctuaryDesc: 'A fészek több, mint menedék; ez az a kiindulópont, ahol a körforgás minden tavasszal újrakezdődik.'
-        }
-      }
-    }
-  }
+  name: 'MateView'
 }
 </script>
 

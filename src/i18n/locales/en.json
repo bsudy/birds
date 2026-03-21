@@ -3,10 +3,11 @@
     "siteTitle": "Common Kestrel: The Living Archive",
     "home": "Home",
     "hatch": "Hatch",
-    "nest": "Nest",
+    "growth": "Growth",
     "flight": "Flight",
     "hunt": "Hunt",
-    "mate": "Mate"
+    "mate": "Mate",
+    "nest": "Nest"
   },
   "home": {
     "heroTitle": "The Falcon of <br/><span class=\"italic font-light\">The Old Wind</span>",

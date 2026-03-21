@@ -33,10 +33,11 @@ export default {
       navItems: [
         { path: '/', icon: 'nest_cam_outdoor', labelKey: 'nav.home' },
         { path: '/hatch', icon: 'egg', labelKey: 'nav.hatch' },
-        { path: '/nest', icon: 'home_max', labelKey: 'nav.nest' },
+        { path: '/growth', icon: 'trending_up', labelKey: 'nav.growth' },
         { path: '/flight', icon: 'flight', labelKey: 'nav.flight' },
         { path: '/hunt', icon: 'target', labelKey: 'nav.hunt' },
-        { path: '/mate', icon: 'favorite', labelKey: 'nav.mate' }
+        { path: '/mate', icon: 'favorite', labelKey: 'nav.mate' },
+        { path: '/nest', icon: 'home_max', labelKey: 'nav.nest' }
       ]
     }
   },

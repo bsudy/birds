@@ -3,10 +3,11 @@
     "siteTitle": "Turmfalke: Das lebende Archiv",
     "home": "Startseite",
     "hatch": "Schlüpfen",
-    "nest": "Nest",
+    "growth": "Wachstum",
     "flight": "Flug",
     "hunt": "Jagd",
-    "mate": "Paarung"
+    "mate": "Paarung",
+    "nest": "Nest"
   },
   "home": {
     "heroTitle": "Die Falke des <br/><span class=\"italic font-light\">Alten Windes</span>",

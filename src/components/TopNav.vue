@@ -37,10 +37,11 @@ export default {
     return {
       navItems: [
         { path: '/hatch', labelKey: 'nav.hatch' },
-        { path: '/nest', labelKey: 'nav.nest' },
+        { path: '/growth', labelKey: 'nav.growth' },
         { path: '/flight', labelKey: 'nav.flight' },
         { path: '/hunt', labelKey: 'nav.hunt' },
-        { path: '/mate', labelKey: 'nav.mate' }
+        { path: '/mate', labelKey: 'nav.mate' },
+        { path: '/nest', labelKey: 'nav.nest' }
       ]
     }
   },

@@ -3,10 +3,11 @@
     "siteTitle": "Vörös vércse: Az élő archívum",
     "home": "Főoldal",
     "hatch": "Kikelés",
-    "nest": "Fészek",
+    "growth": "Növekedés",
     "flight": "Repülés",
     "hunt": "Vadászat",
-    "mate": "Párzás"
+    "mate": "Párzás",
+    "nest": "Fészek"
   },
   "home": {
     "heroTitle": "Az Öreg <br/><span class=\"italic font-light\">Szél Sólyma</span>",

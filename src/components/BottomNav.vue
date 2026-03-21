@@ -34,8 +34,8 @@ export default {
         { path: '/', icon: 'nest_cam_outdoor', label: 'Home' },
         { path: '/hatch', icon: 'egg', label: 'Hatch' },
         { path: '/nest', icon: 'home_max', label: 'Nest' },
-        { path: '/hunt', icon: 'target', label: 'Hunt' },
         { path: '/flight', icon: 'flight', label: 'Flight' },
+        { path: '/hunt', icon: 'target', label: 'Hunt' },
         { path: '/mate', icon: 'favorite', label: 'Mate' }
       ]
     }

@@ -44,8 +44,8 @@ export default {
       navItems: [
         { path: '/hatch', labels: { en: 'Hatch', de: 'Schlüpfen', hu: 'Kikelés' } },
         { path: '/nest', labels: { en: 'Nest', de: 'Nest', hu: 'Fészek' } },
-        { path: '/hunt', labels: { en: 'Hunt', de: 'Jagd', hu: 'Vadászat' } },
         { path: '/flight', labels: { en: 'Flight', de: 'Flug', hu: 'Repülés' } },
+        { path: '/hunt', labels: { en: 'Hunt', de: 'Jagd', hu: 'Vadászat' } },
         { path: '/mate', labels: { en: 'Mate', de: 'Paarung', hu: 'Párzás' } }
       ]
     }

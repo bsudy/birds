@@ -21,6 +21,7 @@
 
       <!-- Detailed Content: Bento Grid Style -->
       <section class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-24">
+        <!-- Row 1: Struggle text + chicks photo -->
         <div class="md:col-span-8 bg-surface-container-low p-10 flex flex-col justify-end min-h-[400px]">
           <h3 class="font-headline text-3xl text-primary mb-6 italic">
             {{ $t('hatch.struggleTitle') }}
@@ -30,45 +31,76 @@
             <p>{{ $t('hatch.struggleP2') }}</p>
           </div>
         </div>
-        <div class="md:col-span-4 bg-[#375541] text-white p-10 flex flex-col items-start justify-center">
-          <span class="material-symbols-outlined text-4xl mb-6" data-icon="lightbulb">lightbulb</span>
-          <h4 class="font-headline text-2xl mb-4">
-            {{ $t('hatch.didYouKnow') }}
-          </h4>
-          <div class="text-on-primary-container font-body text-sm leading-relaxed">
-            <p>{{ $t('hatch.didYouKnowBody') }}</p>
+        <div class="md:col-span-4 overflow-hidden relative min-h-[300px]">
+          <img
+            src="/July14_0008-hoping-for-kestrel-chicks-next.webp"
+            alt="Newly hatched kestrel chicks huddled in their nest"
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent flex flex-col justify-end p-6">
+            <h4 class="font-headline text-xl text-white mb-1">{{ $t('hatch.protoptileDown') }}</h4>
+            <p class="text-white/70 text-xs leading-relaxed">{{ $t('hatch.protoptileDownDesc') }}</p>
           </div>
         </div>
+
+        <!-- Row 2: Yolk Sac + Video + Did You Know -->
         <div class="md:col-span-4 bg-secondary-container text-on-secondary-container p-8">
           <h4 class="font-label text-xs uppercase tracking-tighter mb-4 opacity-70">
             {{ $t('hatch.primaryNutrients') }}
           </h4>
           <div class="flex items-end justify-between">
             <div>
-              <p class="font-headline text-4xl">
-                {{ $t('hatch.yolkSac') }}
-              </p>
-              <p class="text-xs mt-1 opacity-70 italic">
-                {{ $t('hatch.yolkSacDesc') }}
-              </p>
+              <p class="font-headline text-4xl">{{ $t('hatch.yolkSac') }}</p>
+              <p class="text-xs mt-1 opacity-70 italic">{{ $t('hatch.yolkSacDesc') }}</p>
             </div>
             <span class="material-symbols-outlined text-5xl opacity-40" data-icon="egg_alt">egg_alt</span>
           </div>
         </div>
-        <div class="md:col-span-8 bg-surface-container-high p-8 flex items-center gap-8">
-          <div class="flex-shrink-0 w-24 h-24 rounded-full overflow-hidden">
-            <img alt="Close up of a chick" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPafqwrPEbz4ChdQ-MuP5ULi5J7fOq_UcRtI7xG5R1oWFgg88Gg9fxsFItjdKv9UPtO4JzW1tklj1ZSbgHVyOMh2ygoqR9YFrpfrmpIIjIbp5zHiGZR-kk4uTPiW6oyw6SzSKI6xS7N3-05cJ0IkaxXayi_L6QkVPu7sv-m3hDUovOwfqmpKYyhEpj4uGGoANvD4wvSh4bSxEND0VqLim8pqmR9YLqQYZ7MRTF85S6mVzowlZLqonTeX4ToXn1jxOh3Eu4Bnm9xoJt"/>
-          </div>
-          <div>
-            <h4 class="font-headline text-2xl text-primary">
-              {{ $t('hatch.protoptileDown') }}
-            </h4>
-            <p class="text-on-surface-variant text-sm mt-1">
-              {{ $t('hatch.protoptileDownDesc') }}
-            </p>
+        <div
+          class="md:col-span-4 relative overflow-hidden cursor-pointer group min-h-[200px]"
+          @click="showVideo = true"
+        >
+          <img
+            src="/July14_0008-hoping-for-kestrel-chicks-next.webp"
+            alt=""
+            class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 transition-opacity duration-300"
+          />
+          <div class="relative z-10 p-8 flex flex-col items-start justify-end h-full">
+            <div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 mb-4">
+              <span class="material-symbols-outlined text-on-primary text-3xl">play_arrow</span>
+            </div>
+            <p class="font-label text-[10px] text-outline uppercase mb-1">Video</p>
+            <h4 class="font-headline text-xl text-primary">A Father's Vigil</h4>
           </div>
         </div>
+        <div class="md:col-span-4 bg-[#375541] text-white p-8 flex flex-col items-start justify-center">
+          <span class="material-symbols-outlined text-4xl mb-6" data-icon="lightbulb">lightbulb</span>
+          <h4 class="font-headline text-2xl mb-4">{{ $t('hatch.didYouKnow') }}</h4>
+          <p class="text-on-primary-container font-body text-sm leading-relaxed">{{ $t('hatch.didYouKnowBody') }}</p>
+        </div>
       </section>
+
+      <!-- Video modal -->
+      <div
+        v-if="showVideo"
+        class="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+        @click.self="showVideo = false"
+      >
+        <div class="relative w-full max-w-3xl aspect-video bg-black rounded-xl overflow-hidden shadow-2xl">
+          <button
+            @click="showVideo = false"
+            class="absolute top-3 right-3 z-10 w-10 h-10 rounded-full bg-black/60 flex items-center justify-center text-white hover:bg-black transition-colors"
+          >
+            <span class="material-symbols-outlined">close</span>
+          </button>
+          <iframe
+            class="w-full h-full"
+            src="https://www.youtube.com/embed/fZBAz5CCitk?autoplay=1"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
 
       <!-- Final Vision Section -->
       <section class="bg-surface-container-low p-12 text-center max-w-4xl mx-auto rounded-xl border border-outline-variant/10">
@@ -94,7 +126,10 @@ import PhaseLabel from '@/components/PhaseLabel.vue'
 import SpecimenHero from '@/components/SpecimenHero.vue'
 export default {
   name: 'HatchView',
-  components: { PhaseLabel, SpecimenHero }
+  components: { PhaseLabel, SpecimenHero },
+  data() {
+    return { showVideo: false }
+  }
 }
 </script>
 

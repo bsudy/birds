@@ -3,7 +3,7 @@
 
     <main class="pb-12 px-6 max-w-7xl mx-auto">
       <!-- Hero Section -->
-      <SpecimenHero image-src="/bf-young-kestrels.jpg" image-alt="Young kestrels in a nest">
+      <SpecimenHero image-src="/Turmfalken_jung_Sylvia_Urbaniak01.jpg" image-alt="Young kestrels starting to develop their plumage">
         <PhaseLabel>{{ $t('growth.phaseLabel') }}</PhaseLabel>
         <h2 class="font-headline text-5xl md:text-7xl text-primary leading-tight mb-8">
           {{ $t('growth.titleLine1') }} <br/>

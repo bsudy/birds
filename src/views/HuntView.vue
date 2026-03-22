@@ -136,12 +136,6 @@
     </main>
 
 
-    <!-- Floating Action Button -->
-    <div class="fixed bottom-24 right-6 md:bottom-12 md:right-12 z-40 hidden md:block">
-      <button class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center shadow-[0_20px_40px_rgba(26,28,25,0.06)] hover:scale-105 transition-transform">
-        <span class="material-symbols-outlined text-3xl">visibility</span>
-      </button>
-    </div>
   </div>
 </template>
 

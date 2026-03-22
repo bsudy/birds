@@ -24,9 +24,6 @@
         </SpecimenHero>
       </div>
 
-      <!-- Feature Grid -->
-      <FeatureGrid />
-
       <!-- Male / Female Section -->
       <section class="px-6 md:px-12 max-w-7xl mx-auto mt-24 mb-24">
         <div class="mb-12">
@@ -65,6 +62,9 @@
           </div>
         </div>
       </section>
+
+      <!-- Feature Grid -->
+      <FeatureGrid />
 
       <!-- Distribution Map -->
       <section class="px-6 md:px-12 max-w-7xl mx-auto mt-24 mb-12">

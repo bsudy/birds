@@ -48,7 +48,10 @@
       
       <!-- Flight -->
       <div @click="$router.push('/flight')" class="md:col-span-2 bg-tertiary-container rounded-xl p-8 flex flex-col justify-between group hover:opacity-90 transition-opacity cursor-pointer">
-        <span class="material-symbols-outlined text-4xl text-on-tertiary-container">flight</span>
+        <div class="flex justify-between items-start">
+          <span class="material-symbols-outlined text-4xl text-on-tertiary-container">flight</span>
+          <span class="font-serif italic text-4xl text-on-tertiary-container/20 group-hover:text-on-tertiary-container/40 transition-colors">03</span>
+        </div>
         <div class="mt-8">
           <h4 class="font-serif text-xl font-bold text-on-tertiary-container mb-2">
             {{ $t('featureGrid.flightTitle') }}
@@ -58,10 +61,13 @@
           </p>
         </div>
       </div>
-      
+
       <!-- Hunt -->
       <div @click="$router.push('/hunt')" class="md:col-span-2 bg-secondary-container rounded-xl p-8 flex flex-col justify-between group hover:opacity-90 transition-opacity cursor-pointer">
-        <span class="material-symbols-outlined text-4xl text-on-secondary-container">target</span>
+        <div class="flex justify-between items-start">
+          <span class="material-symbols-outlined text-4xl text-on-secondary-container">target</span>
+          <span class="font-serif italic text-4xl text-on-secondary-container/20 group-hover:text-on-secondary-container/40 transition-colors">04</span>
+        </div>
         <div class="mt-8">
           <h4 class="font-serif text-xl font-bold text-on-secondary-container mb-2">
             {{ $t('featureGrid.huntTitle') }}
@@ -71,10 +77,13 @@
           </p>
         </div>
       </div>
-      
+
       <!-- Mate -->
       <div @click="$router.push('/mate')" class="md:col-span-2 bg-surface-container-high rounded-xl p-8 flex flex-col justify-between group cursor-pointer hover:bg-surface-container-highest transition-colors">
-        <span class="material-symbols-outlined text-4xl text-primary">favorite</span>
+        <div class="flex justify-between items-start">
+          <span class="material-symbols-outlined text-4xl text-primary">favorite</span>
+          <span class="font-serif italic text-4xl text-primary/20 group-hover:text-primary/40 transition-colors">05</span>
+        </div>
         <div class="mt-8">
           <h4 class="font-serif text-xl font-bold text-primary mb-2">
             {{ $t('featureGrid.mateTitle') }}
@@ -84,10 +93,10 @@
           </p>
         </div>
       </div>
-      
+
       <!-- Nest -->
       <div @click="$router.push('/nest')" class="md:col-span-6 bg-surface-container-highest rounded-xl p-8 flex items-center gap-6 group cursor-pointer hover:opacity-95 transition-opacity">
-        <span class="material-symbols-outlined text-5xl text-primary">home_max</span>
+        <span class="material-symbols-outlined text-5xl text-primary">forward_circle</span>
         <div class="flex-1">
           <h4 class="font-serif text-2xl font-bold text-primary mb-2">
             {{ $t('featureGrid.nestTitle') }}
@@ -96,6 +105,7 @@
             {{ $t('featureGrid.nestDesc') }}
           </p>
         </div>
+        <span class="font-serif italic text-4xl text-primary/20 group-hover:text-primary/40 transition-colors">06</span>
       </div>
     </div>
   </section>

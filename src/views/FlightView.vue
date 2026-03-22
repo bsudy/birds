@@ -27,11 +27,7 @@
           <div class="md:col-span-2 bg-surface-container-low rounded-xl p-10 relative overflow-hidden flex flex-col justify-between min-h-[400px]">
             <div class="relative z-10 max-w-md">
               <h3 class="font-headline text-3xl mb-4">{{ $t('flight.s2Title') }}</h3>
-              <p class="text-on-surface-variant leading-relaxed mb-6">{{ $t('flight.s2Body') }}</p>
-              <button class="bg-primary text-on-primary px-8 py-3 rounded-lg font-label text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:opacity-90 transition-all">
-                {{ $t('flight.s2Btn') }}
-                <span class="material-symbols-outlined text-sm">north_east</span>
-              </button>
+              <p class="text-on-surface-variant leading-relaxed">{{ $t('flight.s2Body') }}</p>
             </div>
             <div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none flex items-center justify-center">
               <span class="material-symbols-outlined text-[200px]">flight</span>

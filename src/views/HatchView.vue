@@ -10,12 +10,12 @@
           <p>{{ $t('hatch.heroDesc') }}</p>
         </div>
         <template #stat-top>
-          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('hatch.incubationLabel') }}</p>
-          <p class="font-headline text-2xl text-primary">{{ $t('hatch.incubationValue') }}</p>
+          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('hatch.infoBox1.label') }}</p>
+          <p class="font-headline text-2xl text-primary">{{ $t('hatch.infoBox1.value') }}</p>
         </template>
         <template #stat-bottom>
-          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('hatch.successRateLabel') }}</p>
-          <p class="font-headline text-2xl text-tertiary">84%</p>
+          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('hatch.infoBox2.label') }}</p>
+          <p class="font-headline text-2xl text-tertiary">{{ $t('hatch.infoBox2.value') }}</p>
         </template>
       </SpecimenHero>
 

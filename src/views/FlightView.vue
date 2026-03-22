@@ -11,12 +11,12 @@
           <p class="font-headline italic text-2xl text-tertiary-container py-4 border-l-2 border-primary-container/20 pl-6">"{{ $t('flight.fieldNotesQuote') }}"</p>
         </div>
         <template #stat-top>
-          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('flight.stat4Label') }}</p>
-          <p class="font-headline text-2xl text-primary">60 km/h</p>
+          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('flight.infoBox1.label') }}</p>
+          <p class="font-headline text-2xl text-primary">{{ $t('flight.infoBox1.value') }}</p>
         </template>
         <template #stat-bottom>
-          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('flight.stat2Label') }}</p>
-          <p class="font-headline text-2xl text-tertiary">2.5k m</p>
+          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('flight.infoBox2.label') }}</p>
+          <p class="font-headline text-2xl text-tertiary">{{ $t('flight.infoBox2.value') }}</p>
         </template>
       </SpecimenHero>
 

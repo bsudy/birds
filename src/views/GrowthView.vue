@@ -14,12 +14,12 @@
           <p class="font-headline italic text-2xl text-tertiary-container py-4 border-l-2 border-primary-container/20 pl-6">"{{ $t('growth.quote') }}"</p>
         </div>
         <template #stat-top>
-          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('growth.growthRate') }}</p>
-          <p class="font-headline text-2xl text-primary">14.2g/day</p>
+          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('growth.infoBox1.label') }}</p>
+          <p class="font-headline text-2xl text-primary">{{ $t('growth.infoBox1.value') }}</p>
         </template>
         <template #stat-bottom>
-          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('growth.preyFrequency') }}</p>
-          <p class="font-headline text-2xl text-tertiary">4-6 / hr</p>
+          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('growth.infoBox2.label') }}</p>
+          <p class="font-headline text-2xl text-tertiary">{{ $t('growth.infoBox2.value') }}</p>
         </template>
       </SpecimenHero>
 

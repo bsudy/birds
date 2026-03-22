@@ -10,12 +10,12 @@
         </h2>
         <p class="font-body text-lg text-on-surface-variant leading-relaxed max-w-md mb-10">{{ $t('mate.heroDesc') }}</p>
         <template #stat-top>
-          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('mate.eggsTitle') }}</p>
-          <p class="font-headline text-2xl text-primary">3-6 eggs</p>
+          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('mate.infoBox1.label') }}</p>
+          <p class="font-headline text-2xl text-primary">{{ $t('mate.infoBox1.value') }}</p>
         </template>
         <template #stat-bottom>
-          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('mate.breedingSeasonLabel') }}</p>
-          <p class="font-headline text-2xl text-tertiary">{{ $t('mate.breedingSeasonValue') }}</p>
+          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('mate.infoBox2.label') }}</p>
+          <p class="font-headline text-2xl text-tertiary">{{ $t('mate.infoBox2.value') }}</p>
         </template>
       </SpecimenHero>
 

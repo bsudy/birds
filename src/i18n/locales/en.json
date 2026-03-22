@@ -118,6 +118,8 @@
     "dietTitle": "The Hunter's Diet",
     "dietSubtitle": "Dietary composition by prey type",
     "viewDataLogs": "View Data Logs",
+    "infoBox1": { "label": "Field Voles", "value": "75%" },
+    "infoBox2": { "label": "Max. Speed", "value": "200 km/h" },
     "volesLabel": "Field Voles",
     "volesDesc": "The primary energy source for breeding pairs.",
     "beetlesLabel": "Common Beetles",

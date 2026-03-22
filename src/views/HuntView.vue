@@ -11,12 +11,12 @@
           <p>{{ $t('hunt.heroParagraph2') }}</p>
         </div>
         <template #stat-top>
-          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('hunt.volesLabel') }}</p>
-          <p class="font-headline text-2xl text-primary">75%</p>
+          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('hunt.infoBox1.label') }}</p>
+          <p class="font-headline text-2xl text-primary">{{ $t('hunt.infoBox1.value') }}</p>
         </template>
         <template #stat-bottom>
-          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('hunt.beetlesLabel') }}</p>
-          <p class="font-headline text-2xl text-tertiary">12%</p>
+          <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('hunt.infoBox2.label') }}</p>
+          <p class="font-headline text-2xl text-tertiary">{{ $t('hunt.infoBox2.value') }}</p>
         </template>
       </SpecimenHero>
 

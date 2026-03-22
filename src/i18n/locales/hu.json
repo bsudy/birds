@@ -118,6 +118,8 @@
     "dietTitle": "A vadász étrendje",
     "dietSubtitle": "Táplálék-összetétel zsákmánytípusonként",
     "viewDataLogs": "Adatnaplók megtekintése",
+    "infoBox1": { "label": "Mezei pockok", "value": "75%" },
+    "infoBox2": { "label": "Max. sebesség", "value": "200 km/h" },
     "volesLabel": "Mezei pockok",
     "volesDesc": "A költőpárok elsődleges energiaforrása.",
     "beetlesLabel": "Közönséges bogarak",

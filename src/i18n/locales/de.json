@@ -118,6 +118,8 @@
     "dietTitle": "Die Nahrung des Jägers",
     "dietSubtitle": "Nahrungszusammensetzung nach Beutetyp",
     "viewDataLogs": "Datenprotokolle ansehen",
+    "infoBox1": { "label": "Feldmäuse", "value": "75%" },
+    "infoBox2": { "label": "Max Geschwindigkeit", "value": "200 km/h" },
     "volesLabel": "Feldmäuse",
     "volesDesc": "Die primäre Energiequelle für Brutpaare.",
     "beetlesLabel": "Gemeine Käfer",

@@ -27,6 +27,45 @@
       <!-- Feature Grid -->
       <FeatureGrid />
 
+      <!-- Male / Female Section -->
+      <section class="px-6 md:px-12 max-w-7xl mx-auto mt-24 mb-24">
+        <div class="mb-12">
+          <p class="font-label text-xs uppercase tracking-widest text-primary mb-2">{{ $t('home.aboutLabel') }}</p>
+          <h3 class="font-serif text-4xl text-on-surface font-bold italic mb-6">{{ $t('home.aboutTitle') }}</h3>
+          <p class="text-on-surface-variant leading-relaxed max-w-2xl text-lg">{{ $t('home.aboutDesc') }}</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Male -->
+          <div class="group rounded-xl overflow-hidden bg-surface-container-low">
+            <div class="h-80 overflow-hidden">
+              <img
+                src="/male-kestrel_2023-03-15-205234_xwsc.webp"
+                alt="Male Common Kestrel perched on a stump"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+            <div class="p-8">
+              <p class="font-label text-xs uppercase tracking-widest text-primary mb-2">{{ $t('home.maleLabel') }}</p>
+              <p class="text-on-surface-variant leading-relaxed text-sm">{{ $t('home.maleDesc') }}</p>
+            </div>
+          </div>
+          <!-- Female -->
+          <div class="group rounded-xl overflow-hidden bg-surface-container-low">
+            <div class="h-80 overflow-hidden">
+              <img
+                src="/eurasian-kestrel-female.webp"
+                alt="Female Common Kestrel perched on a branch"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+            <div class="p-8">
+              <p class="font-label text-xs uppercase tracking-widest text-primary mb-2">{{ $t('home.femaleLabel') }}</p>
+              <p class="text-on-surface-variant leading-relaxed text-sm">{{ $t('home.femaleDesc') }}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Distribution Map -->
       <section class="px-6 md:px-12 max-w-7xl mx-auto mt-24 mb-12">
         <div class="mb-8 flex flex-col md:flex-row md:items-end md:justify-between gap-4">

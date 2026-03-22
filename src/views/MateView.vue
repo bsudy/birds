@@ -80,7 +80,7 @@
           </div>
           <div class="space-y-4 mt-12">
             <div class="h-64 bg-surface-container-low rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
-              <img alt="Ancient tree hollow" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0VdzSnDgajSW5H4T7GiFgpXBdBNwmhQSIAJoUFtr2WfAGw7vJAqpVNCDMZdJrE_vtQkRnSo8tuLVpkgkaEaXxP3RznYDiOQL9M0BKhinniHqUE1Sy1FqQt7kzIenYmEcB6HtooZrbMRfBneWrsK6gIm54-F7ISEjvKyLHqkj2vqGORr0ZDmcBmUzLi1fyZ8FDPglcCQeR8hRPZAAPbnlkrlP0oCadNaqqk27iJGo9NvPgJcKPU_6bojLLMW_terAYtUxT9TkiiiNf"/>
+              <img alt="Kestrels nesting in a tree hollow" class="w-full h-full object-cover" src="/IMG_8291-2-tracybrighten-1024x683.jpg"/>
             </div>
             <h5 class="font-serif text-xl">{{ $t('mate.sanctuaryTitle') }}</h5>
             <p class="text-sm text-on-surface-variant leading-relaxed">{{ $t('mate.sanctuaryDesc') }}</p>

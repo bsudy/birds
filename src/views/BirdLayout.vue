@@ -1,7 +1,7 @@
 <template>
   <div :data-bird="birdSlug" class="min-h-screen pt-[69px] pb-20">
     <TopNav />
-    <router-view v-if="ready" />
+    <router-view v-if="ready" :key="$route.fullPath" />
     <BottomNav />
   </div>
 </template>

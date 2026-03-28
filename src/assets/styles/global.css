@@ -2,6 +2,7 @@
 
 /* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
 
 /* Bird theme color tokens — stored as space-separated RGB for Tailwind opacity support */
@@ -56,32 +57,63 @@
 }
 
 [data-bird="red-kite"] {
-  --color-primary: 139 37 0;
-  --color-primary-container: 160 82 45;
-  --color-primary-fixed: 253 219 201;
-  --color-primary-fixed-dim: 232 168 130;
+  /* Colors from Stitch design — warm russet/amber palette */
+  --color-primary: 132 44 12;
+  --color-primary-container: 164 67 34;
+  --color-primary-fixed: 255 219 208;
+  --color-primary-fixed-dim: 255 181 158;
   --color-on-primary: 255 255 255;
-  --color-on-primary-container: 255 214 192;
-  --color-on-primary-fixed: 43 14 0;
-  --color-on-primary-fixed-variant: 107 58 30;
-  --color-inverse-primary: 232 168 130;
-  --color-secondary: 107 68 35;
-  --color-secondary-container: 245 213 184;
-  --color-secondary-fixed: 255 223 196;
-  --color-secondary-fixed-dim: 223 184 150;
+  --color-on-primary-container: 255 212 199;
+  --color-on-primary-fixed: 58 11 0;
+  --color-on-primary-fixed-variant: 128 41 9;
+  --color-inverse-primary: 255 181 158;
+  --color-secondary: 135 83 0;
+  --color-secondary-container: 252 174 75;
+  --color-secondary-fixed: 255 221 186;
+  --color-secondary-fixed-dim: 255 185 100;
   --color-on-secondary: 255 255 255;
-  --color-on-secondary-container: 122 80 48;
-  --color-on-secondary-fixed: 42 20 0;
-  --color-on-secondary-fixed-variant: 84 51 24;
-  --color-tertiary: 74 103 65;
-  --color-tertiary-container: 94 128 84;
-  --color-tertiary-fixed: 201 232 191;
-  --color-tertiary-fixed-dim: 168 204 160;
+  --color-on-secondary-container: 111 67 0;
+  --color-on-secondary-fixed: 43 23 0;
+  --color-on-secondary-fixed-variant: 102 62 0;
+  --color-tertiary: 74 73 73;
+  --color-tertiary-container: 98 97 97;
+  --color-tertiary-fixed: 228 226 225;
+  --color-tertiary-fixed-dim: 200 198 198;
   --color-on-tertiary: 255 255 255;
-  --color-on-tertiary-container: 208 240 198;
-  --color-on-tertiary-fixed: 10 32 7;
-  --color-on-tertiary-fixed-variant: 51 80 44;
-  --color-surface-tint: 107 58 30;
+  --color-on-tertiary-container: 223 221 220;
+  --color-on-tertiary-fixed: 27 28 28;
+  --color-on-tertiary-fixed-variant: 71 71 71;
+  --color-surface: 252 249 244;
+  --color-surface-dim: 220 218 213;
+  --color-surface-bright: 252 249 244;
+  --color-surface-tint: 160 64 31;
+  --color-surface-variant: 229 226 221;
+  --color-surface-container-lowest: 255 255 255;
+  --color-surface-container-low: 246 243 238;
+  --color-surface-container: 240 237 232;
+  --color-surface-container-high: 235 232 227;
+  --color-surface-container-highest: 229 226 221;
+  --color-on-surface: 28 28 25;
+  --color-on-surface-variant: 86 66 60;
+  --color-on-background: 28 28 25;
+  --color-background: 252 249 244;
+  --color-outline: 138 114 107;
+  --color-outline-variant: 221 192 184;
+  --color-inverse-surface: 49 48 45;
+  --color-inverse-on-surface: 243 240 235;
+  --color-error: 186 26 26;
+  --color-error-container: 255 218 214;
+  --color-on-error: 255 255 255;
+  --color-on-error-container: 147 0 10;
+}
+
+/* Red Kite font overrides — Noto Serif + Inter from Stitch design */
+[data-bird="red-kite"] {
+  font-family: 'Inter', sans-serif;
+}
+[data-bird="red-kite"] .font-headline,
+[data-bird="red-kite"] .font-serif {
+  font-family: 'Noto Serif', serif;
 }
 
 /* Material Icons Settings */

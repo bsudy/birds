@@ -17,11 +17,13 @@ const i18n = createI18n({
   warnHtmlInMessage: 'off'
 })
 
-const loadedBirds = new Set()
+const sharedMessages = {
+  en: sharedEn,
+  de: sharedDe,
+  hu: sharedHu
+}
 
 export async function loadBirdMessages(birdSlug) {
-  if (loadedBirds.has(birdSlug)) return
-
   const localeModules = {
     en: () => import(`./locales/${birdSlug}/en.json`),
     de: () => import(`./locales/${birdSlug}/de.json`),
@@ -29,15 +31,16 @@ export async function loadBirdMessages(birdSlug) {
   }
 
   for (const locale of supportedLocales) {
+    // Reset to shared messages, then layer bird-specific on top
+    const base = { ...sharedMessages[locale] }
     try {
       const mod = await localeModules[locale]()
-      i18n.global.mergeLocaleMessage(locale, mod.default)
+      Object.assign(base, mod.default)
     } catch (e) {
       console.warn(`Missing ${locale} translations for ${birdSlug}`)
     }
+    i18n.global.setLocaleMessage(locale, base)
   }
-
-  loadedBirds.add(birdSlug)
 }
 
 export default i18n

@@ -19,9 +19,8 @@
     "femaleDesc": "Larger and heavier than the male, the female shares similar plumage but tends to be darker overall. She is the primary incubator of the eggs.",
     "mapRangeLabel": "Global Range",
     "mapTitle": "Where Red Kites Live",
-    "mapBreeding": "Breeding",
-    "mapYearRound": "Year-round",
-    "mapWintering": "Wintering",
+    "mapResident": "Resident",
+    "mapBreeding": "Summer breeding visitor",
     "mapAttribution": "Distribution map for Red Kite <span class=\"italic\">Milvus milvus</span>."
   },
   "hatch": {
@@ -85,6 +84,9 @@
     "dietCarrionValue": "15%",
     "dietSmallBirdsLabel": "Small Birds",
     "dietSmallBirdsValue": "10%",
+    "videoLabel": "Video",
+    "videoTitle": "Feeding the Chicks",
+    "videoDesc": "Watch Red Kite parents carefully feeding their young at the nest.",
     "provisioningTitle": "Provisioning Behavior",
     "provisioningP1": "Red Kites are opportunistic foragers. During the peak growth phase, parents may make up to 15 foraging trips per day. Unlike many raptors, they are known to scavenge heavily, which provides a reliable, if unpredictable, caloric source for the nestlings.",
     "provisioningP2": "The male typically provides the bulk of the food in the first three weeks, while the female remains at the nest to brood and feed the young individually."

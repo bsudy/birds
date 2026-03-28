@@ -67,8 +67,8 @@
         </div>
         <div class="md:col-span-4 overflow-hidden relative min-h-[300px]">
           <img
-            src="/red-kite-hatched-chick.jpg"
-            alt="Newly hatched Red Kite chick covered in pale down"
+            src="/red-kite/wayne_smith_red_shouldered_hawk_chicks.jpg"
+            alt="Red Kite chicks covered in pale fluffy down in the nest"
             class="absolute inset-0 w-full h-full object-cover"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent flex flex-col justify-end p-6">

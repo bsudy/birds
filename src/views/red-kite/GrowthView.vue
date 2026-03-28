@@ -105,6 +105,53 @@
         </div>
       </section>
 
+      <!-- Video: Feeding the Chicks -->
+      <section class="mb-24">
+        <div
+          class="relative overflow-hidden rounded-xl cursor-pointer group min-h-[200px]"
+          @click="showVideo = true"
+        >
+          <img
+            src="/red-kite-growth-2.jpg"
+            alt=""
+            class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 transition-opacity duration-300"
+          />
+          <div class="relative z-10 p-8 flex items-center gap-6 h-full">
+            <div class="w-16 h-16 flex-shrink-0 rounded-full bg-primary flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+              <span class="material-symbols-outlined text-on-primary text-3xl">play_arrow</span>
+            </div>
+            <div>
+              <p class="font-label text-[10px] text-outline uppercase mb-1">{{ $t('growth.videoLabel') }}</p>
+              <h4 class="font-headline text-2xl text-primary">{{ $t('growth.videoTitle') }}</h4>
+              <p class="text-on-surface-variant text-sm mt-1">{{ $t('growth.videoDesc') }}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Video modal -->
+      <div
+        v-if="showVideo"
+        class="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+        @click.self="showVideo = false"
+      >
+        <div class="relative w-full max-w-3xl aspect-video bg-black rounded-xl overflow-hidden shadow-2xl">
+          <button
+            @click="showVideo = false"
+            class="absolute top-3 right-3 z-10 w-10 h-10 rounded-full bg-black/60 flex items-center justify-center text-white hover:bg-black transition-colors"
+          >
+            <span class="material-symbols-outlined">close</span>
+          </button>
+          <iframe
+            class="w-full h-full"
+            title="Red Kite feeding chicks"
+            src="https://www.youtube.com/embed/pZMeUwalq6o?autoplay=1"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
       <!-- Provisioning Behavior -->
       <section class="mb-24 max-w-4xl">
         <h3 class="font-headline text-3xl text-primary mb-8 italic">{{ $t('growth.provisioningTitle') }}</h3>
@@ -123,6 +170,9 @@ import PhaseLabel from '@/components/PhaseLabel.vue'
 import SpecimenHero from '@/components/SpecimenHero.vue'
 export default {
   name: 'GrowthView',
-  components: { PhaseLabel, SpecimenHero }
+  components: { PhaseLabel, SpecimenHero },
+  data() {
+    return { showVideo: false }
+  }
 }
 </script>

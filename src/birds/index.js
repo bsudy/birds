@@ -9,7 +9,7 @@ export const birds = {
     slug: 'red-kite',
     name: 'Red Kite',
     scientificName: 'Milvus milvus',
-    thumbnail: '/red-kite-thumb.jpg'
+    thumbnail: '/red-kite-growth-2.jpg'
   }
 }
 

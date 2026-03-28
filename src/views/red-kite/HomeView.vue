@@ -74,13 +74,12 @@
             <h3 class="font-serif text-4xl text-on-surface font-bold">{{ $t('home.mapTitle') }}</h3>
           </div>
           <div class="flex items-center gap-6 text-xs text-on-surface-variant font-label uppercase tracking-wider">
-            <span class="flex items-center gap-2"><span class="inline-block w-3 h-3 rounded-full bg-[#e8956d]"></span>{{ $t('home.mapBreeding') }}</span>
-            <span class="flex items-center gap-2"><span class="inline-block w-3 h-3 rounded-full bg-[#8b9dc3]"></span>{{ $t('home.mapYearRound') }}</span>
-            <span class="flex items-center gap-2"><span class="inline-block w-3 h-3 rounded-full bg-[#e8d44d]"></span>{{ $t('home.mapWintering') }}</span>
+            <span class="flex items-center gap-2"><span class="inline-block w-3 h-3 rounded-full bg-[#7ecbf0]"></span>{{ $t('home.mapResident') }}</span>
+            <span class="flex items-center gap-2"><span class="inline-block w-3 h-3 rounded-full bg-[#5ddc5d]"></span>{{ $t('home.mapBreeding') }}</span>
           </div>
         </div>
         <div class="rounded-xl overflow-hidden border border-outline-variant/10 shadow-sm">
-          <img src="/map.png" alt="Distribution map of the Red Kite showing breeding, year-round and wintering ranges across Europe" class="w-full" />
+          <img src="/red-kite/map.png" alt="Distribution map of the Red Kite showing resident and summer breeding ranges across Europe" class="w-full" />
         </div>
         <p class="mt-4 text-[11px] text-on-surface-variant/60 leading-relaxed max-w-3xl" v-html="$t('home.mapAttribution')"></p>
       </section>

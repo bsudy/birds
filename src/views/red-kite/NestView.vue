@@ -3,7 +3,7 @@
 
     <main class="pb-12 px-6 md:px-12 max-w-7xl mx-auto">
       <!-- Hero Section -->
-      <SpecimenHero image-src="/red-kite-nest-materials.jpg" image-alt="Red Kite nest with decorative materials">
+      <SpecimenHero image-src="/red-kite/red-kite-adult-chick-egg-nest-alamy-ack02y-john-cancalosi.jpg" image-alt="Red Kite adult brooding chick and egg in nest">
         <PhaseLabel>{{ $t('nest.phaseLabel') }}</PhaseLabel>
         <h2 class="font-headline text-5xl md:text-7xl text-primary leading-tight mb-8" v-html="$t('nest.heroTitle')"></h2>
         <div class="text-lg text-on-surface-variant leading-relaxed mb-10 max-w-md">

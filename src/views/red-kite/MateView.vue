@@ -88,7 +88,7 @@
       <section class="flex flex-col md:flex-row gap-16 items-start mb-24">
         <div class="md:w-1/2 space-y-4">
           <div class="h-80 bg-surface-container-low rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
-            <img alt="Red Kite nest with found materials" class="w-full h-full object-cover" src="/red-kite-nest-materials.jpg"/>
+            <img alt="Red Kite adult brooding chick and egg in nest" class="w-full h-full object-cover" src="/red-kite/red-kite-adult-chick-egg-nest-alamy-ack02y-john-cancalosi.jpg"/>
           </div>
           <h5 class="font-serif text-xl">{{ $t('mate.sanctuaryTitle') }}</h5>
           <p class="text-sm text-on-surface-variant leading-relaxed">{{ $t('mate.sanctuaryDesc') }}</p>
@@ -110,6 +110,9 @@
         <div class="flex-1 min-w-0">
           <p class="font-label text-[10px] text-outline uppercase tracking-widest mb-1">{{ $t('mate.kestrelCallLabel') }}</p>
           <h4 class="font-serif text-xl text-on-surface mb-3"><span class="italic">Milvus milvus</span> {{ $t('mate.flightCallSuffix') }}</h4>
+          <audio controls class="w-full mb-3" style="accent-color: var(--md-sys-color-primary)">
+            <source src="/red-kite/XC1025686 - Red Kite - Milvus milvus.mp3" type="audio/mpeg" />
+          </audio>
           <p class="text-xs text-on-surface-variant">
             {{ $t('mate.audioRecordingPrefix') }}
             <a href="https://xeno-canto.org/species/Milvus-milvus" target="_blank" rel="noopener" class="text-primary underline underline-offset-2 hover:opacity-70 transition-opacity">xeno-canto.org</a>

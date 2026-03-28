@@ -23,6 +23,21 @@ const sharedMessages = {
   hu: sharedHu
 }
 
+function deepMerge(target, source) {
+  const result = { ...target }
+  for (const key of Object.keys(source)) {
+    if (
+      source[key] && typeof source[key] === 'object' && !Array.isArray(source[key]) &&
+      result[key] && typeof result[key] === 'object' && !Array.isArray(result[key])
+    ) {
+      result[key] = deepMerge(result[key], source[key])
+    } else {
+      result[key] = source[key]
+    }
+  }
+  return result
+}
+
 export async function loadBirdMessages(birdSlug) {
   const localeModules = {
     en: () => import(`./locales/${birdSlug}/en.json`),
@@ -31,15 +46,14 @@ export async function loadBirdMessages(birdSlug) {
   }
 
   for (const locale of supportedLocales) {
-    // Reset to shared messages, then layer bird-specific on top
-    const base = { ...sharedMessages[locale] }
+    let messages = structuredClone(sharedMessages[locale])
     try {
       const mod = await localeModules[locale]()
-      Object.assign(base, mod.default)
+      messages = deepMerge(messages, mod.default)
     } catch (e) {
       console.warn(`Missing ${locale} translations for ${birdSlug}`)
     }
-    i18n.global.setLocaleMessage(locale, base)
+    i18n.global.setLocaleMessage(locale, messages)
   }
 }
 

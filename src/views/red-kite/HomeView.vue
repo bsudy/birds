@@ -24,41 +24,22 @@
         </SpecimenHero>
       </div>
 
-      <!-- Male / Female Section -->
+      <!-- About Section -->
       <section class="px-6 md:px-12 max-w-7xl mx-auto mt-24 mb-24">
-        <div class="mb-12">
-          <p class="font-label text-xs uppercase tracking-widest text-primary mb-2">{{ $t('home.aboutLabel') }}</p>
-          <h3 class="font-serif text-4xl text-on-surface font-bold italic mb-6">{{ $t('home.aboutTitle') }}</h3>
-          <p class="text-on-surface-variant leading-relaxed max-w-2xl text-lg">{{ $t('home.aboutDesc') }}</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- Male -->
-          <div class="group rounded-xl overflow-hidden bg-surface-container-low">
-            <div class="h-80 overflow-hidden">
-              <img
-                src="/red-kite-courtship.jpg"
-                alt="Red Kite in aerial courtship display"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-            </div>
-            <div class="p-8">
-              <p class="font-label text-xs uppercase tracking-widest text-primary mb-2">{{ $t('home.maleLabel') }}</p>
-              <p class="text-on-surface-variant leading-relaxed text-sm">{{ $t('home.maleDesc') }}</p>
-            </div>
+        <div class="flex flex-col md:flex-row gap-12 items-start">
+          <div class="md:w-1/2">
+            <p class="font-label text-xs uppercase tracking-widest text-primary mb-2">{{ $t('home.aboutLabel') }}</p>
+            <h3 class="font-serif text-4xl text-on-surface font-bold italic mb-6">{{ $t('home.aboutTitle') }}</h3>
+            <p class="text-on-surface-variant leading-relaxed text-lg mb-6">{{ $t('home.aboutDesc') }}</p>
+            <p class="text-on-surface-variant leading-relaxed text-lg">{{ $t('home.aboutDesc2') }}</p>
           </div>
-          <!-- Female -->
-          <div class="group rounded-xl overflow-hidden bg-surface-container-low">
-            <div class="h-80 overflow-hidden">
-              <img
-                src="/red-kite-nest-materials.jpg"
-                alt="Red Kite at its nest with found materials"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-            </div>
-            <div class="p-8">
-              <p class="font-label text-xs uppercase tracking-widest text-primary mb-2">{{ $t('home.femaleLabel') }}</p>
-              <p class="text-on-surface-variant leading-relaxed text-sm">{{ $t('home.femaleDesc') }}</p>
-            </div>
+          <div class="md:w-1/2 rounded-xl overflow-hidden group">
+            <img
+              src="/red-kite-courtship.jpg"
+              alt="Red Kite soaring with distinctive forked tail"
+              class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <p class="mt-3 text-[11px] text-on-surface-variant/60 italic">{{ $t('home.plateCaption') }}</p>
           </div>
         </div>
       </section>

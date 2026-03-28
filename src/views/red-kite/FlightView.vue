@@ -78,7 +78,7 @@
           <iframe
             class="w-full h-full"
             title="The Red Kite in Flight"
-            src="https://www.youtube.com/embed/3sB_-cBAUZ8?autoplay=1"
+            src="https://www.youtube.com/embed/Jis9kB9bnBc?autoplay=1"
             allow="autoplay; encrypted-media"
             allowfullscreen
           ></iframe>

@@ -89,7 +89,7 @@
           <iframe
             class="w-full h-full"
             title="The Red Kite hunting in the wild"
-            src="https://www.youtube.com/embed/Hvq--9Hio1M?autoplay=1"
+            src="https://www.youtube.com/embed/3sB_-cBAUZ8?autoplay=1"
             allow="autoplay; encrypted-media"
             allowfullscreen
           ></iframe>

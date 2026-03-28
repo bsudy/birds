@@ -133,7 +133,7 @@
           <h3 class="font-headline text-3xl text-primary mb-6 italic">{{ $t('flight.s3Title') }}</h3>
           <p class="text-on-surface-variant leading-relaxed">{{ $t('flight.s3Body') }}</p>
         </div>
-        <div class="md:col-span-4 bg-[#375541] text-white p-10 flex flex-col items-start justify-center">
+        <div class="md:col-span-4 bg-primary text-white p-10 flex flex-col items-start justify-center">
           <span class="material-symbols-outlined text-4xl mb-6">lightbulb</span>
           <h4 class="font-headline text-2xl mb-4">{{ $t('flight.didYouKnow') }}</h4>
           <p class="text-on-primary-container font-body text-sm leading-relaxed">{{ $t('flight.didYouKnowBody') }}</p>

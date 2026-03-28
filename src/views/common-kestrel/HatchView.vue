@@ -73,7 +73,7 @@
             <h4 class="font-headline text-xl text-primary">{{ $t('hatch.videoTitle') }}</h4>
           </div>
         </div>
-        <div class="md:col-span-4 bg-[#375541] text-white p-8 flex flex-col items-start justify-center">
+        <div class="md:col-span-4 bg-primary text-white p-8 flex flex-col items-start justify-center">
           <span class="material-symbols-outlined text-4xl mb-6" data-icon="lightbulb">lightbulb</span>
           <h4 class="font-headline text-2xl mb-4">{{ $t('hatch.didYouKnow') }}</h4>
           <p class="text-on-primary-container font-body text-sm leading-relaxed">{{ $t('hatch.didYouKnowBody') }}</p>

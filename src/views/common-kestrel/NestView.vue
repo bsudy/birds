@@ -30,7 +30,7 @@
             <p>{{ $t('nest.borrowedP2') }}</p>
           </div>
         </div>
-        <div class="md:col-span-4 bg-[#375541] text-white p-10 flex flex-col items-start justify-center">
+        <div class="md:col-span-4 bg-primary text-white p-10 flex flex-col items-start justify-center">
           <span class="material-symbols-outlined text-4xl mb-6" data-icon="lightbulb">lightbulb</span>
           <h4 class="font-headline text-2xl mb-4">
             {{ $t('nest.didYouKnow') }}

@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen bg-background text-on-surface p-8">
-    <router-link to="/" class="inline-flex items-center gap-2 text-primary hover:opacity-80 mb-8">
+    <router-link :to="'/' + $route.params.bird + '/'" class="inline-flex items-center gap-2 text-primary hover:opacity-80 mb-8">
       <span class="material-symbols-outlined">arrow_back</span>
       {{ $t('journey.backToHome') }}
     </router-link>
@@ -8,7 +8,7 @@
     <p class="text-on-surface-variant text-lg">{{ $t('journey.pageDesc') }}</p>
     <div class="mt-12 grid gap-6">
       <router-link
-        v-for="section in sections"
+        v-for="section in computedSections"
         :key="section.path"
         :to="section.path"
         class="bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-colors"
@@ -26,13 +26,22 @@ export default {
   data() {
     return {
       sections: [
-        { path: '/hatch', titleKey: 'journey.hatchTitle', descKey: 'journey.hatchDesc' },
-        { path: '/growth', titleKey: 'journey.growthTitle', descKey: 'journey.growthDesc' },
-        { path: '/flight', titleKey: 'journey.flightTitle', descKey: 'journey.flightDesc' },
-        { path: '/hunt', titleKey: 'journey.huntTitle', descKey: 'journey.huntDesc' },
-        { path: '/mate', titleKey: 'journey.mateTitle', descKey: 'journey.mateDesc' },
-        { path: '/nest', titleKey: 'journey.nestTitle', descKey: 'journey.nestDesc' }
+        { subPath: 'hatch', titleKey: 'journey.hatchTitle', descKey: 'journey.hatchDesc' },
+        { subPath: 'growth', titleKey: 'journey.growthTitle', descKey: 'journey.growthDesc' },
+        { subPath: 'flight', titleKey: 'journey.flightTitle', descKey: 'journey.flightDesc' },
+        { subPath: 'hunt', titleKey: 'journey.huntTitle', descKey: 'journey.huntDesc' },
+        { subPath: 'mate', titleKey: 'journey.mateTitle', descKey: 'journey.mateDesc' },
+        { subPath: 'nest', titleKey: 'journey.nestTitle', descKey: 'journey.nestDesc' }
       ]
+    }
+  },
+  computed: {
+    computedSections() {
+      const bird = this.$route.params.bird
+      return this.sections.map(s => ({
+        ...s,
+        path: '/' + bird + '/' + s.subPath
+      }))
     }
   }
 }

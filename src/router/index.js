@@ -1,46 +1,60 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { birdSlugs } from '@/birds'
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'bird-list',
+    component: () => import('../views/BirdListView.vue')
   },
   {
-    path: '/hatch',
-    name: 'hatch',
-    component: () => import('../views/HatchView.vue')
-  },
-  {
-    path: '/growth',
-    name: 'growth',
-    component: () => import('../views/GrowthView.vue')
-  },
-  {
-    path: '/hunt',
-    name: 'hunt',
-    component: () => import('../views/HuntView.vue')
-  },
-  {
-    path: '/flight',
-    name: 'flight',
-    component: () => import('../views/FlightView.vue')
-  },
-  {
-    path: '/mate',
-    name: 'mate',
-    component: () => import('../views/MateView.vue')
-  },
-  {
-    path: '/nest',
-    name: 'nest',
-    component: () => import('../views/NestView.vue')
-  },
-  {
-    path: '/journey',
-    name: 'journey',
-    component: () => import('../views/JourneyView.vue')
+    path: '/:bird',
+    component: () => import('../views/BirdLayout.vue'),
+    beforeEnter: (to) => {
+      if (!birdSlugs.includes(to.params.bird)) return '/'
+    },
+    children: [
+      {
+        path: '',
+        name: 'bird-home',
+        component: () => import('../views/common-kestrel/HomeView.vue')
+      },
+      {
+        path: 'hatch',
+        name: 'bird-hatch',
+        component: () => import('../views/common-kestrel/HatchView.vue')
+      },
+      {
+        path: 'growth',
+        name: 'bird-growth',
+        component: () => import('../views/common-kestrel/GrowthView.vue')
+      },
+      {
+        path: 'flight',
+        name: 'bird-flight',
+        component: () => import('../views/common-kestrel/FlightView.vue')
+      },
+      {
+        path: 'hunt',
+        name: 'bird-hunt',
+        component: () => import('../views/common-kestrel/HuntView.vue')
+      },
+      {
+        path: 'mate',
+        name: 'bird-mate',
+        component: () => import('../views/common-kestrel/MateView.vue')
+      },
+      {
+        path: 'nest',
+        name: 'bird-nest',
+        component: () => import('../views/common-kestrel/NestView.vue')
+      },
+      {
+        path: 'journey',
+        name: 'bird-journey',
+        component: () => import('../views/common-kestrel/JourneyView.vue')
+      }
+    ]
   }
 ]
 

@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "home": "Home",
+    "hatch": "Hatch",
+    "growth": "Growth",
+    "flight": "Flight",
+    "hunt": "Hunt",
+    "mate": "Mate",
+    "nest": "Nest"
+  },
+  "birdList": {
+    "title": "Taking Flight",
+    "subtitle": "Choose a bird to explore its complete lifecycle.",
+    "explore": "Explore"
+  }
+}

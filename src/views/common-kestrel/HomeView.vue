@@ -8,7 +8,7 @@
           <h2 class="font-serif text-6xl md:text-8xl leading-tight text-primary font-bold tracking-tight mb-6" v-html="$t('home.heroTitle')"></h2>
           <p class="max-w-md text-on-surface-variant text-lg leading-relaxed font-body mb-10">{{ $t('home.heroDesc') }}</p>
           <div class="flex items-center gap-6">
-            <button @click="$router.push('/journey')" class="bg-primary text-on-primary px-8 py-4 rounded-lg font-bold flex items-center gap-2 hover:opacity-90 transition-opacity active:scale-95 shadow-xl shadow-primary/10">
+            <button @click="$router.push('/' + $route.params.bird + '/journey')" class="bg-primary text-on-primary px-8 py-4 rounded-lg font-bold flex items-center gap-2 hover:opacity-90 transition-opacity active:scale-95 shadow-xl shadow-primary/10">
               <span>{{ $t('home.beginJourney') }}</span>
               <span class="material-symbols-outlined">arrow_forward</span>
             </button>

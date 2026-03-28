@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "home": "Főoldal",
+    "hatch": "Kikelés",
+    "growth": "Növekedés",
+    "flight": "Repülés",
+    "hunt": "Vadászat",
+    "mate": "Párzás",
+    "nest": "Fészek"
+  },
+  "birdList": {
+    "title": "Szárnyra kelve",
+    "subtitle": "Válassz egy madarat, hogy felfedezd teljes életciklusát.",
+    "explore": "Felfedezés"
+  }
+}

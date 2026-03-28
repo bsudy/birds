@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "hatch": "Schlüpfen",
+    "growth": "Wachstum",
+    "flight": "Flug",
+    "hunt": "Jagd",
+    "mate": "Paarung",
+    "nest": "Nest"
+  },
+  "birdList": {
+    "title": "Abflug",
+    "subtitle": "Wählen Sie einen Vogel, um seinen vollständigen Lebenszyklus zu erkunden.",
+    "explore": "Erkunden"
+  }
+}

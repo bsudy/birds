@@ -26,12 +26,12 @@
           <div class="h-56 overflow-hidden">
             <img
               :src="bird.thumbnail"
-              :alt="bird.name"
+              :alt="$t(bird.nameKey)"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
           </div>
           <div class="p-6">
-            <h3 class="font-serif text-2xl text-primary font-bold mb-1">{{ bird.name }}</h3>
+            <h3 class="font-serif text-2xl text-primary font-bold mb-1">{{ $t(bird.nameKey) }}</h3>
             <p class="text-on-surface-variant text-sm italic mb-4">{{ bird.scientificName }}</p>
             <span class="inline-flex items-center gap-2 text-primary font-label text-xs uppercase tracking-widest">
               {{ $t('birdList.explore') }}

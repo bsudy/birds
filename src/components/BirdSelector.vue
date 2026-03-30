@@ -13,9 +13,9 @@
             : 'bg-surface-container-low hover:bg-surface-container'
         ]"
       >
-        <img :src="bird.thumbnail" :alt="bird.name" class="w-10 h-10 rounded-full object-cover flex-shrink-0" />
+        <img :src="bird.thumbnail" :alt="$t(bird.nameKey)" class="w-10 h-10 rounded-full object-cover flex-shrink-0" />
         <div class="min-w-0">
-          <p :class="['font-serif font-bold text-sm', bird.slug === currentBird ? 'text-primary' : 'text-on-surface']">{{ bird.name }}</p>
+          <p :class="['font-serif font-bold text-sm', bird.slug === currentBird ? 'text-primary' : 'text-on-surface']">{{ $t(bird.nameKey) }}</p>
           <p class="text-on-surface-variant text-xs italic truncate">{{ bird.scientificName }}</p>
         </div>
       </router-link>

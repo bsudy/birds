@@ -12,5 +12,9 @@
     "title": "Szárnyra kelve",
     "subtitle": "Válassz egy madarat, hogy felfedezd teljes életciklusát.",
     "explore": "Felfedezés"
+  },
+  "birds": {
+    "common-kestrel": "Vörös vércse",
+    "red-kite": "Vörös kánya"
   }
 }

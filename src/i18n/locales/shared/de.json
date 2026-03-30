@@ -12,5 +12,9 @@
     "title": "Abflug",
     "subtitle": "Wählen Sie einen Vogel, um seinen vollständigen Lebenszyklus zu erkunden.",
     "explore": "Erkunden"
+  },
+  "birds": {
+    "common-kestrel": "Turmfalke",
+    "red-kite": "Rotmilan"
   }
 }

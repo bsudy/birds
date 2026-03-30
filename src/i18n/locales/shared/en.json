@@ -12,5 +12,9 @@
     "title": "Taking Flight",
     "subtitle": "Choose a bird to explore its complete lifecycle.",
     "explore": "Explore"
+  },
+  "birds": {
+    "common-kestrel": "Common Kestrel",
+    "red-kite": "Red Kite"
   }
 }
